@@ -1,0 +1,11 @@
+div{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    align-items: center;
+    font-size: 1rem;
+}
+
+div>span {
+    margin-left: 1rem;
+}

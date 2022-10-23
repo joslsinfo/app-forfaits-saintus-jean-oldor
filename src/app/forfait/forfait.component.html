@@ -1,0 +1,49 @@
+<h1>Forfait</h1>
+
+<div>
+  <div>Nom du forfait</div>
+  <div>Description</div>
+  <div>Code</div>
+  <div>Catégories</div>
+  <div>Établissement</div>
+  <div>Coordonnées</div>
+  <div>Date de début</div>
+  <div>Date de fin</div>
+  <div>Prix</div>
+  <div>Avis de note sur 5</div>
+  <div>Commentaires</div>
+</div>
+
+<div>
+  
+  <div>
+    {{forfait?.nom | uppercase}} <br>
+  </div>
+  <div>
+    {{forfait?.description | uppercase}} <br>
+  </div>
+  <div>
+    {{forfait?.code | uppercase}} <br>
+   </div>
+   <div>
+    {{forfait?.categories}} <br>
+  </div>
+   <div> 
+    {{forfait?.etablissement?.nomEtablissement}} <br>
+  </div>
+  <div>
+       {{forfait?.etablissement?.coordonnees}} <br>
+  </div>
+  <div>
+  <span> {{forfait?.dateDebut}} </span> 
+  <span>{{forfait?.dateFin}} </span>
+  <span> {{forfait?.prix}} $CAD </span> 
+  </div>
+  <div>
+    {{forfait?.avis?.note}}
+  </div>
+  <div>
+    {{forfait?.avis?.commentaires}}
+  </div>
+
+</div>
