@@ -48,5 +48,11 @@ div>span {
 
   }
 
+
+  mat-card{
+    background-color: #f7f7f7;
+    margin-left: 0.5rem;
+    color: #333;
+  }
  
  
