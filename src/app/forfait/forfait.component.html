@@ -1,49 +1,63 @@
-<h1>Forfait</h1>
+<div class="forfait-content">
 
-<div>
-  <div>Nom du forfait</div>
-  <div>Description</div>
-  <div>Code</div>
-  <div>Catégories</div>
-  <div>Établissement</div>
-  <div>Coordonnées</div>
-  <div>Date de début</div>
-  <div>Date de fin</div>
-  <div>Prix</div>
-  <div>Avis de note sur 5</div>
-  <div>Commentaires</div>
-</div>
+  <div class="miniforfait-card">
 
-<div>
-  
-  <div>
-    {{forfait?.nom | uppercase}} <br>
+    <h2>Mini forfait</h2>
+    <mat-card>
+      <mat-card-title>
+        <app-mini-forfait [nom]="forfait?.nom"></app-mini-forfait>
+      </mat-card-title>
+
+      <mat-card-content>
+        <app-mini-forfait [etablissement]="forfait?.etablissement?.nomEtablissement"></app-mini-forfait>
+      </mat-card-content>
+
+      <mat-card-content>
+        <app-mini-forfait [dateDebut]="forfait?.dateDebut"></app-mini-forfait>
+      </mat-card-content>
+
+      <mat-card-content>
+        <app-mini-forfait [dateFin]="forfait?.dateFin"></app-mini-forfait>
+      </mat-card-content>
+
+      <mat-card-content>
+        <app-mini-forfait [prix]="forfait?.prix"></app-mini-forfait>
+      </mat-card-content>
+
+    </mat-card>
+
   </div>
-  <div>
-    {{forfait?.description | uppercase}} <br>
+
+
+  <div class="forfait-complet">
+    <h2>Forfait complet</h2>
+    <mat-card>
+      <mat-card-title> {{forfait?.nom}} </mat-card-title>
+      <mat-card-content> {{forfait?.description}} </mat-card-content>
+      <mat-card-content> {{forfait?.code | uppercase}} </mat-card-content>
+      <mat-card-content> {{forfait?.categories}} </mat-card-content>
+      <mat-card-content> {{forfait?.etablissement?.nomEtablissement}} </mat-card-content>
+      <mat-card-content> {{forfait?.etablissement?.coordonnees}} </mat-card-content>
+      <mat-card-content> {{forfait?.dateDebut}} </mat-card-content>
+      <mat-card-content> {{forfait?.dateFin}} </mat-card-content>
+      <mat-card-content> {{forfait?.prix}} $CAD </mat-card-content>
+      <!-- <mat-list> {{forfait?.avis}} </mat-list> -->
+    </mat-card>
+
   </div>
-  <div>
-    {{forfait?.code | uppercase}} <br>
-   </div>
-   <div>
-    {{forfait?.categories}} <br>
-  </div>
-   <div> 
-    {{forfait?.etablissement?.nomEtablissement}} <br>
-  </div>
-  <div>
-       {{forfait?.etablissement?.coordonnees}} <br>
-  </div>
-  <div>
-  <span> {{forfait?.dateDebut}} </span> 
-  <span>{{forfait?.dateFin}} </span>
-  <span> {{forfait?.prix}} $CAD </span> 
-  </div>
-  <div>
-    {{forfait?.avis?.note}}
-  </div>
-  <div>
-    {{forfait?.avis?.commentaires}}
-  </div>
+
+
+  <!-- <div class="forfait-complet">
+  <mat-list> {{forfait?.nom | uppercase}} </mat-list>
+  <mat-list> {{forfait?.description | uppercase}} </mat-list>
+  <mat-list> {{forfait?.code | uppercase}} </mat-list>
+  <mat-list> {{forfait?.categories}}  </mat-list>
+  <mat-list> {{forfait?.etablissement?.nomEtablissement}}  </mat-list>
+  <mat-list> {{forfait?.etablissement?.coordonnees}}  </mat-list>
+  <mat-list> {{forfait?.dateDebut}} </mat-list>
+  <mat-list> {{forfait?.dateFin}} </mat-list>
+  <mat-list> {{forfait?.prix}} $CAD  </mat-list>
+
+</div> -->
 
 </div>

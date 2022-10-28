@@ -4,7 +4,7 @@ export const FORFAITS: Forfait[] = [
     {
         nom: 'Forfait 1',
         description: 'Description du forfait 1',
-        code: 'F0001',
+        code: 'f0001',
         categories: [
             'Hebergement', 'Détente'
         ],
@@ -20,11 +20,16 @@ export const FORFAITS: Forfait[] = [
         dateFin: '2022-10-21',
         prix: 100,
 
-        avis: {
-            note: 8,
-            commentaires: 'Un bon forfait'
+        avis: [
+            {
 
-        }
+                note: 8,
+                commentaires: 'Un bon forfait'
+           }
+
+        ]
+
+        
     
     }
 

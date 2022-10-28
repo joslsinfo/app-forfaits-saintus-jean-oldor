@@ -5,16 +5,31 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListeForfaitsComponent } from './liste-forfaits/liste-forfaits.component';
 import { ForfaitComponent } from './forfait/forfait.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MiniForfaitComponent } from './mini-forfait/mini-forfait.component';
+import {MatCardModule} from '@angular/material/card';
+import { ForfaitCompletComponent } from './forfait-complet/forfait-complet.component';
+import {MatListModule} from '@angular/material/list';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ListeForfaitsComponent,
-    ForfaitComponent
+    ForfaitComponent,
+    MiniForfaitComponent,
+    ForfaitCompletComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatCardModule,
+    MatListModule,
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

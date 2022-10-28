@@ -1,4 +1,4 @@
-div{
+/* div{
     display:flex;
     flex-wrap: wrap;
     justify-content:space-evenly;
@@ -8,4 +8,45 @@ div{
 
 div>span {
     margin-left: 1rem;
+} */
+
+.forfait-content{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    width: 100%;
+    /* background-color: #f7f7f7; */
+    margin: .5rem .5rem;
+    background-color: rgb(182, 214, 214);
+
+ 
 }
+
+.miniforfait-card {
+    flex:1;
+    /* min-width:200px; */
+    /* width:30%; */
+    margin-bottom: 1rem;
+    margin-top: 1.2rem;
+    margin-right:0.9rem;
+    flex-wrap: wrap;
+    color:crimson;
+   
+  }
+
+  .forfait-complet{
+    flex:3;
+    /* min-width: 200px; */
+    /* width:60%; */
+    margin-bottom: 1rem;
+    margin-top: 1.2rem;
+    margin-left:0.9rem;
+    margin-right: 1.5rem;
+    flex-wrap: wrap;
+    color: crimson;
+    background-color: rgb(182, 214, 214);
+
+  }
+
+ 
+ 
