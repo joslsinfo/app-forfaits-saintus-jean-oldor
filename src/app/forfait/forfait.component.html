@@ -1,8 +1,10 @@
 <div class="forfait-content">
 
   <div class="miniforfait-card">
+<mat-card-header>
+  <h2>Mini forfait</h2>
 
-    <h2>Mini forfait</h2>
+</mat-card-header>
     <mat-card>
       <mat-card-title>
         <app-mini-forfait [nom]="forfait?.nom"></app-mini-forfait>
@@ -30,7 +32,10 @@
 
 
   <div class="forfait-complet">
-    <h2>Forfait complet</h2>
+    <mat-card-header>
+      <h2>Forfait complet</h2>
+    </mat-card-header>
+
     <mat-card>
       <mat-card-title> {{forfait?.nom}} </mat-card-title>
       <mat-card-content> {{forfait?.description}} </mat-card-content>

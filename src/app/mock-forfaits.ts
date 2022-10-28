@@ -2,8 +2,8 @@ import { Forfait } from  "./forfait";
 
 export const FORFAITS: Forfait[] = [
     {
-        nom: 'Forfait 1',
-        description: 'Description du forfait 1',
+        nom: 'Forfait de voyage',
+        description: 'Description du forfait de voyage à ajouter',
         code: 'f0001',
         categories: [
             'Hebergement', 'Détente'
