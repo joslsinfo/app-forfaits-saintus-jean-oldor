@@ -16,6 +16,7 @@ export class MiniForfaitComponent implements OnInit {
   @Input() dateFin? = '';
   @Input() prix? = 0;
 
+
  
   constructor() { }
 
