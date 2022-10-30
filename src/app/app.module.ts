@@ -17,6 +17,7 @@ import { ForfaitComponent } from './forfait/forfait.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MiniForfaitComponent } from './mini-forfait/mini-forfait.component';
 import { ForfaitCompletComponent } from './forfait-complet/forfait-complet.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 
 
@@ -26,7 +27,9 @@ import { ForfaitCompletComponent } from './forfait-complet/forfait-complet.compo
     ListeForfaitsComponent,
     ForfaitComponent,
     MiniForfaitComponent,
-    ForfaitCompletComponent
+    ForfaitCompletComponent,
+    NavigationComponent
+
  
   ],
   imports: [
