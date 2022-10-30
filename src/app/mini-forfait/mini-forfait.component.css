@@ -7,3 +7,31 @@
   .liste{
     color: #333;
   } */
+
+
+
+  /* .forfait-container{
+    display: flex;
+    flex-wrap: wrap;
+  
+    width: 100%;
+    
+    margin: .5rem .5rem;
+    background-color: rgb(182, 214, 214);
+
+ 
+} */
+
+
+  .miniforfait-card {
+    /* flex:1; */
+    /* min-width:200px; */
+    /* width:100%; */
+    margin-bottom: 1rem;
+    margin-top: 1.2rem;
+    margin-right:0.9rem;
+    margin-left: 1.9rem;
+    flex-wrap: wrap;
+    color:crimson;
+    background-color: rgb(182, 214, 214);
+  }

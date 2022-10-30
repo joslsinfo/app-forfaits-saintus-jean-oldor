@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+import { Forfait } from '../forfait';
 
 
 
@@ -10,12 +11,13 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MiniForfaitComponent implements OnInit {
  
-  @Input() nom? = '';
-  @Input() etablissement? = '';
-  @Input() dateDebut? = '';
-  @Input() dateFin? = '';
-  @Input() prix? = 0;
+  // @Input() nom? = '';
+  // @Input() etablissement? = '';
+  // @Input() dateDebut? = '';
+  // @Input() dateFin? = '';
+  // @Input() prix? = 0;
 
+  @Input() forfait?: Forfait;
 
  
   constructor() { }

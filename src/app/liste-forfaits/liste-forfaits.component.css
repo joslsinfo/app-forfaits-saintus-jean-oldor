@@ -2,4 +2,23 @@
     flex: 1 1 auto;
   }
 
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    /* width: 100%; */
+    /* background-color: #f7f7f7; */
+    margin: .5rem .5rem;
+    background-color: rgb(182, 214, 214);
+
+
  
+}
+
+
+mat-card{
+  background-color: #f7f7f7;
+  margin-left: 0.5rem;
+  color: #333;
+}
+

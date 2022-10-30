@@ -4,7 +4,7 @@
 
 <div class="forfait-container">
 
-  <div class="miniforfait-card">
+  <!-- <div class="miniforfait-card">
     <mat-card-header>
       <h2>Mini forfait</h2>
 
@@ -33,12 +33,12 @@
      
     </mat-card>
 
-  </div>
+  </div> -->
 
 
-  <div class="forfait-complet">
+  <div class="forfait">
     <mat-card-header>
-      <h2>Forfait complet</h2>
+      <h2>Forfait</h2>
     </mat-card-header>
 
     <mat-card>
@@ -52,7 +52,8 @@
       <mat-card-content> {{forfait?.dateFin}} </mat-card-content>
       <mat-card-content> {{forfait?.prix}} $CAD </mat-card-content>
 
-      <mat-card-content> {{forfait?.avis}} </mat-card-content>
+      <mat-card-content> {{avis?.note}} </mat-card-content>
+      <mat-card-content> {{avis?.commentaires}} </mat-card-content>
     </mat-card>
 
   </div>

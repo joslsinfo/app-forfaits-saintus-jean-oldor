@@ -19,7 +19,16 @@
     Liste des forfaits
 </h1>
 
-  <app-forfait *ngFor="let f of forfaits" [forfait]="f"> </app-forfait>
+<div class="container">
+  <app-mini-forfait *ngFor="let f of forfaits" [forfait]="f"> </app-mini-forfait>
+  <app-forfait-complet *ngFor="let f of forfaits" [forfait]="f"> </app-forfait-complet>
+  
+  
+</div>
 
+<div class="container">
+
+  <app-forfait *ngFor="let f of forfaits" [forfait]="f"> </app-forfait>
+</div>
 
 

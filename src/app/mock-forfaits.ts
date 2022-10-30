@@ -20,7 +20,7 @@ export const FORFAITS: Forfait[] = [
         dateFin: '2022-10-21',
         prix: 100,
 
-        avis: [
+        "avis": [
             {
 
                 note: 10,
