@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Avis } from '../avis';
 import { Forfait } from '../forfait';
+import { FORFAITS } from '../mock-forfaits';
 
 @Component({
   selector: 'app-forfait-complet',
@@ -10,7 +11,10 @@ import { Forfait } from '../forfait';
 export class ForfaitCompletComponent implements OnInit {
 
   @Input() forfait?: Forfait;
-  @Input() avis?: Avis;
+  // @Input() avis: Forfait[] = [];
+  // @Input() note? ='';
+  // @Input() commentaires='';
+  
 
   constructor() { }
 
