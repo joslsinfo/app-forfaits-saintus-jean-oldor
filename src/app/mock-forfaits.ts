@@ -2,8 +2,39 @@ import { Forfait } from  "./forfait";
 
 export const FORFAITS: Forfait[] = [
     {
+        nom: 'Forfaits Smart phone',
+        description: 'Iphone 13 Pro',
+        code: 'f0001',
+        categories: [
+           
+        ],
+        etablissement: {
+            nomEtablissement: 'Vidéotron',
+            coordonnees: [
+                'Centre Laval'
+            ]
+     
+        },
+
+        dateDebut: '2022-10-18',
+        dateFin: '2024-10-21',
+        prix: 40.75,
+
+        avis: [
+            {
+
+                note: 10,
+                commentaires: 'Un très bon forfait'
+           }
+
+        ]
+
+        
+    
+    },
+    {
         nom: 'Forfaits vacances',
-        description: 'Description du forfaits vacances à ajouter',
+        description: 'Description des forfaits vacances à ajouter',
         code: 'f0001',
         categories: [
             'Hebergement', 'Détente'
@@ -20,7 +51,7 @@ export const FORFAITS: Forfait[] = [
         dateFin: '2022-10-21',
         prix: 100,
 
-        "avis": [
+        avis: [
             {
 
                 note: 10,
@@ -33,9 +64,6 @@ export const FORFAITS: Forfait[] = [
     
     }
 
-    
-    
-
-
+ 
 ]
 

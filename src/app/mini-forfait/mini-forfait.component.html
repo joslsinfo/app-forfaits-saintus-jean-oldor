@@ -22,15 +22,14 @@
 
     <mat-card>
       <mat-card-title> {{forfait?.nom}} </mat-card-title>
-      <mat-card-content> {{forfait?.etablissement}} </mat-card-content>
- 
+      <mat-card-content> {{forfait?.etablissement?.nomEtablissement}} </mat-card-content>
       <!-- <mat-card-content> {{forfait?.code | uppercase}} </mat-card-content> -->
       <!-- <mat-card-content> {{forfait?.categories}} </mat-card-content>
       <mat-card-content> {{forfait?.etablissement?.nomEtablissement}} </mat-card-content> -->
       <!-- <mat-card-content> {{forfait?.etablissement?.coordonnees}} </mat-card-content> -->
       <mat-card-content> {{forfait?.dateDebut}} </mat-card-content>
       <mat-card-content> {{forfait?.dateFin}} </mat-card-content>
-      <mat-card-content> {{forfait?.prix}} $CAD </mat-card-content>
+      <mat-card-content> {{forfait?.prix}} $CAD/mois </mat-card-content>
 
       
     </mat-card>

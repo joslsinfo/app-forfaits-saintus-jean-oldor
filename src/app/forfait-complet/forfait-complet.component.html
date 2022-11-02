@@ -15,10 +15,11 @@
       <mat-card-content> {{forfait?.etablissement?.coordonnees}} </mat-card-content>
       <mat-card-content> {{forfait?.dateDebut}} </mat-card-content>
       <mat-card-content> {{forfait?.dateFin}} </mat-card-content>
-      <mat-card-content> {{forfait?.prix}} $CAD </mat-card-content>
+      <mat-card-content> {{forfait?.prix}} $CAD/mois </mat-card-content>
 
 
-      <mat-card-content> {{forfait?.avis}} </mat-card-content>
+      <mat-card-content *ngFor="let a of forfait?.avis"> {{a.note}} {{a.commentaires}}</mat-card-content>
+
    
       
       
