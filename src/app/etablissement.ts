@@ -1,5 +1,5 @@
 export interface Etablissement {
-    nomEtablissement: string,
+    nomEtablissement: string;
     coordonnees: string[]
         
     
