@@ -4,6 +4,7 @@ import { Etablissement } from '../etablissement';
 import { Forfait } from '../forfait';
 
 
+
 @Component({
   selector: 'app-forfait-complet',
   templateUrl: './forfait-complet.component.html',
@@ -14,6 +15,7 @@ export class ForfaitCompletComponent implements OnInit {
   @Input() forfait?: Forfait;
   @Input() avis?: Avis;
   @Input() etablissment?: Etablissement;
+
 
   // @Input() avis: Forfait[] = [];
   // @Input() note? ='';

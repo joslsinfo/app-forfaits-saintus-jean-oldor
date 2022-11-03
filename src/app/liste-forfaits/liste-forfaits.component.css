@@ -44,10 +44,12 @@ mat-card{
 }
 
 .save{
-  background-color: teal;
-  width: 80px;
-  height: 20px;
-  padding: 0.3rem;
+  /* background-color: teal; */
+  /* width: 80px;
+  height: 20px; */
+  /* padding: 0.3rem; */
   font-size: .9rem;
+  color:#333;
+ 
   
 }
