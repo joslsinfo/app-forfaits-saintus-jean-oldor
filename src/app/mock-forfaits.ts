@@ -28,7 +28,8 @@ export const FORFAITS: Forfait[] = [
            }
 
         ],
-        nouveauPrix: 860
+        nouveauPrix: 860,
+        premium: false
 
         
     
@@ -60,7 +61,8 @@ export const FORFAITS: Forfait[] = [
            }
 
         ],
-        nouveauPrix: 300
+        nouveauPrix: 300,
+        premium: true
 
         
     
@@ -92,7 +94,8 @@ export const FORFAITS: Forfait[] = [
            }
 
         ],
-        nouveauPrix: 150
+        nouveauPrix: 150,
+        premium: true
 
         
     

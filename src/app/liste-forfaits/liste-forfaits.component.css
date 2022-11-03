@@ -54,3 +54,19 @@ mat-card{
  
   
 }
+
+
+.premium{
+  display: flex;
+  flex-wrap: wrap;
+  max-width:1200px;
+  width:25%;
+  justify-content:space-around;
+  
+
+  margin: 0.5rem 0.5rem;
+  /* margin: .5rem .5rem; */
+  background-color: rgb(182, 214, 214);
+ 
+
+}
