@@ -18,6 +18,7 @@
 <h1>
   Liste des forfaits
 </h1>
+<!-- Affichage des forfaits premium -->
 <div class="premium" *ngFor="let f of forfaits">
   <p *ngIf="f.premium">
     <app-mini-forfait [forfait]="f"> </app-mini-forfait>
@@ -25,15 +26,11 @@
 </div>
 
 <div class="container" *ngFor="let f of forfaits">
-
-
-
   <app-mini-forfait [forfait]="f"> </app-mini-forfait>
-
   <app-forfait-complet [forfait]="f"> </app-forfait-complet>
   <app-forfait [forfait]="f"> </app-forfait>
 
-
+  <!-- Affichage des prix -->
   <div *ngIf="f.prix >= 0 ">
     <div class="nouveau-prix"> {{f.nouveauPrix}} $ </div>
     <div class="barre"> {{f.prix}} $ </div>
