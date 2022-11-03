@@ -2,7 +2,7 @@ import { Forfait } from  "./forfait";
 
 export const FORFAITS: Forfait[] = [
     {
-        nom: 'Forfaits mobile Smart phone',
+        nom: 'Forfaits Smart phone',
         description: 'Iphone 13 Pro',
         code: 'f0001',
         categories: [
