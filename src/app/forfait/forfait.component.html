@@ -51,10 +51,11 @@
       <mat-card-content> {{forfait?.dateDebut}} </mat-card-content>
       <mat-card-content> {{forfait?.dateFin}} </mat-card-content>
       <mat-card-content> {{forfait?.prix}} $CAD </mat-card-content>
+      <mat-card-content> {{forfait?.nouveauPrix}} $CAD </mat-card-content>
 
     
-
-      <mat-card-content *ngFor="let a of forfait?.avis"> {{a.note}} {{a.commentaires}}</mat-card-content>
+      <mat-card-content *ngFor="let a of forfait?.avis"> <div>{{a.note}}</div> <div>{{a.commentaires}}</div></mat-card-content>
+ 
    
     </mat-card>
 

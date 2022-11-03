@@ -9,7 +9,7 @@ export const FORFAITS: Forfait[] = [
            
         ],
         etablissement: {
-            nomEtablissement: 'Vidéotron',
+            nomEtablissement: 'Cummunication plus',
             coordonnees: [
                 'Centre Laval'
             ]
@@ -18,7 +18,7 @@ export const FORFAITS: Forfait[] = [
 
         dateDebut: '2022-10-18',
         dateFin: '2024-10-21',
-        prix: 40.75,
+        prix: 960,
 
         avis: [
             {
@@ -27,38 +27,72 @@ export const FORFAITS: Forfait[] = [
                 commentaires: 'Un très bon forfait'
            }
 
-        ]
+        ],
+        nouveauPrix: 860
 
         
     
     },
     {
-        nom: 'Forfaits vacances',
-        description: 'Description des forfaits vacances à ajouter',
-        code: 'f0001',
+        nom: 'Forfaits massages',
+        description: 'Massage pour un couple',
+        code: 'f0002',
         categories: [
-            'Hebergement', 'Détente'
+            'Détente'
         ],
         etablissement: {
-            nomEtablissement: 'Établissement X',
+            nomEtablissement: 'JOSLS Massage',
             coordonnees: [
-                '10 Blvd XXXX', 'Laval', '514-730-8206', 'josaintus@josaintus.com','www.josaintus.com'
+                '15 rue Edith ', 'Laval'
             ]
      
         },
 
-        dateDebut: '2022-10-18',
-        dateFin: '2022-10-21',
-        prix: 100,
+        dateDebut: '2022-11-02',
+        dateFin: '2022-12-31',
+        prix: 400,
 
         avis: [
             {
 
                 note: 10,
-                commentaires: 'Un très bon forfait'
+                commentaires: 'Un très bon forfait pour de bons massages'
            }
 
-        ]
+        ],
+        nouveauPrix: 300
+
+        
+    
+    },
+    {
+        nom: 'Forfaits massages',
+        description: 'Massages pour une personne',
+        code: 'f0003',
+        categories: [
+           'Détente'
+        ],
+        etablissement: {
+            nomEtablissement: 'JOSLS Massage',
+            coordonnees: [
+                '15 rue Edith ', 'Laval'
+            ]
+     
+        },
+
+        dateDebut: '2022-11-02',
+        dateFin: '2022-12-31',
+        prix: 200,
+
+        avis: [
+            {
+
+                note: 9,
+                commentaires: 'Un bon forfait'
+           }
+
+        ],
+        nouveauPrix: 150
 
         
     

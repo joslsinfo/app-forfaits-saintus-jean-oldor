@@ -16,25 +16,22 @@
 
 
 <h1>
-    Liste des forfaits
+  Liste des forfaits
 </h1>
 
 <div class="container" *ngFor="let f of forfaits">
-  <app-mini-forfait  [forfait]="f"> </app-mini-forfait>
+  <app-mini-forfait [forfait]="f"> </app-mini-forfait>
 
   <app-forfait-complet [forfait]="f"> </app-forfait-complet>
- 
- 
+  <app-forfait [forfait]="f"> </app-forfait>
 
-  <!-- <div class="container" *ngFor="let f of forfaits" > -->
 
-    <app-forfait [forfait]="f"> </app-forfait>
-  <!-- </div> -->
-  <!-- <app-mini-forfait  [forfait]="f"> </app-mini-forfait>
-  
-  <app-forfait-complet [forfait]="f"> </app-forfait-complet>
-  <app-forfait [forfait]="f"> </app-forfait> -->
+  <div *ngIf="f.prix >= 0 ">
+    <div class="nouveau-prix"> {{f.nouveauPrix}} $ </div>
+    <div class="barre"> {{f.prix}} $ </div>
+    <div class="save"> Save: {{f.prix - f.nouveauPrix}} $</div>
+
+  </div>
+
+
 </div>
-
-
-

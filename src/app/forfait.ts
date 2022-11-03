@@ -14,7 +14,8 @@ export interface Forfait {
     dateFin: string;
     prix: number;
 
-    avis: Avis[]
+    avis: Avis[];
+    nouveauPrix: number;
 
    
 
