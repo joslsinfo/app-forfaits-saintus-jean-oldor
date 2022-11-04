@@ -1,7 +1,3 @@
-
-
-
-
 <div class="forfait-container">
 
   <!-- <div class="miniforfait-card">
@@ -41,42 +37,67 @@
       <h2>Forfait</h2>
     </mat-card-header>
 
+    <!-- <mat-card-content> <div> <img src="../assets/images/iphone.jpg"> </div>  <mat-divider></mat-divider></mat-card-content> -->
+    
     <mat-card>
-      <mat-card-title> {{forfait?.nom}} <mat-divider></mat-divider></mat-card-title>
-      <mat-card-content> {{forfait?.description}} <mat-divider></mat-divider></mat-card-content>
+      <mat-card-title> {{forfait?.nom}} <mat-divider></mat-divider>
+      </mat-card-title>
+      <mat-card-content> {{forfait?.description}} <mat-divider></mat-divider>
+      </mat-card-content>
       <mat-card-content> {{forfait?.code | uppercase}}</mat-card-content>
-      <mat-card-content> {{forfait?.categories}} <mat-divider></mat-divider></mat-card-content>
-      <mat-card-content> {{forfait?.etablissement?.nomEtablissement}} <mat-divider></mat-divider></mat-card-content>
-      <mat-card-content> {{forfait?.etablissement?.coordonnees}} <mat-divider></mat-divider></mat-card-content>
-      <mat-card-content> {{forfait?.dateDebut}} <mat-divider></mat-divider></mat-card-content>
-      <mat-card-content> {{forfait?.dateFin}} <mat-divider></mat-divider></mat-card-content>
-      <mat-card-content> {{forfait?.prix}} $CAD <mat-divider></mat-divider></mat-card-content>
+      <mat-card-content> {{forfait?.categories}} <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-content> {{forfait?.etablissement?.nomEtablissement}} <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-content> {{forfait?.etablissement?.coordonnees}} <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-content> {{forfait?.dateDebut}} <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-content> {{forfait?.dateFin}} <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-content> {{forfait?.prix}} $CAD <mat-divider></mat-divider>
+      </mat-card-content>
 
       <!-- <mat-card-content> {{forfait?.nouveauPrix}} $CAD </mat-card-content> -->
 
-    
-      <mat-card-content *ngFor="let a of forfait?.avis"> <div>{{a.note}}</div><mat-divider></mat-divider> <div>{{a.commentaires}}</div><mat-divider></mat-divider></mat-card-content>
- 
-   
+
+      <mat-card-content *ngFor="let a of forfait?.avis">
+        <div>{{a.note}}</div>
+        <mat-divider></mat-divider>
+        <div>{{a.commentaires}}</div>
+        <mat-divider></mat-divider>
+      </mat-card-content>
+
+
     </mat-card>
 
   </div>
 
 
-    <!-- <div class="forfait-complet">
-        <mat-list> {{forfait?.nom | uppercase}} </mat-list>
-        <mat-list> {{forfait?.description | uppercase}} </mat-list>
-        <mat-list> {{forfait?.code | uppercase}} </mat-list>
-        <mat-list> {{forfait?.categories}} </mat-list>
-        <mat-list> {{forfait?.etablissement?.nomEtablissement}} </mat-list>
-        <mat-list> {{forfait?.etablissement?.coordonnees}} </mat-list>
-        <mat-list> {{forfait?.dateDebut}} </mat-list>
-        <mat-list> {{forfait?.dateFin}} </mat-list>
-        <mat-list> {{forfait?.prix}} $CAD </mat-list>
-
-    </div> -->
-
 </div>
 
 
 
+<!-- <mat-list> {{forfait?.nom}} <mat-divider></mat-divider>
+</mat-list>
+<mat-list-item> {{forfait?.description}} <mat-divider></mat-divider>
+</mat-list-item>
+<mat-list-item> {{forfait?.code | uppercase}}</mat-list-item>
+<mat-list-item> {{forfait?.categories}} <mat-divider></mat-divider>
+</mat-list-item>
+<mat-list-item> {{forfait?.etablissement?.nomEtablissement}} <mat-divider></mat-divider>
+</mat-list-item>
+<mat-list-item> {{forfait?.etablissement?.coordonnees}} <mat-divider></mat-divider>
+</mat-list-item>
+<mat-list-item> {{forfait?.dateDebut}} <mat-divider></mat-divider>
+</mat-list-item>
+<mat-list-item> {{forfait?.dateFin}} <mat-divider></mat-divider>
+</mat-list-item>
+<mat-list-item> {{forfait?.prix}} $CAD <mat-divider></mat-divider>
+</mat-list-item>
+<mat-list-item *ngFor="let a of forfait?.avis">
+  <div>{{a.note}}</div>
+  <mat-divider></mat-divider>
+  <div>{{a.commentaires}}</div>
+  <mat-divider></mat-divider>
+</mat-list-item> -->

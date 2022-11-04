@@ -1,3 +1,4 @@
+import { UrlHandlingStrategy } from "@angular/router";
 import { Forfait } from  "./forfait";
 
 export const FORFAITS: Forfait[] = [
@@ -29,7 +30,8 @@ export const FORFAITS: Forfait[] = [
 
         ],
         nouveauPrix: 860,
-        premium: false
+        premium: false,
+        urlImage: "assets/images/iphone.jpg"
 
         
     
@@ -62,7 +64,8 @@ export const FORFAITS: Forfait[] = [
 
         ],
         nouveauPrix: 300,
-        premium: true
+        premium: true,
+        urlImage: "assets/images/iphone.jpg"
 
         
     
@@ -95,7 +98,8 @@ export const FORFAITS: Forfait[] = [
 
         ],
         nouveauPrix: 150,
-        premium: true
+        premium: true,
+        urlImage: "assets/images/iphone.jpg"
 
         
     
