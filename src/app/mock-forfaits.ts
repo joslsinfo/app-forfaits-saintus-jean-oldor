@@ -31,7 +31,7 @@ export const FORFAITS: Forfait[] = [
         ],
         nouveauPrix: 860,
         premium: false,
-        urlImage: "assets/images/iphone.jpg"
+        urlImage: "../assets/images/iphone.jpg"
 
         
     
@@ -65,7 +65,7 @@ export const FORFAITS: Forfait[] = [
         ],
         nouveauPrix: 300,
         premium: true,
-        urlImage: "assets/images/iphone.jpg"
+        urlImage: "../assets/images/iphone.jpg"
 
         
     
@@ -99,7 +99,7 @@ export const FORFAITS: Forfait[] = [
         ],
         nouveauPrix: 150,
         premium: true,
-        urlImage: "assets/images/iphone.jpg"
+        urlImage: "../assets/images/iphone.jpg"
 
         
     
