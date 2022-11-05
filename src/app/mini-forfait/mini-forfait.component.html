@@ -1,5 +1,3 @@
-
-
 <!-- <div class="liste">
 
 {{nom}}
@@ -16,28 +14,41 @@
 
 
 <div class="miniforfait-card">
-    <mat-card-header>
-      <h2>Mini Forfait </h2>
-    </mat-card-header>
+  <mat-card-header>
+    <h2>Mini Forfait </h2>
+  </mat-card-header>
 
- 
-    
+
+  <div class="mini">
     <mat-card>
-      <mat-card-title>  <img [src]="forfait?.imageUrl"> <mat-divider></mat-divider></mat-card-title>
+      <mat-card-title> <img [src]="forfait?.imageUrl">
+        <mat-divider></mat-divider>
+      </mat-card-title>
 
-      <mat-card-title> {{forfait?.nom}} <mat-divider></mat-divider></mat-card-title>
-      <mat-card-content> {{forfait?.etablissement?.nomEtablissement}} <mat-divider></mat-divider></mat-card-content>
-      <mat-card-content> {{forfait?.dateDebut}} <mat-divider></mat-divider></mat-card-content>
-      <mat-card-content> {{forfait?.dateFin}} <mat-divider></mat-divider></mat-card-content>
-      <mat-card-content> {{forfait?.prix | currency:'CAD':'symbol': '3.2-2' : 'fr'}} <mat-divider></mat-divider></mat-card-content>
+      <mat-card-title> 
+        {{forfait?.nom}} <mat-divider></mat-divider>
+      </mat-card-title>
+      <mat-card-content> 
+        {{forfait?.etablissement?.nomEtablissement}} <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-content> 
+        From : {{forfait?.dateDebut}} <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-content> 
+        To : {{forfait?.dateFin}} <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-content> 
+        {{forfait?.prix | currency:'CAD':'symbol': '3.2-2' : 'fr'}} <mat-divider></mat-divider>
+      </mat-card-content>
 
-    
+
     </mat-card>
-
   </div>
 
+</div>
 
-  <!-- <mat-list> {{forfait?.nom}} <mat-divider></mat-divider></mat-list>
+
+<!-- <mat-list> {{forfait?.nom}} <mat-divider></mat-divider></mat-list>
   <mat-list-item> {{forfait?.etablissement?.nomEtablissement}} <mat-divider></mat-divider></mat-list-item>
   <mat-list-item> {{forfait?.dateDebut}} <mat-divider></mat-divider></mat-list-item>
   <mat-list-item> {{forfait?.dateFin}} <mat-divider></mat-divider></mat-list-item>

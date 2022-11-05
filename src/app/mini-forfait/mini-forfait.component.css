@@ -26,7 +26,7 @@
   .miniforfait-card {
     /* flex:1; */
     max-width:360px;
-    /* width:25%; */
+    width:90%;
     /* margin-bottom: 1rem; */
     margin-top: 1.2rem;
     /* margin-right:0.9rem; */
@@ -39,5 +39,18 @@
 
   div> img{
     width:300px;
+    /* width:25%; */
   
   }
+
+  .mini{
+    width:70%;
+  
+
+ 
+  }
+
+  .mini img{
+    width:100%;
+  }
+
