@@ -18,8 +18,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MiniForfaitComponent } from './mini-forfait/mini-forfait.component';
 import { ForfaitCompletComponent } from './forfait-complet/forfait-complet.component';
 import { NavigationComponent } from './navigation/navigation.component';
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
 
-
+registerLocaleData(localeFr, 'fr');
 
 @NgModule({
   declarations: [

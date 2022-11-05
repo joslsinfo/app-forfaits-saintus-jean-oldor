@@ -17,7 +17,7 @@ export interface Forfait {
     avis: Avis[];
     nouveauPrix: number;
     premium: boolean;
-    urlImage: string;
+    imageUrl: string;
 
    
 

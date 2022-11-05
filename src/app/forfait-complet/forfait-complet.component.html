@@ -10,7 +10,8 @@
 
     <mat-card>
     
-      <!-- <mat-card-title> {{forfait?.urlImage}} <mat-divider></mat-divider></mat-card-title> -->
+      <mat-card-title> {{forfait?.imageUrl}} <mat-divider></mat-divider></mat-card-title>
+      
       <mat-card-title> {{forfait?.nom}} <mat-divider></mat-divider></mat-card-title>
       <mat-card-content> {{forfait?.description}} <mat-divider></mat-divider></mat-card-content>
       <mat-card-content> {{forfait?.code | uppercase}} </mat-card-content>
@@ -19,7 +20,7 @@
       <mat-card-content> {{forfait?.etablissement?.coordonnees}} <mat-divider></mat-divider></mat-card-content>
       <mat-card-content> {{forfait?.dateDebut}} <mat-divider></mat-divider></mat-card-content>
       <mat-card-content> {{forfait?.dateFin}} <mat-divider></mat-divider></mat-card-content>
-      <mat-card-content> {{forfait?.prix}} $CAD <mat-divider></mat-divider></mat-card-content>
+      <mat-card-content> {{forfait?.prix | currency:'CAD':'symbol': '3.2-2' : 'fr'}}  <mat-divider></mat-divider></mat-card-content>
     
    
 
@@ -44,3 +45,7 @@
   <mat-list-item> {{forfait?.dateFin}} <mat-divider></mat-divider></mat-list-item>
   <mat-list-item> {{forfait?.prix}} $CAD <mat-divider></mat-divider></mat-list-item>
   <mat-list-item *ngFor="let a of forfait?.avis"> <div>{{a.note}}</div><mat-divider></mat-divider> <div>{{a.commentaires}}</div><mat-divider></mat-divider></mat-list-item> -->
+
+
+
+ 
