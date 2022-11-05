@@ -10,8 +10,8 @@
 
     <mat-card>
     
-      <mat-card-title> {{forfait?.imageUrl}} <mat-divider></mat-divider></mat-card-title>
-      
+      <mat-card-title>  <img [src]="forfait?.imageUrl"> <mat-divider></mat-divider></mat-card-title>
+      <!-- <img [src]="forfait?.imageUrl"> -->
       <mat-card-title> {{forfait?.nom}} <mat-divider></mat-divider></mat-card-title>
       <mat-card-content> {{forfait?.description}} <mat-divider></mat-divider></mat-card-content>
       <mat-card-content> {{forfait?.code | uppercase}} </mat-card-content>
@@ -26,7 +26,9 @@
 
       <mat-card-content *ngFor="let a of forfait?.avis"> <div>{{a.note}}</div><mat-divider></mat-divider> <div>{{a.commentaires}}</div><mat-divider></mat-divider></mat-card-content>
       
-  
+
+
+
             
     </mat-card>
 

@@ -32,19 +32,26 @@
 </div> -->
 
 <div class="container" *ngFor="let f of forfaits">
-  
+
+  <!-- <div *ngIf="f.imageUrl">
+    <img [src]="f.imageUrl"> 
+  </div> -->
+    
   <app-mini-forfait [forfait]="f"> </app-mini-forfait>
   <app-forfait-complet [forfait]="f"></app-forfait-complet>
   <app-forfait [forfait]="f"> </app-forfait>
 
   <!-- Affichage des prix -->
   <div *ngIf="f.prix >= 0 ">
-    <div class="nouveau-prix"> {{f.nouveauPrix | currency:'CAD':'symbol': '3.2-2' : 'fr'}}  </div>
-    <div class="barre"> {{f.prix | currency:'CAD':'symbol': '3.2-2' : 'fr'}}  </div>
+    <div class="nouveau-prix"> {{f.nouveauPrix | currency:'CAD':'symbol': '2.2-2' : 'fr'}}  </div>
+    <div class="barre"> {{f.prix | currency:'CAD':'symbol': '2.2-2' : 'fr'}}  </div>
     <div class="save"> Save: {{f.prix - f.nouveauPrix }} $</div>
 
-
   </div>
+
+
+   
+
 
 
 </div>

@@ -31,7 +31,7 @@ export const FORFAITS: Forfait[] = [
         ],
         nouveauPrix: 860,
         premium: false,
-        imageUrl: 'assets/img/iphonereduite.jpg'
+        imageUrl: 'assets/img/iphoneresize.jpg'
         
     
     },
@@ -64,7 +64,7 @@ export const FORFAITS: Forfait[] = [
         ],
         nouveauPrix: 300,
         premium: true,
-        imageUrl: 'assets/img/iphonereduite.png'
+        imageUrl: 'assets/img/massage1resize.jpg'
 
         
     
@@ -98,7 +98,41 @@ export const FORFAITS: Forfait[] = [
         ],
         nouveauPrix: 150,
         premium: true,
-        imageUrl: 'assets/img/iphonereduite.png'
+        imageUrl: 'assets/img/massage2resize.jpg'
+
+        
+    
+    },
+    {
+        nom: 'Forfaits massages',
+        description: 'Massages pour Bébé',
+        code: 'f0004',
+        categories: [
+           'Détente'
+        ],
+        etablissement: {
+            nomEtablissement: 'JOSLS Massage',
+            coordonnees: [
+                '15 rue Edith ', 'Laval'
+            ]
+     
+        },
+
+        dateDebut: '2022-11-02',
+        dateFin: '2023-01-31',
+        prix: 100,
+
+        avis: [
+            {
+
+                note: 10,
+                commentaires: 'Un très bon forfait pour Bébé'
+           }
+
+        ],
+        nouveauPrix: 70,
+        premium: true,
+        imageUrl: 'assets/img/massage3resize.jpg'
 
         
     

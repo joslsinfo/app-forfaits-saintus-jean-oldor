@@ -20,15 +20,13 @@
       <h2>Mini Forfait </h2>
     </mat-card-header>
 
-    <!-- <mat-card-content> <div> <img src="../assets/images/iphone.jpg"> </div>  <mat-divider></mat-divider></mat-card-content> -->
+ 
     
     <mat-card>
+      <mat-card-title>  <img [src]="forfait?.imageUrl"> <mat-divider></mat-divider></mat-card-title>
+
       <mat-card-title> {{forfait?.nom}} <mat-divider></mat-divider></mat-card-title>
       <mat-card-content> {{forfait?.etablissement?.nomEtablissement}} <mat-divider></mat-divider></mat-card-content>
-      <!-- <mat-card-content> {{forfait?.code | uppercase}} </mat-card-content> -->
-      <!-- <mat-card-content> {{forfait?.categories}} </mat-card-content>
-      <mat-card-content> {{forfait?.etablissement?.nomEtablissement}} </mat-card-content> -->
-      <!-- <mat-card-content> {{forfait?.etablissement?.coordonnees}} </mat-card-content> -->
       <mat-card-content> {{forfait?.dateDebut}} <mat-divider></mat-divider></mat-card-content>
       <mat-card-content> {{forfait?.dateFin}} <mat-divider></mat-divider></mat-card-content>
       <mat-card-content> {{forfait?.prix | currency:'CAD':'symbol': '3.2-2' : 'fr'}} <mat-divider></mat-divider></mat-card-content>
