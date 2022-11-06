@@ -51,8 +51,11 @@
       </mat-card-content>
       <mat-card-content> {{forfait?.etablissement?.nomEtablissement}} <mat-divider></mat-divider>
       </mat-card-content>
-      <mat-card-content> {{forfait?.etablissement?.coordonnees}} <mat-divider></mat-divider>
-      </mat-card-content>
+      <mat-card-content> {{forfait?.etablissement?.coordonnees?.adresse}} <mat-divider></mat-divider></mat-card-content>
+      <mat-card-content> {{forfait?.etablissement?.coordonnees?.ville}} <mat-divider></mat-divider></mat-card-content>
+      <mat-card-content> {{forfait?.etablissement?.coordonnees?.telephone}} <mat-divider></mat-divider></mat-card-content>
+      <mat-card-content> {{forfait?.etablissement?.coordonnees?.courriel}} <mat-divider></mat-divider></mat-card-content>
+      <mat-card-content> {{forfait?.etablissement?.coordonnees?.siteWeb}} <mat-divider></mat-divider></mat-card-content>
       <mat-card-content> From :  {{forfait?.dateDebut}} <mat-divider></mat-divider>
       </mat-card-content>
       <mat-card-content> To   :  {{forfait?.dateFin}} <mat-divider></mat-divider>

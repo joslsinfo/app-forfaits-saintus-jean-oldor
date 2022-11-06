@@ -11,9 +11,16 @@ export const FORFAITS: Forfait[] = [
         ],
         etablissement: {
             nomEtablissement: 'Cummunication plus',
-            coordonnees: [
-                'Centre Laval'
-            ]
+            coordonnees: 
+                {
+                    adresse: 'Centre Laval',
+                    ville: 'Laval',
+                    telephone: '514-730-8206',
+                    courriel: 'josaintus@gmail.com',
+                    siteWeb: 'josaintus.com'
+
+                }
+            
      
         },
 
@@ -35,18 +42,26 @@ export const FORFAITS: Forfait[] = [
         
     
     },
+
     {
         nom: 'Forfaits massages',
         description: 'Massage pour un couple',
         code: 'f0002',
         categories: [
-            'Détente'
+            'Détente', ' Hebergement'
         ],
         etablissement: {
             nomEtablissement: 'JOSLS Massage',
-            coordonnees: [
-                '15 rue Edith ', 'Laval'
-            ]
+            coordonnees: 
+                {
+                    adresse: '33 rue Edith',
+                    ville: 'Laval',
+                    telephone: '514-730-8282',
+                    courriel: 'josls@gmail.com',
+                    siteWeb: 'joslsinfo.com'
+
+                }
+            
      
         },
 
@@ -65,22 +80,29 @@ export const FORFAITS: Forfait[] = [
         nouveauPrix: 300,
         premium: true,
         imageUrl: 'assets/img/massage1resize.jpg'
-
         
     
     },
+
     {
         nom: 'Forfaits massages',
         description: 'Massages pour une personne',
         code: 'f0003',
         categories: [
-           'Détente'
+            'Détente', ' Restaurant'
         ],
         etablissement: {
             nomEtablissement: 'JOSLS Massage',
-            coordonnees: [
-                '15 rue Edith ', 'Laval'
-            ]
+            coordonnees: 
+                {
+                    adresse: '33 rue Edith',
+                    ville: 'Laval',
+                    telephone: '514-730-8282',
+                    courriel: 'josls@gmail.com',
+                    siteWeb: 'joslsinfo.com'
+
+                }
+            
      
         },
 
@@ -99,27 +121,34 @@ export const FORFAITS: Forfait[] = [
         nouveauPrix: 150,
         premium: true,
         imageUrl: 'assets/img/massage2resize.jpg'
-
         
     
     },
+
     {
         nom: 'Forfaits massages',
         description: 'Massages pour Bébé',
         code: 'f0004',
         categories: [
-           'Détente'
+            'Détente'
         ],
         etablissement: {
             nomEtablissement: 'JOSLS Massage',
-            coordonnees: [
-                '15 rue Edith ', 'Laval'
-            ]
+            coordonnees: 
+                {
+                    adresse: '33 rue Edith',
+                    ville: 'Laval',
+                    telephone: '514-730-8282',
+                    courriel: 'josls@gmail.com',
+                    siteWeb: 'joslsinfo.com'
+
+                }
+            
      
         },
 
         dateDebut: '2022-11-02',
-        dateFin: '2023-01-31',
+        dateFin: '2022-01-31',
         prix: 100,
 
         avis: [
@@ -133,12 +162,11 @@ export const FORFAITS: Forfait[] = [
         nouveauPrix: 70,
         premium: true,
         imageUrl: 'assets/img/massage3resize.jpg'
-
         
     
     }
 
-    
+        
 
  
 ]

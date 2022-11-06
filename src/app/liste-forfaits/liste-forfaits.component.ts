@@ -1,5 +1,5 @@
 import { FORFAITS } from './../mock-forfaits';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-liste-forfaits',
@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./liste-forfaits.component.css']
 })
 export class ListeForfaitsComponent implements OnInit {
-[x: string]: any;
+
   forfaits = FORFAITS
 
   constructor() { }
