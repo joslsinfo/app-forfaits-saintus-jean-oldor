@@ -3,21 +3,19 @@
   }
 
   .container{
+  
     display: flex;
     flex-wrap: wrap;
     max-width:1200px;
-    width:100%;
+    width:90%;
     justify-content:space-around;
     /* width: 100%; */
     /* background-color: #f7f7f7; */
  
-    margin: 0.5rem 0.5rem;
+    margin: 0.5rem 1.6rem;
     /* margin: .5rem .5rem; */
     background-color: rgb(182, 214, 214);
-   
-
-
- 
+    
 }
 
 .title-h1{
@@ -47,7 +45,7 @@ mat-card{
   color: #333;
   font-weight: bold;
   margin-top: .6rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
 
 }
 
@@ -71,9 +69,12 @@ mat-card{
   /* width:20%; */
   justify-content:space-around;
   /* padding: .5rem; */
-  margin: 0 1.3rem;
+  margin: 0 1rem;
   /* margin: .5rem .5rem; */
   /* background-color: rgb(182, 214, 214); */
- 
+  background-color: rgb(242, 249, 250);
+
+
+
 
 }

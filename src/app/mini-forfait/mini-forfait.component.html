@@ -25,21 +25,30 @@
         <mat-divider></mat-divider>
       </mat-card-title>
 
-      <mat-card-title> 
+      <mat-card-title>
         {{forfait?.nom}} <mat-divider></mat-divider>
       </mat-card-title>
-      <mat-card-content> 
+      <mat-card-content>
         {{forfait?.etablissement?.nomEtablissement}} <mat-divider></mat-divider>
       </mat-card-content>
-      <mat-card-content> 
+      <mat-card-content>
         From : {{forfait?.dateDebut}} <mat-divider></mat-divider>
       </mat-card-content>
-      <mat-card-content> 
+      <mat-card-content>
         To : {{forfait?.dateFin}} <mat-divider></mat-divider>
       </mat-card-content>
-      <mat-card-content> 
-        {{forfait?.prix | currency:'CAD':'symbol': '3.2-2' : 'fr'}} <mat-divider></mat-divider>
+    
+      <div *ngIf="forfait!.nouveauPrix > 0">
+      <mat-card-content>
+          <div class="nouveau-prix"> {{forfait?.nouveauPrix | currency:'CAD':'symbol': '2.2-2' : 'fr'}} </div>
+          <mat-divider></mat-divider>
+          <div class="barre">{{forfait?.prix | currency:'CAD':'symbol': '2.2-2' : 'fr'}}</div>
+       
+        <mat-divider></mat-divider>
+        <div> Save: {{ forfait!.prix - forfait!.nouveauPrix }}$</div>
+        <mat-divider></mat-divider>
       </mat-card-content>
+    </div>
 
 
     </mat-card>
