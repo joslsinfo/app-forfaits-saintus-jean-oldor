@@ -3,7 +3,7 @@ import { Forfait } from  "./forfait";
 
 export const FORFAITS: Forfait[] = [
     {
-        nom: 'Forfaits Smart phone',
+        nom: 'Forfait Smart phone',
         description: 'Iphone 13 Pro',
         code: 'f0001',
         categories: [
@@ -44,7 +44,7 @@ export const FORFAITS: Forfait[] = [
     },
 
     {
-        nom: 'Forfaits massages',
+        nom: 'Forfait massage',
         description: 'Massage pour un couple',
         code: 'f0002',
         categories: [
@@ -73,7 +73,7 @@ export const FORFAITS: Forfait[] = [
             {
 
                 note: 10,
-                commentaires: 'Un très bon forfait pour de bons massages'
+                commentaires: 'Un très bon forfait pour un bon massage'
            }
 
         ],
@@ -85,8 +85,8 @@ export const FORFAITS: Forfait[] = [
     },
 
     {
-        nom: 'Forfaits massages',
-        description: 'Massages pour une personne',
+        nom: 'Forfait massage',
+        description: 'Massage pour une personne',
         code: 'f0003',
         categories: [
             'Détente', ' Restaurant'
@@ -126,8 +126,8 @@ export const FORFAITS: Forfait[] = [
     },
 
     {
-        nom: 'Forfaits massages',
-        description: 'Massages pour Bébé',
+        nom: 'Forfait massage',
+        description: 'Massage pour Bébé',
         code: 'f0004',
         categories: [
             'Détente'
