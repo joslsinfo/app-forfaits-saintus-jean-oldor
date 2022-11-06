@@ -10,8 +10,8 @@
 
     <mat-card>
     
-      <mat-card-title>  <img [src]="forfait?.imageUrl"> <mat-divider></mat-divider></mat-card-title>
-      <!-- <img [src]="forfait?.imageUrl"> -->
+      <mat-card-title>  <img [src]="forfait?.imageUrl" alt="{{forfait?.nom}}"> <mat-divider></mat-divider></mat-card-title>
+      <!-- <img [src]="forfait?.imageUrl" alt="{{forfait?.nom}}"> -->
       <mat-card-title> {{forfait?.nom}} <mat-divider></mat-divider></mat-card-title>
       <mat-card-content> {{forfait?.description}} <mat-divider></mat-divider></mat-card-content>
       <mat-card-content> {{forfait?.code | uppercase}} </mat-card-content>
@@ -46,12 +46,16 @@
   <mat-list-item> {{forfait?.code | uppercase}} </mat-list-item>
   <mat-list-item> {{forfait?.categories}} <mat-divider></mat-divider></mat-list-item>
   <mat-list-item> {{forfait?.etablissement?.nomEtablissement}} <mat-divider></mat-divider></mat-list-item>
-  <mat-list-item> {{forfait?.etablissement?.coordonnees}} <mat-divider></mat-divider></mat-list-item>
+  <mat-list-item> {{forfait?.etablissement?.coordonnees?.adresse}} <mat-divider></mat-divider></mat-list-item>
+  <mat-list-item> {{forfait?.etablissement?.coordonnees?.ville}} <mat-divider></mat-divider></mat-list-item>
+  <mat-list-item> {{forfait?.etablissement?.coordonnees?.telephone}} <mat-divider></mat-divider></mat-list-item>
+  <mat-list-item> {{forfait?.etablissement?.coordonnees?.courriel}} <mat-divider></mat-divider></mat-list-item>
+  <mat-list-item> {{forfait?.etablissement?.coordonnees?.siteWeb}} <mat-divider></mat-divider></mat-list-item>
   <mat-list-item> {{forfait?.dateDebut}} <mat-divider></mat-divider></mat-list-item>
   <mat-list-item> {{forfait?.dateFin}} <mat-divider></mat-divider></mat-list-item>
   <mat-list-item> {{forfait?.prix}} $CAD <mat-divider></mat-divider></mat-list-item>
-  <mat-list-item *ngFor="let a of forfait?.avis"> <div>{{a.note}}</div><mat-divider></mat-divider> <div>{{a.commentaires}}</div><mat-divider></mat-divider></mat-list-item> -->
+  <mat-list-item *ngFor="let a of forfait?.avis"> <div>{{a.note}}</div><mat-divider></mat-divider> <div>{{a.commentaires}}</div><mat-divider></mat-divider></mat-list-item>
 
-
+ -->
 
  

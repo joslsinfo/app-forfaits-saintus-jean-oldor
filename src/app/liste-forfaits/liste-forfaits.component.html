@@ -41,6 +41,23 @@
   <app-forfait-complet [forfait]="f"></app-forfait-complet>
   <app-forfait [forfait]="f"> </app-forfait>
 
+ <!-- <div>
+    <img src="{{f.imageUrl}}" alt="{{f.nom}}">
+    <p>{{f.nom}}</p>
+    <p>{{f.description}}</p>
+    <p>{{f.code | uppercase}} </p>
+    <p>{{f.categories}}</p>
+    <p>{{f.etablissement.nomEtablissement}}</p>
+    <p>{{f.etablissement.coordonnees.adresse}}</p>
+    <p>{{f.etablissement.coordonnees.ville}}</p>
+    <p>{{f.etablissement.coordonnees.telephone}}</p>
+    <p>{{f.etablissement.coordonnees.courriel}}</p>
+    <p>{{f.etablissement.coordonnees.siteWeb}}</p>
+    <p>{{f.dateDebut}}</p>
+    <p>{{f.dateFin}}</p>
+    <p>{{f.prix | currency:'CAD':'symbol': '3.2-2' : 'fr'}}</p>
+  </div> -->
+
   <!-- Affichage des prix -->
   <div *ngIf="f.prix >= 0 ">
     <div class="nouveau-prix"> {{f.nouveauPrix | currency:'CAD':'symbol': '2.2-2' : 'fr'}} </div>
