@@ -38,7 +38,8 @@ export const FORFAITS: Forfait[] = [
         ],
         nouveauPrix: 860,
         premium: false,
-        imageUrl: 'assets/img/iphoneresize.jpg'
+        imageUrl: 'assets/img/iphoneresize.jpg',
+        rating: 5
         
     
     },
@@ -79,7 +80,8 @@ export const FORFAITS: Forfait[] = [
         ],
         nouveauPrix: 300,
         premium: true,
-        imageUrl: 'assets/img/massage1resize.jpg'
+        imageUrl: 'assets/img/massage1resize.jpg',
+        rating: 5
         
     
     },
@@ -120,7 +122,8 @@ export const FORFAITS: Forfait[] = [
         ],
         nouveauPrix: 150,
         premium: true,
-        imageUrl: 'assets/img/massage2resize.jpg'
+        imageUrl: 'assets/img/massage2resize.jpg',
+        rating: 4
         
     
     },
@@ -161,7 +164,8 @@ export const FORFAITS: Forfait[] = [
         ],
         nouveauPrix: 70,
         premium: true,
-        imageUrl: 'assets/img/massage3resize.jpg'
+        imageUrl: 'assets/img/massage3resize.jpg',
+        rating: 5
         
     
     }

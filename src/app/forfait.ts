@@ -18,6 +18,7 @@ export interface Forfait {
     nouveauPrix: number;
     premium: boolean;
     imageUrl: string;
+    rating: number;
 
    
 

@@ -41,6 +41,7 @@
   <app-forfait-complet [forfait]="f"></app-forfait-complet>
   <app-forfait [forfait]="f"> </app-forfait>
 
+
  <!-- <div>
     <img src="{{f.imageUrl}}" alt="{{f.nom}}">
     <p>{{f.nom}}</p>
@@ -63,12 +64,19 @@
     <div class="nouveau-prix"> {{f.nouveauPrix | currency:'CAD':'symbol': '2.2-2' : 'fr'}} </div>
     <div class="barre"> {{f.prix | currency:'CAD':'symbol': '2.2-2' : 'fr'}} </div>
     <div class="save"> Save: {{f.prix - f.nouveauPrix }} $</div>
+ 
+  
+    <app-star-rating [forfait]="f"> </app-star-rating>
+ 
 
+   
   </div>
 
 
 
-
-
+ 
+  
+  
 
 </div>
+

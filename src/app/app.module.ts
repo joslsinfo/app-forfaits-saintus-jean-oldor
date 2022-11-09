@@ -21,6 +21,8 @@ import { ForfaitCompletComponent } from './forfait-complet/forfait-complet.compo
 import { NavigationComponent } from './navigation/navigation.component';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import { StarRatingComponent } from './shared/components/star-rating/star-rating.component';
+
 
 registerLocaleData(localeFr, 'fr');
 
@@ -31,6 +33,7 @@ registerLocaleData(localeFr, 'fr');
     ForfaitComponent,
     MiniForfaitComponent,
     ForfaitCompletComponent,
+    StarRatingComponent,
     NavigationComponent
   
 
