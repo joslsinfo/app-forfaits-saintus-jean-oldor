@@ -13,23 +13,24 @@ import { Forfait } from '../../../forfait';
 })
 
 export class StarRatingComponent implements OnChanges {
+  
 
-  public starWidth?: number;
-
-  public rating: number = 2;
-  // @Input()
   @Input() forfait?: Forfait;
   @Input() avis?: Avis;
   @Input() etablissment?: Etablissement;
 
+  public starWidth?: number;
+  // Initialisation 
+  public rating: number = 0;
  
-  // constructor() { }
+    // constructor() { }
   // ngOnChanges(changes: SimpleChanges): void {
   //   throw new Error('Method not implemented.');
   // }
 
+  // Modifier la valeur de chaque étoile(rating) si la valeur change 
   ngOnChanges() {
-    this.starWidth = this.forfait!.rating * 125 / 5 ; 
+    this.starWidth = this.forfait!.rating * 125 / 5; 
     console.log(this.starWidth);
   }
 

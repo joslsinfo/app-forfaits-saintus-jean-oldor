@@ -39,7 +39,7 @@ export const FORFAITS: Forfait[] = [
         nouveauPrix: 860,
         premium: false,
         imageUrl: 'assets/img/iphoneresize.jpg',
-        rating: 5
+        rating: 2.5
         
     
     },
