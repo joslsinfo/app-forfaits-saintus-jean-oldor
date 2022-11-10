@@ -40,7 +40,7 @@
    
     
     <mat-card>
-      <mat-card-title>  <img [src]="forfait?.imageUrl" [title]="forfait?.description" [alt]="forfait?.nom"> <mat-divider></mat-divider></mat-card-title>
+      <mat-card-title>  <img [src]="forfait?.imageUrl" [title]="forfait?.description | uppercase" [alt]="forfait?.nom"> <mat-divider></mat-divider></mat-card-title>
 
       <mat-card-title> {{forfait?.nom}} <mat-divider></mat-divider>
       </mat-card-title>
@@ -71,7 +71,9 @@
             <div class="barre">{{forfait?.prix | currency:'CAD':'symbol': '2.2-2' : 'fr'}}</div>
          
           <mat-divider></mat-divider>
+          <div *ngIf="forfait!.prix >= forfait!.nouveauPrix">
           <div> Save: {{ forfait!.prix - forfait!.nouveauPrix }}$</div>
+          </div>
           <mat-divider></mat-divider>
         </mat-card-content>
       </div>

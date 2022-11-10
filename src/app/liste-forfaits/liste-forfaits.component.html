@@ -21,7 +21,7 @@
 <!-- Affichage des forfaits premium -->
 <div class="premium" *ngFor="let f of forfaits">
   <p *ngIf="f.premium">
-    <app-mini-forfait  [forfait]="f"> </app-mini-forfait>
+    <app-mini-forfait [forfait]="f"> </app-mini-forfait>
   </p>
 </div>
 
@@ -36,13 +36,16 @@
   <!-- <div *ngIf="f.imageUrl.length > 0">
     <img [src]="f.imageUrl"> 
   </div> -->
+  <!-- <div *ngIf="f.imageUrl.length > 0">
+    <img src="{{f.imageUrl}}" title="{{f.description}}"> 
+  </div> -->
 
   <app-mini-forfait [forfait]="f"> </app-mini-forfait>
   <app-forfait-complet [forfait]="f"></app-forfait-complet>
   <app-forfait [forfait]="f"> </app-forfait>
 
 
- <!-- <div>
+  <!-- <div>
     <img src="{{f.imageUrl}}" alt="{{f.nom}}">
     <p>{{f.nom}}</p>
     <p>{{f.description}}</p>
@@ -63,20 +66,20 @@
   <div *ngIf="f.nouveauPrix >= 0 ">
     <div class="nouveau-prix"> {{f.nouveauPrix | currency:'CAD':'symbol': '2.2-2' : 'fr'}} </div>
     <div class="barre"> {{f.prix | currency:'CAD':'symbol': '2.2-2' : 'fr'}} </div>
-    <div class="save"> Save: {{f.prix - f.nouveauPrix }} $</div>
- 
-  
-    <app-star-rating [forfait]="f"> </app-star-rating>
- 
+    <div *ngIf="f.prix >= f.nouveauPrix">
+      <div class="save"> Save: {{f.prix - f.nouveauPrix }} $</div>
+    </div>
 
-   
+    <app-star-rating [forfait]="f"> </app-star-rating>
+
+
+
   </div>
 
 
 
- 
-  
-  
+
+
+  {{'Date du jour:' + getDate() | date:'fullDate'  }}
 
 </div>
-
