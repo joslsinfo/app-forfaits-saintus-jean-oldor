@@ -1,0 +1,103 @@
+<h2 class="title-h2">Formulaire forfait</h2>
+<div class="form-container">
+  <form>
+
+    <div>
+      <mat-form-field appearance="fill">
+
+        <mat-label>Nom du forfait</mat-label>
+        <input type="text" matInput [(ngModel)]="forfait.nom" id="nom" name="nom" value="nom"
+          placeholder="Nom du forfait">
+
+      </mat-form-field>
+
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Description</mat-label>
+        <textarea matInput type="text" [(ngModel)]="forfait.description" id="description" name="description"
+          value="description">description</textarea>
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Nom de l'établissement</mat-label>
+        <input type="text" matInput [(ngModel)]="forfait.etablissement.nomEtablissement" id="nomEtablissement"
+          name="nomEtablissement" value="nomEtablissement">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label> Adresse l'établissement</mat-label>
+        <input type="text" matInput [(ngModel)]="forfait.etablissement.coordonnees.adresse" id="adresse" name="adresse"
+          value="adresse">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label> Ville</mat-label>
+        <input type="text" matInput [(ngModel)]="forfait.etablissement.coordonnees.ville" id="ville" name="ville"
+          value="ville">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label> Téléphone</mat-label>
+        <input type="tel" matInput [(ngModel)]="forfait.etablissement.coordonnees.telephone" id="telephone"
+          name="telephone" value="telephone">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label> Courriel</mat-label>
+        <input type="email" matInput [(ngModel)]="forfait.etablissement.coordonnees.courriel" id="courriel"
+          name="courriel" value="courriel">
+      </mat-form-field>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label> Site web</mat-label>
+        <input type="text" matInput [(ngModel)]="forfait.etablissement.coordonnees.siteWeb" id="siteWeb" name="siteWeb"
+          value="siteWeb">
+      </mat-form-field>
+    </div>
+    <div>
+
+
+
+
+      <mat-form-field color="accent" appearance="fill">
+        <mat-label>Inherited calendar color</mat-label>
+        <input matInput [matDatepicker]="picker1" [(ngModel)]="forfait.dateDebut" id="dateDebut" name="dateDebut"
+          value="dateDebut">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+        <mat-datepicker #picker1></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field color="accent" appearance="fill">
+        <mat-label>Custom calendar color</mat-label>
+        <input matInput [matDatepicker]="picker2" [(ngModel)]="forfait.dateFin" id="dateFin" name="dateFin"
+          value="dateFin">
+        <mat-hint>MM/DD/YYYY</mat-hint>
+        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+        <mat-datepicker #picker2 color="primary"></mat-datepicker>
+      </mat-form-field>
+
+
+    </div>
+
+    <div class="checkbox">
+      <mat-checkbox class="example-margin" [(ngModel)]="forfait.premium">Premium</mat-checkbox>
+
+    </div>
+
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Prix</mat-label>
+        <input type="number" matInput [(ngModel)]="forfait.prix" id="prix" name="prix" value="prix"
+          placeholder="prix" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Nouveau prix</mat-label>
+        <input type="number" matInput [(ngModel)]="forfait.nouveauPrix" id="nouveauPrix" name="nouveauPrix"
+          value="nouveauPrix" placeholder="nouveauPrix" />
+      </mat-form-field>
+
+    </div>
+  </form>
+
+</div>

@@ -21,10 +21,18 @@ import { ForfaitCompletComponent } from './forfait-complet/forfait-complet.compo
 import { NavigationComponent } from './navigation/navigation.component';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
-import { StarRatingComponent } from './shared/components/star-rating/star-rating.component';
-
-
 registerLocaleData(localeFr, 'fr');
+import { StarRatingComponent } from './shared/components/star-rating/star-rating.component';
+import { FormulaireForfaitComponent } from './formulaire-forfait/formulaire-forfait.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { FormsModule } from '@angular/forms'; 
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import { FormulaireAvisComponent } from './formulaire-avis/formulaire-avis.component';
+import {MatSliderModule} from '@angular/material/slider';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +42,10 @@ registerLocaleData(localeFr, 'fr');
     MiniForfaitComponent,
     ForfaitCompletComponent,
     StarRatingComponent,
-    NavigationComponent
+    NavigationComponent,
+    FormulaireForfaitComponent,
+    FormulaireAvisComponent
+
   
 
  
@@ -49,7 +60,15 @@ registerLocaleData(localeFr, 'fr');
     MatIconModule,
     LayoutModule,
     MatButtonModule,
-    MatSidenavModule
+    MatSidenavModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatCheckboxModule,
+    MatSliderModule,
+  
   ],
   providers: [],
   bootstrap: [AppComponent]

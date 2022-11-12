@@ -24,27 +24,26 @@
 
 
   .miniforfait-card {
-    /* flex:1; */
-    max-width:360px;
-    width:90%;
-    /* margin-bottom: 1rem; */
+
+    max-width:100%;
+    width:100%;
+  
     margin-top: 1.2rem;
-    /* margin-right:0.9rem; */
-    /* margin-left: 1.9rem; */
+   
     flex-wrap: wrap;
     color:crimson;
-    /* background-color: rgb(182, 214, 214); */
+   
   }
 
 
   div> img{
     width:300px;
-    /* width:25%; */
+   
   
   }
 
   .mini{
-    width:70%;
+    width:80%;
    
   }
 

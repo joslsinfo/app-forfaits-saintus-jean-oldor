@@ -31,15 +31,15 @@ export const FORFAITS: Forfait[] = [
         avis: [
             {
 
-                note: 10,
-                commentaires: 'Un très bon forfait'
+                note: 6,
+                commentaires: 'Un bon forfait'
            }
 
         ],
         nouveauPrix: 860,
         premium: false,
         imageUrl: 'assets/img/iphoneresize.jpg',
-        rating: 2.5
+        rating: 3.5
         
     
     },
@@ -158,7 +158,7 @@ export const FORFAITS: Forfait[] = [
             {
 
                 note: 10,
-                commentaires: 'Un très bon forfait pour Bébé'
+                commentaires: 'J\'adore ce forfait pour Bébé'
            }
 
         ],

@@ -1,0 +1,25 @@
+<!-- <mat-slider type="number" min="0" value="1" max="10" step="0.5" aria-label="unit(s)" thumbLabel tickInterval="auto"
+[(ngModel)]="forfait.avis"> 
+
+</mat-slider>
+
+<mat-form-field class="example-full-width" appearance="fill">
+  <mat-label>Note sur 10</mat-label>
+  <input matInput type="number" [(ngModel)]="forfait.avis"> 
+</mat-form-field> -->
+
+
+<!-- ============================= -->
+<h2 class="title-h2">Formulaire avis</h2>
+<div class="form-container">
+  <form>
+    <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="10" step="1" min="0" max="10" aria-label="units">
+      <input matInput type="text">
+    </mat-slider>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Commentaires</mat-label>
+      <textarea class="textArea" matInput></textarea>
+    </mat-form-field>
+  </form>
+</div>

@@ -1,46 +1,15 @@
-<div class="forfait-container">
-
-  <!-- <div class="miniforfait-card">
-    <mat-card-header>
-      <h2>Mini forfait</h2>
-
-    </mat-card-header>
-    <mat-card>
-      <mat-card-title>
-        <app-mini-forfait [nom]="forfait?.nom"></app-mini-forfait>
-      </mat-card-title>
-
-      <mat-card-content>
-        <app-mini-forfait [etablissement]="forfait?.etablissement?.nomEtablissement"></app-mini-forfait>
-      </mat-card-content>
-
-      <mat-card-content>
-        <app-mini-forfait [dateDebut]="forfait?.dateDebut"></app-mini-forfait>
-      </mat-card-content>
-
-      <mat-card-content>
-        <app-mini-forfait [dateFin]="forfait?.dateFin"></app-mini-forfait>
-      </mat-card-content>
-
-      <mat-card-content>
-        <app-mini-forfait [prix]="forfait?.prix"></app-mini-forfait>
-      </mat-card-content>
-
-     
-    </mat-card>
-
-  </div> -->
-
-
-  <div class="forfait">
+<div class="forfait-complet">
+   
     <mat-card-header>
       <h2>Forfait</h2>
     </mat-card-header>
 
-   
-    
+  <div class="complet">
     <mat-card>
-      <mat-card-title>  <img [src]="forfait?.imageUrl" [title]="forfait?.description | uppercase" [alt]="forfait?.nom"> <mat-divider></mat-divider></mat-card-title>
+      <mat-card-title> 
+      <img [src]="forfait?.imageUrl" [title]="forfait?.description | uppercase" [alt]="forfait?.nom"> 
+      <mat-divider></mat-divider>
+     </mat-card-title>
 
       <mat-card-title> {{forfait?.nom}} <mat-divider></mat-divider>
       </mat-card-title>
@@ -93,7 +62,6 @@
     </mat-card>
 
   </div>
-
 
 </div>
 

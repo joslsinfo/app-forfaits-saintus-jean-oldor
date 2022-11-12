@@ -1,85 +1,77 @@
-<!-- <p>
-  <mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>apps</mat-icon>
-    </button>
-    <span>Application forfaits</span>
-    <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-      <mat-icon>share</mat-icon>
-    </button>
-  </mat-toolbar>
-</p> -->
-
 
 <h1 class="title-h1">
   Liste des forfaits
 </h1>
+
+<hr>
 <!-- Affichage des forfaits premium -->
 <div class="premium" *ngFor="let f of forfaits">
   <p *ngIf="f.premium">
     <app-mini-forfait [forfait]="f"> </app-mini-forfait>
+
   </p>
+  
 </div>
 
-<!-- <div  *ngFor="let f of forfaits">
-  <p [ngClass]="{ 'premium' :  f.premium === true } ">
-    <app-mini-forfait [forfait]="f"> </app-mini-forfait>
-  </p>
-</div> -->
+<br><br>
+<hr>
 
-<div class="container" *ngFor="let f of forfaits">
-
-  <!-- <div *ngIf="f.imageUrl.length > 0">
-    <img [src]="f.imageUrl"> 
-  </div> -->
-  <!-- <div *ngIf="f.imageUrl.length > 0">
-    <img src="{{f.imageUrl}}" title="{{f.description}}"> 
-  </div> -->
-
-  <app-mini-forfait [forfait]="f"> </app-mini-forfait>
+<div class="container-flex" *ngFor="let f of forfaits">
   <app-forfait-complet [forfait]="f"></app-forfait-complet>
-  <app-forfait [forfait]="f"> </app-forfait>
+     <div class="rating-style" *ngIf="f.rating > 0">
+      <app-star-rating [forfait]="f"> </app-star-rating>
+ 
+  </div>
+</div>
 
+<br><br>
+<hr>
+  <app-formulaire-forfait></app-formulaire-forfait>
+  <hr>
+  <app-formulaire-avis></app-formulaire-avis>
 
-  <!-- <div>
-    <img src="{{f.imageUrl}}" alt="{{f.nom}}">
-    <p>{{f.nom}}</p>
-    <p>{{f.description}}</p>
-    <p>{{f.code | uppercase}} </p>
-    <p>{{f.categories}}</p>
-    <p>{{f.etablissement.nomEtablissement}}</p>
-    <p>{{f.etablissement.coordonnees.adresse}}</p>
-    <p>{{f.etablissement.coordonnees.ville}}</p>
-    <p>{{f.etablissement.coordonnees.telephone}}</p>
-    <p>{{f.etablissement.coordonnees.courriel}}</p>
-    <p>{{f.etablissement.coordonnees.siteWeb}}</p>
-    <p>{{f.dateDebut}}</p>
-    <p>{{f.dateFin}}</p>
-    <p>{{f.prix | currency:'CAD':'symbol': '3.2-2' : 'fr'}}</p>
+  <!-- <br><br>
+  <hr>
+  <div class="container-flex" *ngFor="let f of forfaits">
+    <app-mini-forfait [forfait]="f"></app-mini-forfait>
+       <div class="rating-style" *ngIf="f.rating > 0">
+        <app-star-rating [forfait]="f"> </app-star-rating>
+   
+    </div>
   </div> -->
+
+ 
+
+<!-- <div class="container" *ngFor="let f of forfaits"> -->
+
+    <!-- <app-forfait-complet [forfait]="f"></app-forfait-complet> -->
+
+
+ 
+ 
 
   <!-- Affichage des prix -->
-  <div *ngIf="f.nouveauPrix >= 0 ">
+  
+  <!-- <div *ngIf="f.nouveauPrix >= 0 ">
     <div class="nouveau-prix"> {{f.nouveauPrix | currency:'CAD':'symbol': '2.2-2' : 'fr'}} </div>
     <div class="barre"> {{f.prix | currency:'CAD':'symbol': '2.2-2' : 'fr'}} </div>
-    <div *ngIf="f.prix >= f.nouveauPrix">
-      <div class="save"> Save: {{f.prix - f.nouveauPrix }} $</div>
-    </div>
+  
+   <div *ngIf="f.prix >= f.nouveauPrix" class="save"> Save: {{f.prix - f.nouveauPrix }} $</div>
+
 
     <app-star-rating [forfait]="f"> </app-star-rating>
 
 
 
-  </div>
+  </div> -->
 
-
-
-
-
+  
+   <!-- <app-formulaire-forfait></app-formulaire-forfait>
+  <app-formulaire-avis></app-formulaire-avis>  -->
+  
+  <br><br>
   {{'Date du jour:' + getDate() | date:'fullDate'  }}
+  
+<!-- </div> -->
 
-</div>
+
