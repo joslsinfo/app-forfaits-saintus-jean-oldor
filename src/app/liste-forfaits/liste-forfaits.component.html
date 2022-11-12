@@ -1,4 +1,6 @@
 
+
+
 <h1 class="title-h1">
   Liste des forfaits
 </h1>
@@ -20,9 +22,13 @@
   <app-forfait-complet [forfait]="f"></app-forfait-complet>
      <div class="rating-style" *ngIf="f.rating > 0">
       <app-star-rating [forfait]="f"> </app-star-rating>
- 
-  </div>
+      <app-formulaire-avis></app-formulaire-avis>
+     </div>
 </div>
+
+
+
+
 
 <br><br>
 <hr>
