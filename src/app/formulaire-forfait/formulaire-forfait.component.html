@@ -15,43 +15,43 @@
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Description</mat-label>
         <textarea matInput type="text" [(ngModel)]="forfait.description" id="description" name="description"
-          value="description">description</textarea>
+          value="description" placeholder="description">description</textarea>
       </mat-form-field>
     </div>
     <div>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Nom de l'établissement</mat-label>
         <input type="text" matInput [(ngModel)]="forfait.etablissement.nomEtablissement" id="nomEtablissement"
-          name="nomEtablissement" value="nomEtablissement">
+          name="nomEtablissement" value="nomEtablissement" placeholder="Nom de l'établissement">
       </mat-form-field>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label> Adresse l'établissement</mat-label>
         <input type="text" matInput [(ngModel)]="forfait.etablissement.coordonnees.adresse" id="adresse" name="adresse"
-          value="adresse">
+          value="adresse" placeholder="Adresse l'établissement">
       </mat-form-field>
     </div>
     <div>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label> Ville</mat-label>
         <input type="text" matInput [(ngModel)]="forfait.etablissement.coordonnees.ville" id="ville" name="ville"
-          value="ville">
+          value="ville" placeholder="Ville">
       </mat-form-field>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label> Téléphone</mat-label>
         <input type="tel" matInput [(ngModel)]="forfait.etablissement.coordonnees.telephone" id="telephone"
-          name="telephone" value="telephone">
+          name="telephone" value="telephone" placeholder="555-555-5555">
       </mat-form-field>
     </div>
     <div>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label> Courriel</mat-label>
         <input type="email" matInput [(ngModel)]="forfait.etablissement.coordonnees.courriel" id="courriel"
-          name="courriel" value="courriel">
+          name="courriel" value="courriel" placeholder="xxxx@xxxx.com">
       </mat-form-field>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label> Site web</mat-label>
         <input type="text" matInput [(ngModel)]="forfait.etablissement.coordonnees.siteWeb" id="siteWeb" name="siteWeb"
-          value="siteWeb">
+          value="siteWeb" placeholder="www.xxxx.com">
       </mat-form-field>
     </div>
     <div>

@@ -1,6 +1,3 @@
-
-
-
 <h1 class="title-h1">
   Liste des forfaits
 </h1>
@@ -10,9 +7,8 @@
 <div class="premium" *ngFor="let f of forfaits">
   <p *ngIf="f.premium">
     <app-mini-forfait [forfait]="f"> </app-mini-forfait>
-
   </p>
-  
+
 </div>
 
 <br><br>
@@ -20,23 +16,20 @@
 
 <div class="container-flex" *ngFor="let f of forfaits">
   <app-forfait-complet [forfait]="f"></app-forfait-complet>
-     <div class="rating-style" *ngIf="f.rating > 0">
-      <app-star-rating [forfait]="f"> </app-star-rating>
-      <app-formulaire-avis></app-formulaire-avis>
-     </div>
+  <div class="rating-style" *ngIf="f.rating > 0">
+    <app-star-rating [forfait]="f"> </app-star-rating>
+    <app-formulaire-avis></app-formulaire-avis>
+  </div>
 </div>
-
-
-
 
 
 <br><br>
 <hr>
-  <app-formulaire-forfait></app-formulaire-forfait>
-  <hr>
-  <app-formulaire-avis></app-formulaire-avis>
+<app-formulaire-forfait></app-formulaire-forfait>
+<hr>
+<app-formulaire-avis></app-formulaire-avis>
 
-  <!-- <br><br>
+<!-- <br><br>
   <hr>
   <div class="container-flex" *ngFor="let f of forfaits">
     <app-mini-forfait [forfait]="f"></app-mini-forfait>
@@ -46,19 +39,19 @@
     </div>
   </div> -->
 
- 
+
 
 <!-- <div class="container" *ngFor="let f of forfaits"> -->
 
-    <!-- <app-forfait-complet [forfait]="f"></app-forfait-complet> -->
+<!-- <app-forfait-complet [forfait]="f"></app-forfait-complet> -->
 
 
- 
- 
 
-  <!-- Affichage des prix -->
-  
-  <!-- <div *ngIf="f.nouveauPrix >= 0 ">
+
+
+<!-- Affichage des prix -->
+
+<!-- <div *ngIf="f.nouveauPrix >= 0 ">
     <div class="nouveau-prix"> {{f.nouveauPrix | currency:'CAD':'symbol': '2.2-2' : 'fr'}} </div>
     <div class="barre"> {{f.prix | currency:'CAD':'symbol': '2.2-2' : 'fr'}} </div>
   
@@ -71,13 +64,11 @@
 
   </div> -->
 
-  
-   <!-- <app-formulaire-forfait></app-formulaire-forfait>
+
+<!-- <app-formulaire-forfait></app-formulaire-forfait>
   <app-formulaire-avis></app-formulaire-avis>  -->
-  
-  <br><br>
-  {{'Date du jour:' + getDate() | date:'fullDate'  }}
-  
+
+<br><br>
+{{'Date du jour:' + getDate() | date:'fullDate'  }}
+
 <!-- </div> -->
-
-
