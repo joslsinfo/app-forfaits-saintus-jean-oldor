@@ -4,72 +4,72 @@
   </mat-card-header>
 
 
-<div class="complet">
-  <mat-card>
-    <mat-card-title> 
-      <img [src]="forfait?.imageUrl" [title]="forfait?.description | uppercase" [alt]="forfait?.nom">
-      <mat-divider></mat-divider>
-    </mat-card-title>
-    <!-- <mat-card-content><img src="{{forfait?.imageUrl}}"></mat-card-content> -->
-    <!-- <img [src]="forfait?.imageUrl" alt="{{forfait?.nom}}"> -->
-    <mat-card-title> {{forfait?.nom}} <mat-divider></mat-divider>
-    </mat-card-title>
-    <mat-card-content> {{forfait?.description}} <mat-divider></mat-divider>
-    </mat-card-content>
-    <mat-card-content> {{forfait?.code | uppercase}} </mat-card-content>
-    <mat-card-content> {{forfait?.categories}} <mat-divider></mat-divider>
-    </mat-card-content>
-    <mat-card-content> {{forfait?.etablissement?.nomEtablissement}} <mat-divider></mat-divider>
-    </mat-card-content>
-    <mat-card-content> {{forfait?.etablissement?.coordonnees?.adresse}} <mat-divider></mat-divider>
-    </mat-card-content>
-    <mat-card-content> {{forfait?.etablissement?.coordonnees?.ville}} <mat-divider></mat-divider>
-    </mat-card-content>
-    <mat-card-content> {{forfait?.etablissement?.coordonnees?.telephone}} <mat-divider></mat-divider>
-    </mat-card-content>
-    <mat-card-content> {{forfait?.etablissement?.coordonnees?.courriel}} <mat-divider></mat-divider>
-    </mat-card-content>
-    <mat-card-content> {{forfait?.etablissement?.coordonnees?.siteWeb}} <mat-divider></mat-divider>
-    </mat-card-content>
-    <mat-card-content> From : {{forfait?.dateDebut}} <mat-divider></mat-divider>
-    </mat-card-content>
-    <mat-card-content> To : {{forfait?.dateFin}} <mat-divider></mat-divider>
-    </mat-card-content>
-    
-    <!-- <mat-card-content> {{forfait?.prix | currency:'CAD':'symbol': '3.2-2' : 'fr'}}  <mat-divider></mat-divider></mat-card-content> -->
-
-
-
-
-    <div *ngIf="forfait!.nouveauPrix > 0">
-      <mat-card-content>
-        <div class="nouveau-prix"> {{forfait?.nouveauPrix | currency:'CAD':'symbol': '2.2-2' : 'fr'}} </div>
+  <div class="complet">
+    <mat-card>
+      <mat-card-title>
+        <img [src]="forfait?.imageUrl" [title]="forfait?.description | uppercase" [alt]="forfait?.nom">
         <mat-divider></mat-divider>
-        <div class="barre">{{forfait?.prix | currency:'CAD':'symbol': '2.2-2' : 'fr'}}</div>
+      </mat-card-title>
+      <!-- <mat-card-content><img src="{{forfait?.imageUrl}}"></mat-card-content> -->
+      <!-- <img [src]="forfait?.imageUrl" alt="{{forfait?.nom}}"> -->
+      <mat-card-title> {{forfait?.nom}} <mat-divider></mat-divider>
+      </mat-card-title>
+      <mat-card-content> {{forfait?.description}} <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-content> {{forfait?.code | uppercase}} </mat-card-content>
+      <mat-card-content> {{forfait?.categories}} <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-content> {{forfait?.etablissement?.nomEtablissement}} <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-content> {{forfait?.etablissement?.coordonnees?.adresse}} <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-content> {{forfait?.etablissement?.coordonnees?.ville}} <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-content> {{forfait?.etablissement?.coordonnees?.telephone}} <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-content> {{forfait?.etablissement?.coordonnees?.courriel}} <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-content> {{forfait?.etablissement?.coordonnees?.siteWeb}} <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-content> From : {{forfait?.dateDebut}} <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-content> To : {{forfait?.dateFin}} <mat-divider></mat-divider>
+      </mat-card-content>
 
+      <!-- <mat-card-content> {{forfait?.prix | currency:'CAD':'symbol': '3.2-2' : 'fr'}}  <mat-divider></mat-divider></mat-card-content> -->
+
+
+
+
+      <div *ngIf="forfait!.nouveauPrix > 0">
+        <mat-card-content>
+          <div class="nouveau-prix"> {{forfait?.nouveauPrix | currency:'CAD':'symbol': '2.2-2' : 'fr'}} </div>
+          <mat-divider></mat-divider>
+          <div class="barre">{{forfait?.prix | currency:'CAD':'symbol': '2.2-2' : 'fr'}}</div>
+
+          <mat-divider></mat-divider>
+          <div *ngIf="forfait!.prix >= forfait!.nouveauPrix">
+            <div> Save: {{ forfait!.prix - forfait!.nouveauPrix }}$</div>
+          </div>
+          <mat-divider></mat-divider>
+        </mat-card-content>
+      </div>
+
+
+
+
+
+      <mat-card-content *ngFor="let a of forfait?.avis">
+        <div *ngIf="a.note > 0">{{a.note}}</div>
         <mat-divider></mat-divider>
-        <div *ngIf="forfait!.prix >= forfait!.nouveauPrix">
-          <div> Save: {{ forfait!.prix - forfait!.nouveauPrix }}$</div>
-        </div>
+        <div>{{a.commentaires}}</div>
         <mat-divider></mat-divider>
       </mat-card-content>
-    </div>
+
+    </mat-card>
 
 
-
-
-
-    <mat-card-content *ngFor="let a of forfait?.avis">
-      <div *ngIf="a.note > 0">{{a.note}}</div>
-      <mat-divider></mat-divider>
-      <div>{{a.commentaires}}</div>
-      <mat-divider></mat-divider>
-    </mat-card-content>
-
-  </mat-card>
-  
-  
-</div>
+  </div>
 
 </div>
 
@@ -89,4 +89,3 @@
   <mat-list-item> {{forfait?.prix}} $CAD <mat-divider></mat-divider></mat-list-item>
   <mat-list-item *ngFor="let a of forfait?.avis"> <div>{{a.note}}</div><mat-divider></mat-divider> <div>{{a.commentaires}}</div><mat-divider></mat-divider></mat-list-item>
  -->
-

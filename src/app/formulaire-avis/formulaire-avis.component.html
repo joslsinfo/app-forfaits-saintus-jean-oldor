@@ -14,12 +14,13 @@
 <div class="form-container">
   <form>
     <mat-slider thumbLabel [displayWith]="formatLabel" tickInterval="10" step="1" min="0" max="10" aria-label="units">
-      <input matInput type="text">
+      <input matInput type="number">
     </mat-slider>
 
+  
     <mat-form-field appearance="fill">
       <mat-label>Commentaires</mat-label>
-      <textarea class="textArea" matInput type="text" id="commentaires" name="commentaires"
+      <textarea class="textArea" matInput type="text"  id="commentaires" name="commentaires"
       value="" placeholder="commentaires"></textarea>
     </mat-form-field>
   </form>

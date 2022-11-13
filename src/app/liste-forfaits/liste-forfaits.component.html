@@ -11,6 +11,19 @@
 
 </div>
 
+<!-- Affichage de tous les mini-forfaits -->
+
+<!-- <br><br>
+<hr>
+
+<div class="container-flex" *ngFor="let f of forfaits">
+  <app-mini-forfait [forfait]="f" ></app-mini-forfait>
+
+</div>  -->
+
+
+
+<!-- Affichage des forfaits complets -->
 <br><br>
 <hr>
 
@@ -19,6 +32,7 @@
   <div class="rating-style" *ngIf="f.rating > 0">
     <app-star-rating [forfait]="f"> </app-star-rating>
     <app-formulaire-avis></app-formulaire-avis>
+ 
   </div>
 </div>
 
@@ -41,9 +55,9 @@
 
 
 
-<!-- <div class="container" *ngFor="let f of forfaits"> -->
+<!-- <div class="container" *ngFor="let f of forfaits">
 
-<!-- <app-forfait-complet [forfait]="f"></app-forfait-complet> -->
+<app-forfait-complet [forfait]="f"></app-forfait-complet> -->
 
 
 
@@ -72,3 +86,5 @@
 {{'Date du jour:' + getDate() | date:'fullDate'  }}
 
 <!-- </div> -->
+
+
