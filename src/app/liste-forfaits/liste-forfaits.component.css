@@ -30,7 +30,15 @@
   font-size: 1.8rem;
   font-weight: 500;
 
-}
+  }
+
+  .title-h2{
+    margin: 1rem  1rem 0 1rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+
+  
+  }
 
 hr{
   width:90%;
@@ -74,13 +82,25 @@ mat-card{
   max-width:1200px;
   justify-content:space-around;
   margin: 0 1rem;
-  
-
-
-}
+  }
 
 
 .rating-style{
   color:teal;
 }
+
+
+
+.premium-complet{
+  display: inline-block;
+  flex-wrap: wrap;
+  max-width:1200px; 
+  justify-content:space-around;
+  margin: 0 1rem;
+  background-color: rgb(230, 248, 230);
+  border-radius: 5%;
+
+  }
+
+
 

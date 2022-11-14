@@ -43,7 +43,8 @@ export class FormulaireForfaitComponent implements OnInit {
   nouveauPrix: 0,
   premium: false,
   imageUrl: '',
-  rating: 0
+  rating: 0,
+  propertiesStyle:true
   
 
 };

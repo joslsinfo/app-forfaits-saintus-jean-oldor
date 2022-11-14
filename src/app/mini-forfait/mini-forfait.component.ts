@@ -23,6 +23,7 @@ export class MiniForfaitComponent implements OnInit {
   @Input() avis?: Avis;
   @Input() etablissment?: Etablissement;
 
+
  
   constructor() { }
 

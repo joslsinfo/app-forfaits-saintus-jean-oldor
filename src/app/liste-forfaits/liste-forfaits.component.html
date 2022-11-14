@@ -4,9 +4,10 @@
 
 <hr>
 <!-- Affichage des forfaits premium -->
+<h2 class="title-h2">Liste des mini-forfaits premium</h2>
 <div class="premium" *ngFor="let f of forfaits">
   <p *ngIf="f.premium">
-    <app-mini-forfait [forfait]="f"> </app-mini-forfait>
+    <app-mini-forfait [forfait]="f" class="propertiesStyle"> </app-mini-forfait>
   </p>
 
 </div>
@@ -21,12 +22,23 @@
 
 </div>  -->
 
+<br><br>
+<hr>
+<h2 class="title-h2">Liste des forfaits complets premium</h2>
+<div class="premium-complet" *ngFor="let f of forfaits">
+  <p *ngIf="f.premium">
+    <app-forfait-complet [forfait]="f"></app-forfait-complet>
+  </p>
+
+</div>
 
 
 <!-- Affichage des forfaits complets -->
+
+
 <br><br>
 <hr>
-
+<h2 class="title-h2">Liste de tous les forfaits complets </h2>
 <div class="container-flex" *ngFor="let f of forfaits">
   <app-forfait-complet [forfait]="f"></app-forfait-complet>
   <div class="rating-style" *ngIf="f.rating > 0">
