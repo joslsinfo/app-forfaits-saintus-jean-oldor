@@ -40,7 +40,7 @@ export const FORFAITS: Forfait[] = [
         premium: false,
         imageUrl: 'assets/img/iphoneresize.jpg',
         rating: 3.5,
-        propertiesStyle: true
+        // propertiesStyle: true
         
     
     },
@@ -83,7 +83,7 @@ export const FORFAITS: Forfait[] = [
         premium: true,
         imageUrl: 'assets/img/massage1resize.jpg',
         rating: 5,
-        propertiesStyle: true
+        // propertiesStyle: true
         
     
     },
@@ -126,7 +126,7 @@ export const FORFAITS: Forfait[] = [
         premium: true,
         imageUrl: 'assets/img/massage2resize.jpg',
         rating: 4,
-        propertiesStyle:true
+        // propertiesStyle:true
         
     
     },
@@ -169,7 +169,7 @@ export const FORFAITS: Forfait[] = [
         premium: true,
         imageUrl: 'assets/img/massage3resize.jpg',
         rating: 5,
-        propertiesStyle: true
+        // propertiesStyle: true
         
     
     }

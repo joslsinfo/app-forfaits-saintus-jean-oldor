@@ -32,6 +32,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FormulaireAvisComponent } from './formulaire-avis/formulaire-avis.component';
 import {MatSliderModule} from '@angular/material/slider';
+import { PrixComponent } from './prix/prix.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import {MatSliderModule} from '@angular/material/slider';
     StarRatingComponent,
     NavigationComponent,
     FormulaireForfaitComponent,
-    FormulaireAvisComponent
+    FormulaireAvisComponent,
+    PrixComponent
 
   
 

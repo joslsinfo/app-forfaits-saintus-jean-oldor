@@ -11,16 +11,18 @@
 
       </mat-form-field>
 
-
       <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Description</mat-label>
+            <mat-label>Description</mat-label>
+      
         <textarea matInput type="text" [(ngModel)]="forfait.description" id="description" name="description"
           value="description" placeholder="description">description</textarea>
+         
       </mat-form-field>
     </div>
     <div>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Nom de l'établissement</mat-label>
+        
         <input type="text" matInput [(ngModel)]="forfait.etablissement.nomEtablissement" id="nomEtablissement"
           name="nomEtablissement" value="nomEtablissement" placeholder="Nom de l'établissement">
       </mat-form-field>

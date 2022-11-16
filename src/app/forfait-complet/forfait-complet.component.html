@@ -1,5 +1,10 @@
-<div class="forfait-complet">
+<div class="forfait-complet" [ngClass]="{'premium-forfait-complet' : forfait?.premium}">
+  
+
+
+
   <mat-card-header>
+
     <h2>Forfait complet</h2>
   </mat-card-header>
 
@@ -16,7 +21,7 @@
       </mat-card-title>
       <mat-card-content> {{forfait?.description}} <mat-divider></mat-divider>
       </mat-card-content>
-      <mat-card-content> {{forfait?.code | uppercase}} </mat-card-content>
+      <mat-card-content [ngStyle]="{'color' : forfait?.code === 'f0001' ? 'teal' : 'red'}"> {{forfait?.code | uppercase}} </mat-card-content>
       <mat-card-content> {{forfait?.categories}} <mat-divider></mat-divider>
       </mat-card-content>
       <mat-card-content> {{forfait?.etablissement?.nomEtablissement}} <mat-divider></mat-divider>
@@ -38,25 +43,23 @@
 
       <!-- <mat-card-content> {{forfait?.prix | currency:'CAD':'symbol': '3.2-2' : 'fr'}}  <mat-divider></mat-divider></mat-card-content> -->
 
+ 
 
 
-
-      <div *ngIf="forfait!.nouveauPrix > 0">
-        <mat-card-content>
+      <!-- <div *ngIf="forfait!.nouveauPrix > 0"> -->
+        <!-- <mat-card-content> -->
           <!-- <div class="nouveau-prix"> {{forfait?.nouveauPrix | currency:'CAD':'symbol': '2.2-2' : 'fr'}} </div> -->
-          <div [ngStyle]="{'background-color' : '#f0f8ff'}"  [ngClass]="{'propertiesStyle': true } "> {{forfait?.nouveauPrix | currency:'CAD':'symbol': '2.2-2' : 'fr'}} </div>
-          <mat-divider></mat-divider>
-          <div class="barre">{{forfait?.prix | currency:'CAD':'symbol': '2.2-2' : 'fr'}}</div>
+          <!-- <div [ngStyle]="{'background-color' : '#f0f8ff'}"  [ngClass]="{'propertiesStyle': true } "> {{forfait?.nouveauPrix | currency:'CAD':'symbol': '2.2-2' : 'fr'}} </div> -->
+          <!-- <mat-divider></mat-divider> -->
+          <!-- <div class="barre">{{forfait?.prix | currency:'CAD':'symbol': '2.2-2' : 'fr'}}</div> -->
 
-          <mat-divider></mat-divider>
-          <div *ngIf="forfait!.prix >= forfait!.nouveauPrix">
-            <div> Save: {{ forfait!.prix - forfait!.nouveauPrix }}$</div>
-          </div>
-          <mat-divider></mat-divider>
-        </mat-card-content>
-      </div>
-
-
+          <!-- <mat-divider></mat-divider> -->
+          <!-- <div *ngIf="forfait!.prix >= forfait!.nouveauPrix"> -->
+            <!-- <div> Save: {{ forfait!.prix - forfait!.nouveauPrix }}$</div> -->
+          <!-- </div> -->
+          <!-- <mat-divider></mat-divider> -->
+        <!-- </mat-card-content> -->
+      <!-- </div> -->
 
 
 
