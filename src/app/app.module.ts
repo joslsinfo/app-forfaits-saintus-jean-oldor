@@ -33,6 +33,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { FormulaireAvisComponent } from './formulaire-avis/formulaire-avis.component';
 import {MatSliderModule} from '@angular/material/slider';
 import { PrixComponent } from './prix/prix.component';
+import { FormulaireRechercheComponent } from './formulaire-recherche/formulaire-recherche.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { PrixComponent } from './prix/prix.component';
     NavigationComponent,
     FormulaireForfaitComponent,
     FormulaireAvisComponent,
-    PrixComponent
+    PrixComponent,
+    FormulaireRechercheComponent
 
   
 
