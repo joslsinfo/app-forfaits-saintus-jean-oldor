@@ -1,6 +1,6 @@
 
 
-<!-- ============================Affichage de tous les champs indiqués dans mini-forfait======================================== -->
+<!-- ============================Affichage de tous les champs demandés dans mini-forfait======================================== -->
 
 <div class="miniforfait-card">
   <mat-card-header>
@@ -22,31 +22,13 @@
         {{forfait?.etablissement?.nomEtablissement}} <mat-divider></mat-divider>
       </mat-card-content>
       <mat-card-content>
-        From : {{forfait?.dateDebut}} <mat-divider></mat-divider>
+        De : {{forfait?.dateDebut}} <mat-divider></mat-divider>
       </mat-card-content>
       <mat-card-content>
-        To : {{forfait?.dateFin}} <mat-divider></mat-divider>
+        À : {{forfait?.dateFin}} <mat-divider></mat-divider>
       </mat-card-content>
 
-      <!-- <div *ngIf="forfait!.nouveauPrix > 0"> -->
       
-        <!-- <mat-card-content> -->
-          <!-- <div class="nouveau-prix"> {{forfait?.nouveauPrix | currency:'CAD':'symbol': '2.2-2' : 'fr'}} </div> -->
-          <!-- <div [ngStyle]="{'background-color' : '#f0f8ff'}"  [ngClass]="{'propertiesStyle': true } "> {{forfait?.nouveauPrix | currency:'CAD':'symbol': '2.2-2' : 'fr'}} </div> -->
-          <!-- <div [ngStyle]="{'background-color' : '#f0f8ff'}"> {{forfait?.nouveauPrix | currency:'CAD':'symbol': '2.2-2' : 'fr'}} </div> -->
-          
-          <!-- <mat-divider></mat-divider>
-          <div class="barre">{{forfait?.prix | currency:'CAD':'symbol': '2.2-2' : 'fr'}}</div>
-
-          <mat-divider></mat-divider>
-          <div *ngIf="forfait!.prix >= forfait!.nouveauPrix">
-            <div> Save: {{ forfait!.prix - forfait!.nouveauPrix }}$</div>
-          </div>
-          <mat-divider></mat-divider> -->
-        <!-- </mat-card-content> -->
-      <!-- </div> -->
-
-
     </mat-card>
   </div>
 

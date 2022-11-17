@@ -19,7 +19,7 @@ export interface Forfait {
     premium: boolean;
     imageUrl: string;
     rating: number;
-    // propertiesStyle: boolean;
+  
 
    
 

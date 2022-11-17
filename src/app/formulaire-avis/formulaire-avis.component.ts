@@ -46,7 +46,7 @@ export class FormulaireAvisComponent implements OnInit {
   premium: false,
   imageUrl: '',
   rating: 0,
-  // propertiesStyle: true
+
   
 
 };

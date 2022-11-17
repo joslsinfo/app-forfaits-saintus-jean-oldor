@@ -14,7 +14,6 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListeForfaitsComponent } from './liste-forfaits/liste-forfaits.component';
-import { ForfaitComponent } from './forfait/forfait.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MiniForfaitComponent } from './mini-forfait/mini-forfait.component';
 import { ForfaitCompletComponent } from './forfait-complet/forfait-complet.component';
@@ -40,7 +39,6 @@ import { FormulaireRechercheComponent } from './formulaire-recherche/formulaire-
   declarations: [
     AppComponent,
     ListeForfaitsComponent,
-    ForfaitComponent,
     MiniForfaitComponent,
     ForfaitCompletComponent,
     StarRatingComponent,
