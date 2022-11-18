@@ -1,27 +1,35 @@
-<div>
-    <mat-card>
-         
-        <div *ngIf="forfait!.nouveauPrix > 0">
-          <mat-card-content>
-            
-            <div class="nouveau-prix"> {{forfait?.nouveauPrix | currency:'CAD':'symbol': '2.2-2' : 'fr'}} </div>
-            
-            
-            <mat-divider></mat-divider>
-            <div class="barre">{{forfait?.prix | currency:'CAD':'symbol': '2.2-2' : 'fr'}}</div>
-  
-            <mat-divider></mat-divider>
-            <div *ngIf="forfait!.prix >= forfait!.nouveauPrix">
-              <div> Save: {{ forfait!.prix - forfait!.nouveauPrix }}$</div>
-            </div>
-            <!-- <mat-divider></mat-divider> -->
-          </mat-card-content>
-        </div>
-  
-  
-      </mat-card>
+<div *ngIf="forfait!.nouveauPrix > 0">
+  <mat-card>
+    <mat-card-content>
 
+      <div class="nouveau-prix"> {{forfait?.nouveauPrix | currency:'CAD':'symbol': '2.2-2' : 'fr'}} </div>
+
+
+      <mat-divider></mat-divider>
+      <div class="barre">{{forfait?.prix | currency:'CAD':'symbol': '2.2-2' : 'fr'}}</div>
+
+      <mat-divider></mat-divider>
+      <div *ngIf="forfait!.prix >= forfait!.nouveauPrix">
+        <div> Montant d'économie: {{ forfait!.prix - forfait!.nouveauPrix }}$</div>
+      </div>
+      <!-- <mat-divider></mat-divider> -->
+    </mat-card-content>
+  </mat-card>
 </div>
 
 
+<!-- ==============================Sous forme de liste================================== -->
 
+<!-- <div *ngIf="forfait!.nouveauPrix > 0">
+  <mat-list-item>
+    <div class="nouveau-prix"> {{forfait?.nouveauPrix | currency:'CAD':'symbol': '2.2-2' : 'fr'}} </div>
+    <mat-divider></mat-divider>
+    <div class="barre">{{forfait?.prix | currency:'CAD':'symbol': '2.2-2' : 'fr'}}</div>
+    <mat-divider></mat-divider>
+    <div *ngIf="forfait!.prix >= forfait!.nouveauPrix">
+      <div> Save: {{ forfait!.prix - forfait!.nouveauPrix }}$</div>
+    </div>
+    <mat-divider></mat-divider>
+
+  </mat-list-item>
+</div> -->

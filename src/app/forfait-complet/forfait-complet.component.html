@@ -41,30 +41,11 @@
       <mat-card-content> Fin : {{forfait?.dateFin}} <mat-divider></mat-divider>
       </mat-card-content>
 
-      <!-- <mat-card-content> {{forfait?.prix | currency:'CAD':'symbol': '3.2-2' : 'fr'}}  <mat-divider></mat-divider></mat-card-content> -->
-
- 
-
-
-      <!-- <div *ngIf="forfait!.nouveauPrix > 0"> -->
-        <!-- <mat-card-content> -->
-          <!-- <div class="nouveau-prix"> {{forfait?.nouveauPrix | currency:'CAD':'symbol': '2.2-2' : 'fr'}} </div> -->
-          <!-- <div [ngStyle]="{'background-color' : '#f0f8ff'}"  [ngClass]="{'propertiesStyle': true } "> {{forfait?.nouveauPrix | currency:'CAD':'symbol': '2.2-2' : 'fr'}} </div> -->
-          <!-- <mat-divider></mat-divider> -->
-          <!-- <div class="barre">{{forfait?.prix | currency:'CAD':'symbol': '2.2-2' : 'fr'}}</div> -->
-
-          <!-- <mat-divider></mat-divider> -->
-          <!-- <div *ngIf="forfait!.prix >= forfait!.nouveauPrix"> -->
-            <!-- <div> Save: {{ forfait!.prix - forfait!.nouveauPrix }}$</div> -->
-          <!-- </div> -->
-          <!-- <mat-divider></mat-divider> -->
-        <!-- </mat-card-content> -->
-      <!-- </div> -->
-
-
-
+    
       <mat-card-content *ngFor="let a of forfait?.avis">
         <div *ngIf="a.note > 0">{{a.note}}</div>
+        <!-- Utilisation du composant star-rating sous forme d'étoile dans le composant forfait complet -->
+        <!-- <app-star-rating [forfait]="forfait"> </app-star-rating> -->
         <mat-divider></mat-divider>
         <div>{{a.commentaires}}</div>
         <mat-divider></mat-divider>
@@ -72,14 +53,16 @@
 
     </mat-card>
     
+    <!-- Réutilisation du composant prix dans le composant forfait complet  -->
     <app-prix [forfait]="forfait"></app-prix>
 
   </div>
 
 </div>
 
-
-<!-- <mat-list> {{forfait?.nom}} <mat-divider></mat-divider></mat-list>
+<!-- ========================Sous forme de liste========================================= -->
+<!-- 
+ <mat-list> {{forfait?.nom}} <mat-divider></mat-divider></mat-list>
   <mat-list-item> {{forfait?.description}} <mat-divider></mat-divider></mat-list-item>
   <mat-list-item> {{forfait?.code | uppercase}} </mat-list-item>
   <mat-list-item> {{forfait?.categories}} <mat-divider></mat-divider></mat-list-item>
@@ -93,4 +76,5 @@
   <mat-list-item> {{forfait?.dateFin}} <mat-divider></mat-divider></mat-list-item>
   <mat-list-item> {{forfait?.prix}} $CAD <mat-divider></mat-divider></mat-list-item>
   <mat-list-item *ngFor="let a of forfait?.avis"> <div>{{a.note}}</div><mat-divider></mat-divider> <div>{{a.commentaires}}</div><mat-divider></mat-divider></mat-list-item>
- -->
+ 
+  <app-prix [forfait]="forfait"></app-prix> -->

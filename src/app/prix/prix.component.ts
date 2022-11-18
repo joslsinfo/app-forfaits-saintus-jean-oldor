@@ -15,8 +15,8 @@ export class PrixComponent implements OnInit {
   @Input() avis?: Avis;
   @Input() etablissment?: Etablissement;
   
-  @Input() prix?: Forfait;
-  @Input() nouveauPrix?: Forfait;
+  // @Input() prix?: Forfait;
+  // @Input() nouveauPrix?: Forfait;
 
 
 

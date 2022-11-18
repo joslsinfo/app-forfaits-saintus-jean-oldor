@@ -1,9 +1,7 @@
-
-
 <!-- ============================Affichage de tous les champs demandés dans mini-forfait======================================== -->
 
 <div class="miniforfait-card">
- 
+
   <mat-card-header>
     <h2>Mini Forfait </h2>
   </mat-card-header>
@@ -18,7 +16,7 @@
       <mat-card-title>
         {{forfait?.nom}} <mat-divider></mat-divider>
       </mat-card-title>
-    
+
       <mat-card-content>
         {{forfait?.etablissement?.nomEtablissement | uppercase}} <mat-divider></mat-divider>
       </mat-card-content>
@@ -28,70 +26,27 @@
       <mat-card-content>
         Fin : {{forfait?.dateFin}} <mat-divider></mat-divider>
       </mat-card-content>
-
-      <app-prix [forfait]="forfait"></app-prix>
-      
     </mat-card>
+    
+  <!-- Réutilisation du composant prix dans le composant forfait complet  -->
+    <app-prix [forfait]="forfait"></app-prix>
+ 
   </div>
 
 </div>
 
 
 
-<!-- ==========================Affichage de forfait premium depuis mini-forfait======================================== -->
-<!-- <div class="miniforfait-card">
-  <mat-card-header>
-    <h2>Mini Forfait </h2>
-  </mat-card-header>
+<!-- ================================Sous forme de liste========================================================== -->
 
-
-  <div class="mini">
-    <mat-card *ngIf="forfait?.premium" >
-      <mat-card-title> <img [src]="forfait?.imageUrl" [title]="forfait?.description | uppercase" [alt]="forfait?.nom">
-        <mat-divider></mat-divider>
-      </mat-card-title>
-
-      <mat-card-title>
-        {{forfait?.nom}} <mat-divider></mat-divider>
-      </mat-card-title>
-    
-      <mat-card-content>
-        {{forfait?.etablissement?.nomEtablissement}} <mat-divider></mat-divider>
-      </mat-card-content>
-      <mat-card-content>
-        From : {{forfait?.dateDebut}} <mat-divider></mat-divider>
-      </mat-card-content>
-      <mat-card-content>
-        To : {{forfait?.dateFin}} <mat-divider></mat-divider>
-      </mat-card-content>
-
-      <div *ngIf="forfait!.nouveauPrix > 0">
-        <mat-card-content>
-          <div class="nouveau-prix"> {{forfait?.nouveauPrix | currency:'CAD':'symbol': '2.2-2' : 'fr'}} </div>
-          <div [ngStyle]="{'background-color' : '#f0f8ff'}"> {{forfait?.nouveauPrix}} </div>
-          
-          <mat-divider></mat-divider>
-          <div class="barre">{{forfait?.prix | currency:'CAD':'symbol': '2.2-2' : 'fr'}}</div>
-
-          <mat-divider></mat-divider>
-          <div *ngIf="forfait!.prix >= forfait!.nouveauPrix">
-            <div> Save: {{ forfait!.prix - forfait!.nouveauPrix }}$</div>
-          </div>
-          <mat-divider></mat-divider>
-        </mat-card-content>
-      </div>
-
-
-    </mat-card>
-  </div>
-
-
-
-</div> -->
-<!-- ========================================================================================== -->
-
-<!-- <mat-list> {{forfait?.nom}} <mat-divider></mat-divider></mat-list>
-  <mat-list-item> {{forfait?.etablissement?.nomEtablissement}} <mat-divider></mat-divider></mat-list-item>
-  <mat-list-item> {{forfait?.dateDebut}} <mat-divider></mat-divider></mat-list-item>
-  <mat-list-item> {{forfait?.dateFin}} <mat-divider></mat-divider></mat-list-item>
-  <mat-list-item> {{forfait?.prix}} $CAD <mat-divider></mat-divider></mat-list-item> -->
+<!-- <mat-list> {{forfait?.nom}} <mat-divider></mat-divider>
+</mat-list>
+<mat-list-item> {{forfait?.etablissement?.nomEtablissement}} <mat-divider></mat-divider>
+</mat-list-item>
+<mat-list-item> {{forfait?.dateDebut}} <mat-divider></mat-divider>
+</mat-list-item>
+<mat-list-item> {{forfait?.dateFin}} <mat-divider></mat-divider>
+</mat-list-item>
+<mat-list-item> {{forfait?.prix}} $CAD <mat-divider></mat-divider>
+</mat-list-item>
+<app-prix [forfait]="forfait"></app-prix> -->
