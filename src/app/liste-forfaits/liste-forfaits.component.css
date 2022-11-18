@@ -9,20 +9,17 @@
   
   }
 
-  .container{
-  
-    display: flex;
+  /* une carte sur la largeur */
+
+  /* .container{
     flex-wrap: wrap;
     max-width:1200px;
-    width:90%;
+    width:100%;
     justify-content:space-around;
-   
- 
     margin: 0.5rem 1.6rem;
 
-    background-color: rgb(182, 214, 214);
-    
-}
+     
+} */
 
 .title-h1{
   margin: 1rem  1rem 0 1rem;
@@ -48,6 +45,7 @@ mat-card{
   background-color: #f7f7f7;
   margin-left: 0.5rem;
   color: #333;
+
   
 
 }
