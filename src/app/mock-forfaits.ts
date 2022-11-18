@@ -172,7 +172,50 @@ export const FORFAITS: Forfait[] = [
       
         
     
+    },
+    {
+        nom: 'Forfait Yoga',
+        description: 'Yoga d\'équipe',
+        code: 'f0005',
+        categories: [
+            'Détente'
+        ],
+        etablissement: {
+            nomEtablissement: 'JOSLS Yoga',
+            coordonnees: 
+                {
+                    adresse: '33 rue Edith',
+                    ville: 'Laval',
+                    telephone: '514-730-8282',
+                    courriel: 'josls@gmail.com',
+                    siteWeb: 'www.joslsinfo.com'
+
+                }
+            
+     
+        },
+
+        dateDebut: '2022-11-19',
+        dateFin: '2022-01-31',
+        prix: 180,
+
+        avis: [
+            {
+
+                note: 10,
+                commentaires: 'Le plaisir de faire du yoga'
+           }
+
+        ],
+        nouveauPrix: 120,
+        premium: false,
+        imageUrl: 'assets/img/img-yoga-resize.jpg',
+        rating: 5,
+      
+        
+    
     }
+    
     
 
         

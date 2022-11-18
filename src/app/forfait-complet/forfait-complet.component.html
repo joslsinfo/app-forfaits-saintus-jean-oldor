@@ -54,7 +54,7 @@
 
     </mat-card>
     
-    <!-- Réutilisation du composant prix dans le composant forfait complet  -->
+    <!-- Réutilisation du composant prix dans le composant forfait complet pour afficher les prix  -->
     <app-prix [forfait]="forfait"></app-prix>
 
   </div>
@@ -62,7 +62,10 @@
 </div>
 
 <!-- ========================Sous forme de liste========================================= -->
-<!-- 
+
+<!-- <div  [ngClass]="{'premium-forfait-complet-liste' : forfait?.premium}">
+
+
  <mat-list> {{forfait?.nom}} <mat-divider></mat-divider></mat-list>
   <mat-list-item> {{forfait?.description}} <mat-divider></mat-divider></mat-list-item>
   <mat-list-item> {{forfait?.code | uppercase}} </mat-list-item>
@@ -78,4 +81,6 @@
   <mat-list-item> {{forfait?.prix}} $CAD <mat-divider></mat-divider></mat-list-item>
   <mat-list-item *ngFor="let a of forfait?.avis"> <div>{{a.note}}</div><mat-divider></mat-divider> <div>{{a.commentaires}}</div><mat-divider></mat-divider></mat-list-item>
  
-  <app-prix [forfait]="forfait"></app-prix> -->
+  <app-prix [forfait]="forfait"></app-prix>
+
+</div> -->

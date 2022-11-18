@@ -79,6 +79,7 @@ mat-card{
   max-width:1200px;
   justify-content:space-around;
   margin: 0 1rem;
+  color: teal;
   }
 
 
@@ -98,10 +99,6 @@ mat-card{
   border-radius: 5%;
 
 
-  }
-
-  .complet{
-    background-color: red;
   }
 
 
