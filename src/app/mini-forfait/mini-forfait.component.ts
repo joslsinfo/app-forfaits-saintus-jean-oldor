@@ -6,6 +6,7 @@ import { Forfait } from '../forfait';
 
 
 
+
 @Component({
   selector: 'app-mini-forfait',
   templateUrl: './mini-forfait.component.html',
@@ -22,6 +23,7 @@ export class MiniForfaitComponent implements OnInit {
   @Input() forfait?: Forfait;
   @Input() avis?: Avis;
   @Input() etablissment?: Etablissement;
+
 
 
  

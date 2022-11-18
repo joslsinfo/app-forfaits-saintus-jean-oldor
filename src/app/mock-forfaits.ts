@@ -17,7 +17,7 @@ export const FORFAITS: Forfait[] = [
                     ville: 'Laval',
                     telephone: '514-730-8206',
                     courriel: 'josaintus@gmail.com',
-                    siteWeb: 'josaintus.com'
+                    siteWeb: 'www.josaintus.com'
 
                 }
             
@@ -46,7 +46,7 @@ export const FORFAITS: Forfait[] = [
     },
 
     {
-        nom: 'Forfait massage',
+        nom: 'Forfait massage pour un couple',
         description: 'Massage pour un couple',
         code: 'f0002',
         categories: [
@@ -60,7 +60,7 @@ export const FORFAITS: Forfait[] = [
                     ville: 'Laval',
                     telephone: '514-730-8282',
                     courriel: 'josls@gmail.com',
-                    siteWeb: 'joslsinfo.com'
+                    siteWeb: 'www.joslsinfo.com'
 
                 }
             
@@ -89,7 +89,7 @@ export const FORFAITS: Forfait[] = [
     },
 
     {
-        nom: 'Forfait massage',
+        nom: 'Forfait massage une personne',
         description: 'Massage pour une personne',
         code: 'f0003',
         categories: [
@@ -103,7 +103,7 @@ export const FORFAITS: Forfait[] = [
                     ville: 'Laval',
                     telephone: '514-730-8282',
                     courriel: 'josls@gmail.com',
-                    siteWeb: 'joslsinfo.com'
+                    siteWeb: 'www.joslsinfo.com'
 
                 }
             
@@ -132,7 +132,7 @@ export const FORFAITS: Forfait[] = [
     },
 
     {
-        nom: 'Forfait massage',
+        nom: 'Forfait massage pour Bébé',
         description: 'Massage pour Bébé',
         code: 'f0004',
         categories: [
@@ -146,7 +146,7 @@ export const FORFAITS: Forfait[] = [
                     ville: 'Laval',
                     telephone: '514-730-8282',
                     courriel: 'josls@gmail.com',
-                    siteWeb: 'joslsinfo.com'
+                    siteWeb: 'www.joslsinfo.com'
 
                 }
             
