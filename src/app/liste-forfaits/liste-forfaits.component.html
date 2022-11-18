@@ -8,7 +8,7 @@
 <div class="premium" *ngFor="let f of forfaits">
   <p *ngIf="f.premium">
     <app-mini-forfait [forfait]="f"> </app-mini-forfait>
-    <app-prix [forfait]="f"></app-prix>
+    <!-- <app-prix [forfait]="f"></app-prix> -->
   </p>
 
 </div>
@@ -23,7 +23,7 @@
 
   <p>
     <app-forfait-complet [forfait]="f"></app-forfait-complet>
-    <app-prix [forfait]="f"></app-prix>
+    <!-- <app-prix [forfait]="f"></app-prix> -->
   
   </p>
   <div class="rating-style" *ngIf="f.rating > 0">
