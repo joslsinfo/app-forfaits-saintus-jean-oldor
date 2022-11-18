@@ -76,6 +76,7 @@ autoTicks = false;
 
     return value + '/10';
     
+    
   }
 
 
