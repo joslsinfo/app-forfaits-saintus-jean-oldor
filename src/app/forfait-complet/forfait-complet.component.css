@@ -2,25 +2,33 @@
 
 
 .forfait-complet{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
     width: 100%;
     min-width: 200px;
-    max-width: 1200px;
+    max-width: 100%;
     flex-wrap: wrap;
     /* color: crimson; */
+    overflow:hidden;
    
   }
 
   .complet{
     width:100%;
     justify-content: space-around;
+
+  
+   
   }
 
 
   .image{
+    width:100%;
     overflow:hidden;
     transition: 0.4s ease-in-out;
     cursor: pointer;
-    width:100%;
+    
   }
 
 
