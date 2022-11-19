@@ -9,17 +9,17 @@
   </mat-card-header>
 
 
-  <div class="complet">
+  <div class="complet ">
     <mat-card>
       <mat-card-title>
-        <img [src]="forfait?.imageUrl" [title]="forfait?.description | uppercase" [alt]="forfait?.nom">
+        <img class="image" [src]="forfait?.imageUrl" [title]="forfait?.description | uppercase" [alt]="forfait?.nom">
         <mat-divider></mat-divider>
       </mat-card-title>
       <!-- <mat-card-content><img src="{{forfait?.imageUrl}}"></mat-card-content> -->
       <!-- <img [src]="forfait?.imageUrl" alt="{{forfait?.nom}}"> -->
       <mat-card-title> {{forfait?.nom}} <mat-divider></mat-divider>
       </mat-card-title>
-      <mat-card-content> {{forfait?.description}} <mat-divider></mat-divider>
+      <mat-card-content [ngClass]="{'premium-forfait-complet' : forfait?.premium}"> {{forfait?.description}} <mat-divider></mat-divider>
       </mat-card-content>
       <mat-card-content [ngStyle]="{'color' : forfait?.code === 'f0001' ? 'teal' : 'red'}"> {{forfait?.code | uppercase}} </mat-card-content>
       <mat-card-content> {{forfait?.categories}} <mat-divider></mat-divider>
@@ -51,7 +51,6 @@
         <div>{{a.commentaires}}</div>
         <mat-divider></mat-divider>
       </mat-card-content>
-
     </mat-card>
     
     <!-- Réutilisation du composant prix dans le composant forfait complet pour afficher les prix  -->

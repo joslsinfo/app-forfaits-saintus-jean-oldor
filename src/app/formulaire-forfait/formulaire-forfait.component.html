@@ -12,17 +12,17 @@
       </mat-form-field>
 
       <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Description</mat-label>
-      
+        <mat-label>Description</mat-label>
+
         <textarea matInput type="text" [(ngModel)]="forfait.description" id="description" name="description"
           value="description" placeholder="description">description</textarea>
-         
+
       </mat-form-field>
     </div>
     <div>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Nom de l'établissement</mat-label>
-        
+
         <input type="text" matInput [(ngModel)]="forfait.etablissement.nomEtablissement" id="nomEtablissement"
           name="nomEtablissement" value="nomEtablissement" placeholder="Nom de l'établissement">
       </mat-form-field>
@@ -43,14 +43,14 @@
         <span matPrefix>+1 &nbsp;</span>
         <input type="tel" matInput [(ngModel)]="forfait.etablissement.coordonnees.telephone" id="telephone"
           name="telephone" value="telephone" placeholder="555-555-1234">
-          <mat-icon matSuffix>mode_edit</mat-icon>
+        <mat-icon matSuffix>mode_edit</mat-icon>
       </mat-form-field>
     </div>
     <div>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label> Courriel</mat-label>
-        <input type="email" matInput  id="courriel" placeholder="jean@example.com">
-          <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+        <input type="email" matInput id="courriel" placeholder="jean@example.com" required>
+        <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
             Please enter a valid email address
           </mat-error>
           <mat-error *ngIf="emailFormControl.hasError('required')">
@@ -95,20 +95,27 @@
     </div>
 
     <div>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" floatLabel="always">
         <mat-label>Prix</mat-label>
-        <input type="number" matInput [(ngModel)]="forfait.prix" id="prix" name="prix" value="prix"
-          placeholder="prix" />
+        <input type="number" class="example-right-align" placeholder="0"  matInput [(ngModel)]="forfait.prix"  />
+          <span matTextPrefix>$&nbsp;</span>
+          <span matTextSuffix>.00</span>
       </mat-form-field>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="fill" floatLabel="always">
         <mat-label>Nouveau prix</mat-label>
-        <input type="number" matInput [(ngModel)]="forfait.nouveauPrix" id="nouveauPrix" name="nouveauPrix"
-          value="nouveauPrix" placeholder="nouveauPrix" />
+        <input type="number" class="example-right-align" placeholder="0" matInput [(ngModel)]="forfait.nouveauPrix"
+          id="nouveauPrix" name="nouveauPrix" />
+        <span matTextPrefix>$&nbsp;</span>
+        <span matTextSuffix>.00</span>
       </mat-form-field>
-
+      
+      <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>Amount</mat-label>
+        <input matInput type="number" class="example-right-align" placeholder="0">
+        <span matTextPrefix>$&nbsp;</span>
+        <span matTextSuffix>.00</span>
+      </mat-form-field>
     </div>
   </form>
 
 </div>
-
-

@@ -26,7 +26,7 @@
   .miniforfait-card {
 
     max-width:100%;
-    width:100%;
+    width:90%;
   
     margin-top: 1.2rem;
    
@@ -35,21 +35,28 @@
    
   }
 
-
-  div> img{
-    width:300px;
-   
-  
+  .image{
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    width:100%;
   }
+
+
+
+  .image:hover{
+      transform: scale(1.1);
+      box-shadow: 0 0 15px gray;
+
+  }
+
+
 
   .mini{
     width:80%;
    
   }
 
-  .mini img{
-    width:100%;
-  }
+ 
 
   .barre{
     text-decoration: line-through;

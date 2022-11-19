@@ -4,22 +4,33 @@
 .forfait-complet{
     width: 100%;
     min-width: 200px;
-    max-width: 840px;
+    max-width: 1200px;
     flex-wrap: wrap;
     /* color: crimson; */
    
   }
 
   .complet{
-  
     width:100%;
     justify-content: space-around;
   }
 
-  div> img{
+
+  .image{
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
     width:100%;
-  
+
   }
+  
+
+  .image:hover{
+      transform: scale(1.1);
+      box-shadow: 0 0 15px gray;
+    
+  }
+
+ 
 
   
 .barre{
@@ -47,10 +58,11 @@
   margin-top: .6rem;
   font-size: 1rem;
   background-color: rgb(230, 248, 230);
+
 }
 
 
-/* .premium-forfait-complet-liste{
+.premium-forfait-complet-liste{
 
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-style: italic;
@@ -58,7 +70,8 @@
   margin-top: .6rem;
   font-size: 1rem;
   
-} */
+} 
+
 
 
 
