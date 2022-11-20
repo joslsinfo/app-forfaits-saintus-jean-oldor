@@ -32,7 +32,7 @@ export const FORFAITS: Forfait[] = [
             {
 
                 note: 6,
-                commentaires: 'Un forfait qui demande de réfléchir avant d\'embarquer là-dedans'
+                commentaires: 'Un forfait qui demande de réfléchir avant d\'embarquer là-dedans.'
            }
 
         ],
@@ -75,7 +75,7 @@ export const FORFAITS: Forfait[] = [
             {
 
                 note: 10,
-                commentaires: 'Un très bon forfait pour un bon massage'
+                commentaires: 'Un très bon forfait pour un bon massage.'
            }
 
         ],
@@ -118,7 +118,7 @@ export const FORFAITS: Forfait[] = [
             {
 
                 note: 9,
-                commentaires: 'Un bon forfait'
+                commentaires: 'Un bon forfait.'
            }
 
         ],
@@ -161,7 +161,7 @@ export const FORFAITS: Forfait[] = [
             {
 
                 note: 10,
-                commentaires: 'J\'adore ce forfait pour Bébé'
+                commentaires: 'J\'adore ce forfait pour Bébé.'
            }
 
         ],
@@ -203,7 +203,7 @@ export const FORFAITS: Forfait[] = [
             {
 
                 note: 10,
-                commentaires: 'Le plaisir de faire du yoga'
+                commentaires: 'Le plaisir de faire du yoga!'
            }
 
         ],
