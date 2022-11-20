@@ -9,11 +9,17 @@
       <div class="barre">{{forfait?.prix | currency:'CAD':'symbol': '2.2-2' : 'fr'}}</div>
 
       <mat-divider></mat-divider>
-      <div *ngIf="forfait!.prix >= forfait!.nouveauPrix">
+      <div *ngIf="forfait!.prix >= forfait!.nouveauPrix; else noEconomie">
         <div> Montant d'économie: {{ forfait!.prix - forfait!.nouveauPrix }}$</div>
       </div>
       <!-- <mat-divider></mat-divider> -->
     </mat-card-content>
+
+    <ng-template #noEconomie>
+      <p> Il n'y a pas d'économie pour le moment.</p>
+
+    </ng-template>
+    
   </mat-card>
 </div>
 

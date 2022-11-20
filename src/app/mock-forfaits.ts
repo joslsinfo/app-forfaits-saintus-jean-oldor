@@ -32,11 +32,11 @@ export const FORFAITS: Forfait[] = [
             {
 
                 note: 6,
-                commentaires: 'Un bon forfait'
+                commentaires: 'Un forfait qui demande de réfléchir avant d\'embarquer là-dedans'
            }
 
         ],
-        nouveauPrix: 860,
+        nouveauPrix: 1060,
         premium: false,
         imageUrl: 'assets/img/iphoneresize.jpg',
         rating: 3.5,
