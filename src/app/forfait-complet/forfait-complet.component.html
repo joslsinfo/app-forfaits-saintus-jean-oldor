@@ -1,5 +1,5 @@
 <div class="forfait-complet" [ngClass]="{'premium-forfait-complet' : forfait?.premium}">
-  
+
 
 
 
@@ -19,14 +19,16 @@
       <!-- <img [src]="forfait?.imageUrl" alt="{{forfait?.nom}}"> -->
       <mat-card-title> {{forfait?.nom}} <mat-divider></mat-divider>
       </mat-card-title>
-      <mat-card-content [ngClass]="{'premium-forfait-complet' : forfait?.premium}"> {{forfait?.description}} <mat-divider></mat-divider>
+      <mat-card-content [ngClass]="{'premium-forfait-complet' : forfait?.premium}"> {{forfait?.description}}
+        <mat-divider></mat-divider>
       </mat-card-content>
-      <mat-card-content [ngStyle]="{'color' : forfait?.code === 'f0001' ? 'teal' : 'red'}"> {{forfait?.code | uppercase}} </mat-card-content>
+      <mat-card-content [ngStyle]="{'color' : forfait?.code === 'f0001' ? 'teal' : 'red'}">
+        {{forfait?.code | uppercase}} </mat-card-content>
       <mat-card-content> {{forfait?.categories}} <mat-divider></mat-divider>
       </mat-card-content>
       <mat-card-content> {{forfait?.etablissement?.nomEtablissement | uppercase }} <mat-divider></mat-divider>
       </mat-card-content>
-    
+
       <mat-card-content> {{forfait?.etablissement?.coordonnees?.adresse}} <mat-divider></mat-divider>
       </mat-card-content>
       <mat-card-content> {{forfait?.etablissement?.coordonnees?.ville}} <mat-divider></mat-divider>
@@ -37,12 +39,12 @@
       </mat-card-content>
       <mat-card-content> {{forfait?.etablissement?.coordonnees?.siteWeb}} <mat-divider></mat-divider>
       </mat-card-content>
-      <mat-card-content> Début : {{forfait?.dateDebut}} <mat-divider></mat-divider>
+      <mat-card-content> Date de début : {{forfait?.dateDebut}} <mat-divider></mat-divider>
       </mat-card-content>
-      <mat-card-content> Fin : {{forfait?.dateFin}} <mat-divider></mat-divider>
+      <mat-card-content> Date de fin : {{forfait?.dateFin}} <mat-divider></mat-divider>
       </mat-card-content>
 
-    
+
       <mat-card-content *ngFor="let a of forfait?.avis">
         <div *ngIf="a.note > 0">{{a.note}}</div>
         <!-- Utilisation du composant star-rating sous forme d'étoile dans le composant forfait complet -->
@@ -52,7 +54,7 @@
         <mat-divider></mat-divider>
       </mat-card-content>
     </mat-card>
-    
+
     <!-- Réutilisation du composant prix dans le composant forfait complet pour afficher les prix  -->
     <app-prix [forfait]="forfait"></app-prix>
 

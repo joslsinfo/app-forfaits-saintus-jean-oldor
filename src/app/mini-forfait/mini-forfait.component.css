@@ -44,6 +44,7 @@
     transition: 0.4s ease-in-out;
     cursor: pointer;
     width:100%;
+ 
   }
 
 
@@ -58,6 +59,7 @@
 
   .mini{
     width:80%;
+
    
   }
 
