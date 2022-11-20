@@ -48,7 +48,7 @@
       <mat-card-content *ngFor="let a of forfait?.avis">
         <div *ngIf="a.note > 0">{{a.note}}</div>
         <!-- Utilisation du composant star-rating sous forme d'étoile dans le composant forfait complet -->
-        <!-- <app-star-rating [forfait]="forfait"> </app-star-rating> -->
+        <!-- <app-star-rating class="rating-style" [forfait]="forfait"> </app-star-rating> -->
         <mat-divider></mat-divider>
         <div>{{a.commentaires}}</div>
         <mat-divider></mat-divider>
