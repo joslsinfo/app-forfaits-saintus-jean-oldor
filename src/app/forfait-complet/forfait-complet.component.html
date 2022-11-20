@@ -17,31 +17,42 @@
       </mat-card-title>
       <!-- <mat-card-content><img src="{{forfait?.imageUrl}}"></mat-card-content> -->
       <!-- <img [src]="forfait?.imageUrl" alt="{{forfait?.nom}}"> -->
-      <mat-card-title> {{forfait?.nom}} <mat-divider></mat-divider>
+      <mat-card-title> {{forfait?.nom}} 
+        <mat-divider></mat-divider>
       </mat-card-title>
       <mat-card-content [ngClass]="{'premium-forfait-complet' : forfait?.premium}"> {{forfait?.description}}
         <mat-divider></mat-divider>
       </mat-card-content>
-      <mat-card-content [ngStyle]="{'color' : forfait?.code === 'f0001' ? 'teal' : 'red'}">
-        {{forfait?.code | uppercase}} </mat-card-content>
-      <mat-card-content> {{forfait?.categories}} <mat-divider></mat-divider>
+      <mat-card-content [ngStyle]="{'color' : forfait?.code === 'f0001' ? 'teal' : 'red'}"> {{forfait?.code | uppercase}} 
+        <mat-divider></mat-divider>
+      </mat-card-content>  
+      <mat-card-content> {{forfait?.categories}} 
+        <mat-divider></mat-divider>
       </mat-card-content>
-      <mat-card-content> {{forfait?.etablissement?.nomEtablissement | uppercase }} <mat-divider></mat-divider>
+      <mat-card-content> {{forfait?.etablissement?.nomEtablissement | uppercase }} 
+        <mat-divider></mat-divider>
       </mat-card-content>
 
-      <mat-card-content> {{forfait?.etablissement?.coordonnees?.adresse}} <mat-divider></mat-divider>
+      <mat-card-content> {{forfait?.etablissement?.coordonnees?.adresse}} 
+        <mat-divider></mat-divider>
       </mat-card-content>
-      <mat-card-content> {{forfait?.etablissement?.coordonnees?.ville}} <mat-divider></mat-divider>
+      <mat-card-content> {{forfait?.etablissement?.coordonnees?.ville}} 
+        <mat-divider></mat-divider>
       </mat-card-content>
-      <mat-card-content> {{forfait?.etablissement?.coordonnees?.telephone}} <mat-divider></mat-divider>
+      <mat-card-content> {{forfait?.etablissement?.coordonnees?.telephone}} 
+        <mat-divider></mat-divider>
       </mat-card-content>
-      <mat-card-content> {{forfait?.etablissement?.coordonnees?.courriel}} <mat-divider></mat-divider>
+      <mat-card-content> {{forfait?.etablissement?.coordonnees?.courriel}} 
+        <mat-divider></mat-divider>
       </mat-card-content>
-      <mat-card-content> {{forfait?.etablissement?.coordonnees?.siteWeb}} <mat-divider></mat-divider>
+      <mat-card-content> {{forfait?.etablissement?.coordonnees?.siteWeb}} 
+        <mat-divider></mat-divider>
       </mat-card-content>
-      <mat-card-content> Date de début : {{forfait?.dateDebut}} <mat-divider></mat-divider>
+      <mat-card-content> Date de début : {{forfait?.dateDebut}} 
+        <mat-divider></mat-divider>
       </mat-card-content>
-      <mat-card-content> Date de fin : {{forfait?.dateFin}} <mat-divider></mat-divider>
+      <mat-card-content> Date de fin : {{forfait?.dateFin}} 
+        <mat-divider></mat-divider>
       </mat-card-content>
 
 
