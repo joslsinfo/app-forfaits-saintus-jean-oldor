@@ -46,9 +46,6 @@ import { FormulaireRechercheComponent } from './formulaire-recherche/formulaire-
     FormulaireAvisComponent,
     PrixComponent,
     FormulaireRechercheComponent
-
-  
-
  
   ],
   imports: [

@@ -38,7 +38,7 @@ export const FORFAITS: Forfait[] = [
         ],
         nouveauPrix: 1060,
         premium: false,
-        imageUrl: 'assets/img/iphoneresize.jpg',
+        imageUrl: 'assets/img/iphone300.jpg',
         rating: 3.5,
      
         
@@ -81,7 +81,7 @@ export const FORFAITS: Forfait[] = [
         ],
         nouveauPrix: 300,
         premium: true,
-        imageUrl: 'assets/img/massage1resize.jpg',
+        imageUrl: 'assets/img/massage11300.jpg',
         rating: 5,
       
         
@@ -124,7 +124,7 @@ export const FORFAITS: Forfait[] = [
         ],
         nouveauPrix: 150,
         premium: true,
-        imageUrl: 'assets/img/massage2resize.jpg',
+        imageUrl: 'assets/img/massage2300.jpg',
         rating: 4,
      
         
@@ -167,7 +167,7 @@ export const FORFAITS: Forfait[] = [
         ],
         nouveauPrix: 70,
         premium: true,
-        imageUrl: 'assets/img/massage3resize.jpg',
+        imageUrl: 'assets/img/massage3300.jpg',
         rating: 5,
       
         
@@ -209,14 +209,12 @@ export const FORFAITS: Forfait[] = [
         ],
         nouveauPrix: 120,
         premium: false,
-        imageUrl: 'assets/img/img-yoga-resize.jpg',
+        imageUrl: 'assets/img/img-yoga300.jpg',
         rating: 5,
       
         
     
     }
-    
-    
 
         
 
