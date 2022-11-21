@@ -26,17 +26,19 @@
 
   .image{
     width:100%;
-    overflow:hidden;
+    /* overflow:hidden; */
     transition: 0.4s ease-in-out;
     cursor: pointer;
+    opacity: 1;
     
   }
 
 
 
   .image:hover{
-      transform: scale(1.02);
+      /* transform: scale(1.02); */
       box-shadow: 0 0 15px gray;
+      opacity: 0.8;
 
   }
  
