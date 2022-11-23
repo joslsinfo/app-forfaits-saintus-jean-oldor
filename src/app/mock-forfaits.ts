@@ -10,7 +10,7 @@ export const FORFAITS: Forfait[] = [
            
         ],
         etablissement: {
-            nomEtablissement: 'Cummunication plus',
+            nomEtablissement: 'Communication plus',
             coordonnees: 
                 {
                     adresse: 'Centre Laval',
