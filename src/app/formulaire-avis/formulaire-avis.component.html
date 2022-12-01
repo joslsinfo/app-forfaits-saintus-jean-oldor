@@ -5,14 +5,14 @@
   <form>
     <mat-label>Note </mat-label>
     <mat-slider color="primary" thumbLabel [displayWith]="formatLabel" tickInterval="10" step="1" min="0" max="10" aria-label="units">
-      <input matInput type="number" >
+      <input matInput type="number">
     </mat-slider>
 
   
     <mat-form-field appearance="fill">
       <mat-label>Commentaires</mat-label>
       <textarea class="resize" matInput type="text"  id="commentaires" name="commentaires"
-      value="" placeholder="commentaires"></textarea>
+      value="" placeholder="commentaires" required></textarea>
     </mat-form-field>
   </form>
 </div>

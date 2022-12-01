@@ -7,7 +7,7 @@
 
         <mat-label>Nom du forfait</mat-label>
         <input type="text" matInput [(ngModel)]="forfait.nom" id="nom" name="nom" value="nom"
-          placeholder="Nom du forfait">
+          placeholder="Nom du forfait" minlength="2" maxlength="50" required>
 
       </mat-form-field>
 
@@ -15,7 +15,7 @@
         <mat-label>Description</mat-label>
 
         <textarea matInput type="text" [(ngModel)]="forfait.description" id="description" name="description"
-          value="description" placeholder="description">description</textarea>
+          value="description" placeholder="description" required>description</textarea>
 
       </mat-form-field>
     </div>
@@ -24,32 +24,32 @@
         <mat-label>Nom de l'établissement</mat-label>
 
         <input type="text" matInput [(ngModel)]="forfait.etablissement.nomEtablissement" id="nomEtablissement"
-          name="nomEtablissement" value="nomEtablissement" placeholder="Nom de l'établissement">
+          name="nomEtablissement" value="nomEtablissement" placeholder="Nom de l'établissement" minlength="2" maxlength="50" required>
       </mat-form-field>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label> Adresse de l'établissement</mat-label>
         <input type="text" matInput [(ngModel)]="forfait.etablissement.coordonnees.adresse" id="adresse" name="adresse"
-          value="adresse" placeholder="Adresse l'établissement">
+          value="adresse" placeholder="Adresse l'établissement" minlength="2" maxlength="50" required>
       </mat-form-field>
     </div>
     <div>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label> Ville</mat-label>
         <input type="text" matInput [(ngModel)]="forfait.etablissement.coordonnees.ville" id="ville" name="ville"
-          value="ville" placeholder="Ville">
+          value="ville" placeholder="Ville" minlength="2" maxlength="50" required>
       </mat-form-field>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label> Téléphone</mat-label>
         <span matPrefix>+1 &nbsp;</span>
         <input type="tel" matInput [(ngModel)]="forfait.etablissement.coordonnees.telephone" id="telephone"
-          name="telephone" value="telephone" placeholder="555-555-1234">
+          name="telephone" value="telephone" placeholder="555-555-1234" required>
         <mat-icon matSuffix>mode_edit</mat-icon>
       </mat-form-field>
     </div>
     <div>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label> Courriel</mat-label>
-        <input type="email" matInput id="courriel" placeholder="jean@example.com" required>
+        <input type="email" [formControl]="courriel" matInput id="courriel" placeholder="jean@example.com" required>
         <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
             Please enter a valid email address
           </mat-error>
@@ -60,7 +60,7 @@
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label> Site web</mat-label>
         <input type="text" matInput [(ngModel)]="forfait.etablissement.coordonnees.siteWeb" id="siteWeb" name="siteWeb"
-          value="siteWeb" placeholder="www.xxxx.com">
+          value="siteWeb" placeholder="www.xxxx.com" required>
       </mat-form-field>
     </div>
     <div>
@@ -71,7 +71,7 @@
       <mat-form-field color="primary" appearance="fill">
         <mat-label>Date de début</mat-label>
         <input matInput [matDatepicker]="picker1" [(ngModel)]="forfait.dateDebut" id="dateDebut" name="dateDebut"
-          value="dateDebut">
+          value="dateDebut" required>
         <mat-hint>MM/DD/YYYY</mat-hint>
         <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
         <mat-datepicker #picker1></mat-datepicker>
@@ -80,7 +80,7 @@
       <mat-form-field color="primary" appearance="fill">
         <mat-label>Date de fin</mat-label>
         <input matInput [matDatepicker]="picker2" [(ngModel)]="forfait.dateFin" id="dateFin" name="dateFin"
-          value="dateFin">
+          value="dateFin" required>
         <mat-hint>MM/DD/YYYY</mat-hint>
         <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
         <mat-datepicker #picker2 color="primary"></mat-datepicker>
@@ -90,21 +90,27 @@
     </div>
 
     <div class="checkbox">
-      <mat-checkbox color="primary" class="example-margin" [(ngModel)]="forfait.premium">Premium</mat-checkbox>
+      <mat-checkbox color="primary" class="example-margin" [(ngModel)]="forfait.premium" >Premium</mat-checkbox>
 
     </div>
 
     <div>
       <mat-form-field appearance="fill" floatLabel="always">
         <mat-label>Prix</mat-label>
-        <input type="number" class="example-right-align" placeholder="0"  matInput [(ngModel)]="forfait.prix"  />
+        <input type="number" class="example-right-align" placeholder="0"  matInput [(ngModel)]="forfait.prix" min="0" required>
+          <!-- <span matTextPrefix>$&nbsp;</span> -->
+          <!-- <span matTextSuffix>.00</span> -->
+      </mat-form-field>
+      <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>Rabais</mat-label>
+        <input type="number" class="example-right-align" placeholder="0"  matInput [(ngModel)]="forfait.rabais">
           <!-- <span matTextPrefix>$&nbsp;</span> -->
           <!-- <span matTextSuffix>.00</span> -->
       </mat-form-field>
       <mat-form-field appearance="fill" floatLabel="always">
         <mat-label>Nouveau prix</mat-label>
         <input type="number" class="example-right-align" placeholder="0" matInput [(ngModel)]="forfait.nouveauPrix"
-          id="nouveauPrix" name="nouveauPrix" />
+          id="nouveauPrix" name="nouveauPrix" min="0" required>
         <!-- <span matTextPrefix>$&nbsp;</span> -->
         <!-- <span matTextSuffix>.00</span> -->
       </mat-form-field>
@@ -112,6 +118,14 @@
       
     </div>
   </form>
+  
+  
+
+    <!-- <button mat-stroked-button color="primary" (click)="openSnackBar('L\ajout dans la base de données sera programmé après le congé des fêtes!', 'durée de 5 secondes')">
+      Ajouter
+    </button> -->
+    <button mat-stroked-button color="primary" (click)="openCustomSnackBar()">Ajouter</button>
+
 
 </div>
 

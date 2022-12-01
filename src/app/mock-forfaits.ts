@@ -27,6 +27,7 @@ export const FORFAITS: Forfait[] = [
         dateDebut: '2022-10-18',
         dateFin: '2024-10-21',
         prix: 960,
+    
 
         avis: [
             {
@@ -40,6 +41,7 @@ export const FORFAITS: Forfait[] = [
         premium: false,
         imageUrl: 'assets/img/iphone300.jpg',
         rating: 3.5,
+        rabais: 0,
      
         
     
@@ -83,6 +85,7 @@ export const FORFAITS: Forfait[] = [
         premium: true,
         imageUrl: 'assets/img/massage11300.jpg',
         rating: 5,
+        rabais: 0,
       
         
     
@@ -126,6 +129,7 @@ export const FORFAITS: Forfait[] = [
         premium: true,
         imageUrl: 'assets/img/massage2300.jpg',
         rating: 4,
+        rabais: 0,
      
         
     
@@ -169,6 +173,7 @@ export const FORFAITS: Forfait[] = [
         premium: true,
         imageUrl: 'assets/img/massage3300.jpg',
         rating: 5,
+        rabais: 0,
       
         
     
@@ -211,6 +216,7 @@ export const FORFAITS: Forfait[] = [
         premium: false,
         imageUrl: 'assets/img/img-yoga300.jpg',
         rating: 5,
+        rabais: 0,
       
         
     

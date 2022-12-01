@@ -34,6 +34,14 @@ mat-form-field {
    font-weight: 500;
 }
 
+
+
+
+.example-button-row {
+  display: table-cell;
+  max-width: 600px;
+}
+
 /* =======================================MEDIAS QUERIES======================================= */
 @media screen and (max-width: 1200px) {
     .form-container{
