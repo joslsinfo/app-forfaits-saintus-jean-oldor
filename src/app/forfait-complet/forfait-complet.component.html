@@ -1,10 +1,6 @@
 <div class="forfait-complet" [ngClass]="{'premium-forfait-complet' : forfait?.premium}">
 
-
-
-
   <mat-card-header>
-
     <h2 class="title">Forfait complet</h2>
   </mat-card-header>
 
@@ -17,41 +13,42 @@
       </mat-card-title>
       <!-- <mat-card-content><img src="{{forfait?.imageUrl}}"></mat-card-content> -->
       <!-- <img [src]="forfait?.imageUrl" alt="{{forfait?.nom}}"> -->
-      <mat-card-title> {{forfait?.nom}} 
+      <mat-card-title> {{forfait?.nom}}
         <mat-divider></mat-divider>
       </mat-card-title>
       <mat-card-content [ngClass]="{'premium-forfait-complet' : forfait?.premium}"> {{forfait?.description}}
         <mat-divider></mat-divider>
       </mat-card-content>
-      <mat-card-content [ngStyle]="{'color' : forfait?.code === 'f0001' ? 'teal' : 'red'}"> {{forfait?.code | uppercase}} 
-        <mat-divider></mat-divider>
-      </mat-card-content>  
-      <mat-card-content> {{forfait?.categories}} 
+      <mat-card-content [ngStyle]="{'color' : forfait?.code === 'f0001' ? 'teal' : 'red'}">
+        {{forfait?.code | uppercase}}
         <mat-divider></mat-divider>
       </mat-card-content>
-      <mat-card-content> {{forfait?.etablissement?.nomEtablissement | uppercase }} 
+      <mat-card-content> {{forfait?.categories}}
+        <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-content> {{forfait?.etablissement?.nomEtablissement | uppercase }}
         <mat-divider></mat-divider>
       </mat-card-content>
 
-      <mat-card-content> {{forfait?.etablissement?.coordonnees?.adresse}} 
+      <mat-card-content> {{forfait?.etablissement?.coordonnees?.adresse}}
         <mat-divider></mat-divider>
       </mat-card-content>
-      <mat-card-content> {{forfait?.etablissement?.coordonnees?.ville}} 
+      <mat-card-content> {{forfait?.etablissement?.coordonnees?.ville}}
         <mat-divider></mat-divider>
       </mat-card-content>
-      <mat-card-content> {{forfait?.etablissement?.coordonnees?.telephone}} 
+      <mat-card-content> {{forfait?.etablissement?.coordonnees?.telephone}}
         <mat-divider></mat-divider>
       </mat-card-content>
-      <mat-card-content> {{forfait?.etablissement?.coordonnees?.courriel}} 
+      <mat-card-content> {{forfait?.etablissement?.coordonnees?.courriel}}
         <mat-divider></mat-divider>
       </mat-card-content>
-      <mat-card-content> {{forfait?.etablissement?.coordonnees?.siteWeb}} 
+      <mat-card-content> {{forfait?.etablissement?.coordonnees?.siteWeb}}
         <mat-divider></mat-divider>
       </mat-card-content>
-      <mat-card-content> Date de début : {{forfait?.dateDebut}} 
+      <mat-card-content> Date de début : {{forfait?.dateDebut}}
         <mat-divider></mat-divider>
       </mat-card-content>
-      <mat-card-content> Date de fin : {{forfait?.dateFin}} 
+      <mat-card-content> Date de fin : {{forfait?.dateFin}}
         <mat-divider></mat-divider>
       </mat-card-content>
 
@@ -69,9 +66,21 @@
     <!-- Réutilisation du composant prix dans le composant forfait complet pour afficher les prix  -->
     <app-prix [forfait]="forfait"></app-prix>
 
+
+
   </div>
 
+
+
 </div>
+
+
+
+
+
+
+
+
 
 <!-- ========================Sous forme de liste========================================= -->
 

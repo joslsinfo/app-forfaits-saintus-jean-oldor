@@ -1,1 +1,36 @@
-<p>formulaire-recherche works!</p>
+
+
+
+<h2> Affichage - Composant enfant</h2>
+<p>
+    {{recherche.nom}} ,  {{recherche.dateDebut}} , {{recherche.dateFin}}
+
+</p>
+
+
+<h2>Formulaire de recherche </h2>
+<!-- <form> -->
+    <mat-form-field appearance="fill" class="container">
+           <mat-label>Nom</mat-label>
+        <input [ngModel]="recherche.nom" matInput (ngModelChange)="changeNom($event)" placeholder="Nom" maxlength="25">
+      </mat-form-field>
+    <mat-form-field appearance="fill" class="container">
+           <mat-label>Date de début</mat-label>
+        <input [ngModel]="recherche.dateDebut" matInput (ngModelChange)="changeDateDebut($event)" placeholder="Date de début" maxlength="25">
+      </mat-form-field>
+    <mat-form-field appearance="fill" class="container">
+           <mat-label>Date de fin</mat-label>
+        <input [ngModel]="recherche.dateFin" matInput (ngModelChange)="changeDateFin($event)" placeholder="Date de fin" maxlength="25">
+      </mat-form-field>
+
+
+  <!-- </form> -->
+
+
+
+
+
+    
+
+
+

@@ -1,5 +1,8 @@
+
 import { FORFAITS } from './../mock-forfaits';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-liste-forfaits',
@@ -8,7 +11,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListeForfaitsComponent implements OnInit {
 
-  forfaits = FORFAITS
+ forfaits = FORFAITS
+ 
 
   constructor() { }
 
@@ -18,5 +22,10 @@ export class ListeForfaitsComponent implements OnInit {
   public getDate(): Date {
     return new Date();
   }
+
+
+
+
+ 
   
 }

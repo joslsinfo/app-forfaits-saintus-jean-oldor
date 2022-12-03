@@ -6,6 +6,7 @@
       <mat-form-field appearance="fill">
 
         <mat-label>Nom du forfait</mat-label>
+        {{recherche.nom}}
         <input type="text" matInput [(ngModel)]="forfait.nom" id="nom" name="nom" value="nom"
           placeholder="Nom du forfait" minlength="2" maxlength="50" required>
 
@@ -42,7 +43,7 @@
         <mat-label> Téléphone</mat-label>
         <span matPrefix>+1 &nbsp;</span>
         <input type="tel" matInput [(ngModel)]="forfait.etablissement.coordonnees.telephone" id="telephone"
-          name="telephone" value="telephone" placeholder="555-555-1234" required>
+          name="telephone" value="telephone" placeholder="555-555-1234"   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
         <mat-icon matSuffix>mode_edit</mat-icon>
       </mat-form-field>
     </div>
@@ -70,6 +71,7 @@
 
       <mat-form-field color="primary" appearance="fill">
         <mat-label>Date de début</mat-label>
+        {{recherche.dateDebut}}
         <input matInput [matDatepicker]="picker1" [(ngModel)]="forfait.dateDebut" id="dateDebut" name="dateDebut"
           value="dateDebut" required>
         <mat-hint>MM/DD/YYYY</mat-hint>
@@ -79,6 +81,7 @@
 
       <mat-form-field color="primary" appearance="fill">
         <mat-label>Date de fin</mat-label>
+        {{recherche.dateFin}}
         <input matInput [matDatepicker]="picker2" [(ngModel)]="forfait.dateFin" id="dateFin" name="dateFin"
           value="dateFin" required>
         <mat-hint>MM/DD/YYYY</mat-hint>
@@ -129,3 +132,4 @@
 
 </div>
 
+{{recherche.nom}}, {{recherche.dateDebut}}, {{recherche.dateFin}}

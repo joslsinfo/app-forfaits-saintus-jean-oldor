@@ -4,6 +4,8 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 import { Forfait } from '../forfait';
+import { Input } from '@angular/core';
+import { Recherche } from '../recherche';
 
 @Component({
   selector: 'app-formulaire-forfait',
@@ -52,6 +54,9 @@ export class FormulaireForfaitComponent implements OnInit {
   
 
 };
+
+@Input() recherche!: Recherche;
+
 
 courriel = new FormControl('', [Validators.required, Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]);
 

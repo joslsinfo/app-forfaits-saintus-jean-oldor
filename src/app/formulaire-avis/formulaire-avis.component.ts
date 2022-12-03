@@ -1,5 +1,6 @@
 
-import { Component, OnInit } from '@angular/core';
+
+import { Component, Input, OnInit } from '@angular/core';
 import { Forfait } from '../forfait';
 
 @Component({
@@ -46,7 +47,8 @@ export class FormulaireAvisComponent implements OnInit {
   premium: false,
   imageUrl: '',
   rating: 0,
-  rabais: 0
+  rabais: 0,
+  
 
   
 
@@ -84,6 +86,6 @@ autoTicks = false;
   ngOnInit(): void {
   }
 
- 
+
 
 }

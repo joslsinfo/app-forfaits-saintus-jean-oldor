@@ -3,6 +3,9 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
+import { Recherche } from '../recherche';
+
+
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
@@ -18,4 +21,17 @@ export class NavigationComponent {
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
+
+
+
+
+  // =============================================
+recherche :Recherche = {
+  nom:'',
+  dateDebut: '',
+  dateFin: ''
+};
+
+
 }
+

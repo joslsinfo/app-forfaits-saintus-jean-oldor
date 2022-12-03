@@ -42,6 +42,7 @@ export const FORFAITS: Forfait[] = [
         imageUrl: 'assets/img/iphone300.jpg',
         rating: 3.5,
         rabais: 0,
+       
      
         
     

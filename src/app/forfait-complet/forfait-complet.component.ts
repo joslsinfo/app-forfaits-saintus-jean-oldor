@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Avis } from '../avis';
 import { Etablissement } from '../etablissement';
 import { Forfait } from '../forfait';
+import { Recherche } from '../recherche';
+
 
 
 
@@ -17,10 +19,14 @@ export class ForfaitCompletComponent implements OnInit {
   @Input() etablissment?: Etablissement;
 
 
+
+
   // @Input() avis: Forfait[] = [];
   // @Input() note? ='';
   // @Input() commentaires='';
   
+
+
 
   constructor() { }
 
