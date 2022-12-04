@@ -1,6 +1,6 @@
 <h2 class="title-h2">Formulaire Forfait</h2>
 <div class="form-container">
-  <form>
+  <form novalidate>
 
     <div>
       <mat-form-field appearance="fill">
@@ -43,7 +43,7 @@
         <mat-label> Téléphone</mat-label>
         <span matPrefix>+1 &nbsp;</span>
         <input type="tel" matInput [(ngModel)]="forfait.etablissement.coordonnees.telephone" id="telephone"
-          name="telephone" value="telephone" placeholder="555-555-1234"   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+          name="telephone" value="telephone" placeholder="555-555-1234" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
         <mat-icon matSuffix>mode_edit</mat-icon>
       </mat-form-field>
     </div>

@@ -1,3 +1,25 @@
 mat-form-field {
     margin-right: 1rem;
+    width: 25%;
+    margin-top: 1rem;
+}
+
+.recherche{
+    display: flex;
+    justify-content:right;
+    align-items: center;
+    /* width: 100%; */
+    margin: 0 2rem;
+
+}
+
+.btn-search{
+   margin: 0 5rem;
+    color: rgb(5, 108, 134);
+    font-size: 1.5rem;
+  
+}
+
+.btn-search:hover{
+color: rgb(72, 122, 93);
 }

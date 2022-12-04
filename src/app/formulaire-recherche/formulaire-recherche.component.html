@@ -1,5 +1,15 @@
 
 
+<div class="recherche">
+
+  <mat-form-field appearence="fill">
+    <mat-label>Rechercher un forfait</mat-label>
+    <input type="text" matInput [ngModel]="" >
+  </mat-form-field>
+  <button mat-icon-button class="btn-search" color="primary"><mat-icon>search</mat-icon>Rechercher</button>
+  
+</div>
+
 
 <h2> Affichage - Composant enfant</h2>
 <p>
@@ -8,23 +18,21 @@
 </p>
 
 
-<h2>Formulaire de recherche </h2>
-<!-- <form> -->
-    <mat-form-field appearance="fill" class="container">
+    <mat-form-field appearance="outline" class="container">
            <mat-label>Nom</mat-label>
         <input [ngModel]="recherche.nom" matInput (ngModelChange)="changeNom($event)" placeholder="Nom" maxlength="25">
       </mat-form-field>
-    <mat-form-field appearance="fill" class="container">
+    <mat-form-field appearance="outline" class="container">
            <mat-label>Date de début</mat-label>
         <input [ngModel]="recherche.dateDebut" matInput (ngModelChange)="changeDateDebut($event)" placeholder="Date de début" maxlength="25">
       </mat-form-field>
-    <mat-form-field appearance="fill" class="container">
+    <mat-form-field appearance="outline" class="container">
            <mat-label>Date de fin</mat-label>
         <input [ngModel]="recherche.dateFin" matInput (ngModelChange)="changeDateFin($event)" placeholder="Date de fin" maxlength="25">
       </mat-form-field>
 
 
-  <!-- </form> -->
+  
 
 
 

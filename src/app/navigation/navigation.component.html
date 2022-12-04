@@ -29,6 +29,7 @@
 
     <!-- Add Content Here -->
 
+    <app-formulaire-recherche [(recherche)]="recherche"></app-formulaire-recherche>
 
       <div class="parent">
 
@@ -36,11 +37,8 @@
           <div>
               {{recherche.nom}}, {{recherche.dateDebut}}, {{recherche.dateFin}} 
           </div>
-           
-
-         <app-formulaire-recherche [(recherche)]="recherche"></app-formulaire-recherche>
+          
   
-
 <app-formulaire-forfait [recherche]="recherche"></app-formulaire-forfait>
         </div>
 

@@ -24,7 +24,7 @@ interface Selection {
 export class FormulaireContactComponent implements OnInit {
 
 
-  prenom = new FormControl('', Validators.required);
+  prenom = new FormControl('',  Validators.required);
   nom = new FormControl('', Validators.required);
   courriel = new FormControl('', [Validators.required, Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]);
   telephone = new FormControl('');
