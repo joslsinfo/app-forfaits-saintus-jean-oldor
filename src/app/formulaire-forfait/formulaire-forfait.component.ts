@@ -92,7 +92,7 @@ courriel = new FormControl('', [Validators.required, Validators.email, Validator
 
 @Component({
   selector: 'custom-snackbar',
-  template: `<span style='color: orange'> L\ajout dans la base de données sera programmé après le congé des fêtes!'</span>`
+  template: `<span style='color: orange'> L\ajout dans la base de données sera programmé après le congé des fêtes!</span>`
 
 })
 export class CustomSnackBarComponent{}
