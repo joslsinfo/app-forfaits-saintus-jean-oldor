@@ -28,3 +28,11 @@ mat-form-field {
 .btn-search:hover{
 color: rgb(72, 122, 93);
 }
+
+mat-icon{
+    position: absolute;
+    z-index: 10;
+    right: 1%;
+    /* top: 20px; */
+    color: rgb(5, 108, 134);
+}
