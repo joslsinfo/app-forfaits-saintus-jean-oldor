@@ -29,28 +29,29 @@
   </p>
   <div class="rating-style" *ngIf="f.rating > 0">
     <app-star-rating [forfait]="f"> </app-star-rating>
-    <app-formulaire-avis></app-formulaire-avis>
- 
-  </div>
+    <!-- <app-formulaire-avis></app-formulaire-avis> -->
+   </div>
 </div>
+
 
 
 <br><br>
 <hr>
 
-
-<app-formulaire-avis></app-formulaire-avis>
+<!-- <app-formulaire-avis></app-formulaire-avis> -->
 
 
 <hr>
 
 
+<!-- <app-formulaire-contact></app-formulaire-contact> -->
 
+<h3 class="title-h2">Liste des forfaits premium avec pipe personnalisée</h3>
+<div *ngFor="let forfait of forfaits | premium " >
 
-<app-formulaire-contact></app-formulaire-contact>
+  <app-forfait-complet [forfait]="forfait"></app-forfait-complet>
 
-
-
+</div>
 
 
 <br><br>

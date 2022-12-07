@@ -9,50 +9,28 @@
     <mat-card>
       <mat-card-title>
         <img class="image" [src]="forfait?.imageUrl" [title]="forfait?.description | uppercase" [alt]="forfait?.nom">
+         {{forfait?.nom}}
         <mat-divider></mat-divider>
       </mat-card-title>
       <!-- <mat-card-content><img src="{{forfait?.imageUrl}}"></mat-card-content> -->
       <!-- <img [src]="forfait?.imageUrl" alt="{{forfait?.nom}}"> -->
-      <mat-card-title> {{forfait?.nom}}
-        <mat-divider></mat-divider>
-      </mat-card-title>
-      <mat-card-content [ngClass]="{'premium-forfait-complet' : forfait?.premium}"> {{forfait?.description}}
+       <mat-card-content [ngClass]="{'premium-forfait-complet' : forfait?.premium}"> {{forfait?.description}} <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-content [ngStyle]="{'color' : forfait?.code === 'f0001' ? 'teal' : 'red'}">  {{forfait?.code | uppercase}} <mat-divider></mat-divider>
+      </mat-card-content>
+      <mat-card-content> 
+        {{forfait?.categories}} <mat-divider></mat-divider>
+        {{forfait?.etablissement?.nomEtablissement | uppercase }} <mat-divider></mat-divider>
+        {{forfait?.etablissement?.coordonnees?.adresse}} <mat-divider></mat-divider>
+        {{forfait?.etablissement?.coordonnees?.ville}} <mat-divider></mat-divider>
+        {{forfait?.etablissement?.coordonnees?.telephone}} <mat-divider></mat-divider>
+        {{forfait?.etablissement?.coordonnees?.courriel}}  <mat-divider></mat-divider>
+        {{forfait?.etablissement?.coordonnees?.siteWeb}}   <mat-divider></mat-divider>
+        Date de début : {{forfait?.dateDebut}} <mat-divider></mat-divider>
+        Date de fin : {{forfait?.dateFin}} 
         <mat-divider></mat-divider>
       </mat-card-content>
-      <mat-card-content [ngStyle]="{'color' : forfait?.code === 'f0001' ? 'teal' : 'red'}">
-        {{forfait?.code | uppercase}}
-        <mat-divider></mat-divider>
-      </mat-card-content>
-      <mat-card-content> {{forfait?.categories}}
-        <mat-divider></mat-divider>
-      </mat-card-content>
-      <mat-card-content> {{forfait?.etablissement?.nomEtablissement | uppercase }}
-        <mat-divider></mat-divider>
-      </mat-card-content>
-
-      <mat-card-content> {{forfait?.etablissement?.coordonnees?.adresse}}
-        <mat-divider></mat-divider>
-      </mat-card-content>
-      <mat-card-content> {{forfait?.etablissement?.coordonnees?.ville}}
-        <mat-divider></mat-divider>
-      </mat-card-content>
-      <mat-card-content> {{forfait?.etablissement?.coordonnees?.telephone}}
-        <mat-divider></mat-divider>
-      </mat-card-content>
-      <mat-card-content> {{forfait?.etablissement?.coordonnees?.courriel}}
-        <mat-divider></mat-divider>
-      </mat-card-content>
-      <mat-card-content> {{forfait?.etablissement?.coordonnees?.siteWeb}}
-        <mat-divider></mat-divider>
-      </mat-card-content>
-      <mat-card-content> Date de début : {{forfait?.dateDebut}}
-        <mat-divider></mat-divider>
-      </mat-card-content>
-      <mat-card-content> Date de fin : {{forfait?.dateFin}}
-        <mat-divider></mat-divider>
-      </mat-card-content>
-
-
+   
       <mat-card-content *ngFor="let a of forfait?.avis">
         <div *ngIf="a.note > 0">{{a.note}}</div>
         <!-- Utilisation du composant star-rating sous forme d'étoile dans le composant forfait complet -->
@@ -62,7 +40,7 @@
         <mat-divider></mat-divider>
       </mat-card-content>
     </mat-card>
-
+    
     <!-- Réutilisation du composant prix dans le composant forfait complet pour afficher les prix  -->
     <app-prix [forfait]="forfait"></app-prix>
 
@@ -80,27 +58,30 @@
 
 
 
-
-
 <!-- ========================Sous forme de liste========================================= -->
 
 <!-- <div  [ngClass]="{'premium-forfait-complet-liste' : forfait?.premium}">
 
 
- <mat-list> {{forfait?.nom}} <mat-divider></mat-divider></mat-list>
-  <mat-list-item> {{forfait?.description}} <mat-divider></mat-divider></mat-list-item>
-  <mat-list-item> {{forfait?.code | uppercase}} </mat-list-item>
-  <mat-list-item> {{forfait?.categories}} <mat-divider></mat-divider></mat-list-item>
-  <mat-list-item> {{forfait?.etablissement?.nomEtablissement}} <mat-divider></mat-divider></mat-list-item>
-  <mat-list-item> {{forfait?.etablissement?.coordonnees?.adresse}} <mat-divider></mat-divider></mat-list-item>
-  <mat-list-item> {{forfait?.etablissement?.coordonnees?.ville}} <mat-divider></mat-divider></mat-list-item>
-  <mat-list-item> {{forfait?.etablissement?.coordonnees?.telephone}} <mat-divider></mat-divider></mat-list-item>
-  <mat-list-item> {{forfait?.etablissement?.coordonnees?.courriel}} <mat-divider></mat-divider></mat-list-item>
-  <mat-list-item> {{forfait?.etablissement?.coordonnees?.siteWeb}} <mat-divider></mat-divider></mat-list-item>
-  <mat-list-item> {{forfait?.dateDebut}} <mat-divider></mat-divider></mat-list-item>
-  <mat-list-item> {{forfait?.dateFin}} <mat-divider></mat-divider></mat-list-item>
-  <mat-list-item> {{forfait?.prix}} $CAD <mat-divider></mat-divider></mat-list-item>
-  <mat-list-item *ngFor="let a of forfait?.avis"> <div>{{a.note}}</div><mat-divider></mat-divider> <div>{{a.commentaires}}</div><mat-divider></mat-divider></mat-list-item>
+ <mat-list-item> 
+   {{forfait?.nom}} <mat-divider></mat-divider>
+    {{forfait?.description}} <mat-divider></mat-divider>
+    {{forfait?.code | uppercase}} <mat-divider></mat-divider>
+    {{forfait?.categories}} <mat-divider></mat-divider>
+    {{forfait?.etablissement?.nomEtablissement}}  <mat-divider></mat-divider>
+    {{forfait?.etablissement?.coordonnees?.adresse}}  <mat-divider></mat-divider>
+    {{forfait?.etablissement?.coordonnees?.ville}}  <mat-divider></mat-divider>
+    {{forfait?.etablissement?.coordonnees?.telephone}}  <mat-divider></mat-divider>
+    {{forfait?.etablissement?.coordonnees?.courriel}}  <mat-divider></mat-divider>
+    {{forfait?.etablissement?.coordonnees?.siteWeb}} <mat-divider></mat-divider>
+    {{forfait?.dateDebut}} <mat-divider></mat-divider>
+    {{forfait?.dateFin}} <mat-divider></mat-divider>
+    {{forfait?.prix}} $CAD  <mat-divider></mat-divider>
+</mat-list-item>
+  <mat-list-item *ngFor="let a of forfait?.avis"> 
+    <div>{{a.note}}</div><mat-divider></mat-divider> 
+    <div>{{a.commentaires}}</div><mat-divider></mat-divider>
+  </mat-list-item>
  
   <app-prix [forfait]="forfait"></app-prix>
 

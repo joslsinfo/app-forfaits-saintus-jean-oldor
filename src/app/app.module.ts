@@ -39,6 +39,8 @@ import { FormulaireAvisComponent } from './formulaire-avis/formulaire-avis.compo
 import { PrixComponent } from './prix/prix.component';
 import { FormulaireRechercheComponent } from './formulaire-recherche/formulaire-recherche.component';
 import { FormulaireContactComponent } from './formulaire-contact/formulaire-contact.component';
+import { PremiumPipe } from './premium.pipe';
+
 
 
 @NgModule({
@@ -54,7 +56,10 @@ import { FormulaireContactComponent } from './formulaire-contact/formulaire-cont
     PrixComponent,
     FormulaireRechercheComponent,
     FormulaireContactComponent,
-    CustomSnackBarComponent
+    CustomSnackBarComponent,
+    PremiumPipe,
+
+
  
   ],
   entryComponents: [CustomSnackBarComponent],
