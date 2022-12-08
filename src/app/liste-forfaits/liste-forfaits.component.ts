@@ -12,6 +12,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ListeForfaitsComponent implements OnInit {
 
  forfaits = FORFAITS
+
  
 
   constructor() { }

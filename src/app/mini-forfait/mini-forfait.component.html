@@ -10,23 +10,20 @@
   <div class="mini">
     <mat-card>
       <mat-card-title class="image"> <img [src]="forfait?.imageUrl" [title]="forfait?.description | uppercase"
-          [alt]="forfait?.nom">
+          [alt]="forfait?.nom |titlecase">
         <mat-divider></mat-divider>
       </mat-card-title>
 
       <mat-card-title>
-        {{forfait?.nom}} <mat-divider></mat-divider>
+        {{forfait?.nom | titlecase}} <mat-divider></mat-divider>
       </mat-card-title>
 
       <mat-card-content>
         {{forfait?.etablissement?.nomEtablissement | uppercase}} <mat-divider></mat-divider>
+        Date de début : {{forfait?.dateDebut | date}} <mat-divider></mat-divider>
+        Date de fin : {{forfait?.dateFin | date }} <mat-divider></mat-divider>
       </mat-card-content>
-      <mat-card-content>
-        Date de début : {{forfait?.dateDebut}} <mat-divider></mat-divider>
-      </mat-card-content>
-      <mat-card-content>
-        Date de fin : {{forfait?.dateFin}} <mat-divider></mat-divider>
-      </mat-card-content>
+     
     </mat-card>
 
     <!-- Réutilisation du composant prix dans le composant forfait complet pour afficher les prix -->

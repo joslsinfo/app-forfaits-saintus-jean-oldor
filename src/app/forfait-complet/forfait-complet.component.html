@@ -9,7 +9,8 @@
     <mat-card>
       <mat-card-title>
         <img class="image" [src]="forfait?.imageUrl" [title]="forfait?.description | uppercase" [alt]="forfait?.nom">
-         {{forfait?.nom}}
+         {{forfait?.nom | titlecase}}
+   
         <mat-divider></mat-divider>
       </mat-card-title>
       <!-- <mat-card-content><img src="{{forfait?.imageUrl}}"></mat-card-content> -->
@@ -21,13 +22,13 @@
       <mat-card-content> 
         {{forfait?.categories}} <mat-divider></mat-divider>
         {{forfait?.etablissement?.nomEtablissement | uppercase }} <mat-divider></mat-divider>
-        {{forfait?.etablissement?.coordonnees?.adresse}} <mat-divider></mat-divider>
-        {{forfait?.etablissement?.coordonnees?.ville}} <mat-divider></mat-divider>
+        {{forfait?.etablissement?.coordonnees?.adresse | titlecase}} <mat-divider></mat-divider>
+        {{forfait?.etablissement?.coordonnees?.ville | titlecase}} <mat-divider></mat-divider>
         {{forfait?.etablissement?.coordonnees?.telephone}} <mat-divider></mat-divider>
         {{forfait?.etablissement?.coordonnees?.courriel}}  <mat-divider></mat-divider>
         {{forfait?.etablissement?.coordonnees?.siteWeb}}   <mat-divider></mat-divider>
-        Date de début : {{forfait?.dateDebut}} <mat-divider></mat-divider>
-        Date de fin : {{forfait?.dateFin}} 
+        Date de début : {{forfait?.dateDebut | date}} <mat-divider></mat-divider>
+        Date de fin : {{forfait?.dateFin | date}} 
         <mat-divider></mat-divider>
       </mat-card-content>
    

@@ -40,6 +40,7 @@ import { PrixComponent } from './prix/prix.component';
 import { FormulaireRechercheComponent } from './formulaire-recherche/formulaire-recherche.component';
 import { FormulaireContactComponent } from './formulaire-contact/formulaire-contact.component';
 import { PremiumPipe } from './premium.pipe';
+import { EtablissementPipe } from './etablissement.pipe';
 
 
 
@@ -58,6 +59,7 @@ import { PremiumPipe } from './premium.pipe';
     FormulaireContactComponent,
     CustomSnackBarComponent,
     PremiumPipe,
+    EtablissementPipe,
 
 
  

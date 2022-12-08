@@ -53,9 +53,16 @@
 
 </div>
 
+<h3 class="title-h2">Liste des forfaits avec pipe personnalisée pour un établissement précis </h3>
+<div *ngFor="let forfait of forfaits | etablissement" >
+  <app-forfait-complet [forfait]="forfait"></app-forfait-complet>
+
+</div>
+
 
 <br><br>
 {{'Date du jour:' + getDate() | date:'fullDate'  }}
+
 
 
 <br>

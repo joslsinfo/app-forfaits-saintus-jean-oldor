@@ -3,7 +3,7 @@ import { Forfait } from  "./forfait";
 
 export const FORFAITS: Forfait[] = [
     {
-        nom: 'Forfait Smart phone',
+        nom: 'forfait Smart phone',
         description: 'Iphone 13 Pro',
         code: 'f0001',
         categories: [
@@ -13,8 +13,8 @@ export const FORFAITS: Forfait[] = [
             nomEtablissement: 'Communication plus',
             coordonnees: 
                 {
-                    adresse: 'Centre Laval',
-                    ville: 'Laval',
+                    adresse: 'centre laval',
+                    ville: 'laval',
                     telephone: '514-730-8206',
                     courriel: 'josaintus@gmail.com',
                     siteWeb: 'www.josaintus.com'
