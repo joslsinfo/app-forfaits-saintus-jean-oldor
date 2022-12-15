@@ -3,7 +3,7 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
-import { Recherche } from '../recherche';
+
 
 
 @Component({
@@ -12,7 +12,7 @@ import { Recherche } from '../recherche';
   styleUrls: ['./navigation.component.css']
 })
 export class NavigationComponent {
-  title = 'app-forfaits-saintus-jean-oldor';
+  // title = 'app-forfaits-saintus-jean-oldor';
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
@@ -26,11 +26,6 @@ export class NavigationComponent {
 
 
   // =============================================
-recherche :Recherche = {
-  nom:'',
-  dateDebut: '',
-  dateFin: ''
-};
 
 
 }

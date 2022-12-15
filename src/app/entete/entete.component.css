@@ -1,0 +1,33 @@
+.navigation{
+    display: flex;
+    list-style-type: none;
+    justify-content: right;
+    flex-wrap: wrap;
+
+
+}
+
+.navigation a{
+  margin: 1rem;
+  text-decoration: none;
+  color: teal;
+  font-size: 1.1rem;
+  padding: 1rem;
+}
+
+.navigation a:hover{
+  background-color: #F7F7F7;
+
+}
+
+
+.mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+  }
+  
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }

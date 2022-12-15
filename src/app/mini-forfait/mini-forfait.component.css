@@ -1,15 +1,12 @@
 
-  .miniforfait-card {
+  /* .miniforfait-card {
    max-width:100%;
    margin-top: 1.2rem;
    margin: 1rem auto;
-    flex-wrap: wrap;
-    /* color:crimson; */
- 
-
-
+   display:flex;
+   justify-content: space-between;
    
-  }
+  } */
 
 
   .image{
@@ -29,12 +26,11 @@
   }
 
 
-
+/* 
   .mini{
-    width:90%;
-
-   
-  }
+    width:25%;
+       
+  } */
 
  
 
@@ -53,3 +49,21 @@
   } */
 
  
+  .mini{
+    display: inline-block;
+    flex-wrap: wrap;
+    max-width:1200px;
+    justify-content:space-around;
+    margin: 0 1rem;
+    color: teal;
+    }
+  
+    .miniforfait-card{
+      display: inline-block;
+      flex-wrap: wrap;
+      max-width:1200px;
+      justify-content:space-around;
+      margin: 0 1rem;
+      color: teal;
+    }
+    

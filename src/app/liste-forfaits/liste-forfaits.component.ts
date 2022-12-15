@@ -20,9 +20,9 @@ export class ListeForfaitsComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  public getDate(): Date {
-    return new Date();
-  }
+  // public getDate(): Date {
+  //   return new Date();
+  // }
 
 
 

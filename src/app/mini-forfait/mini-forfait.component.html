@@ -1,13 +1,9 @@
 <!-- ============================Affichage de tous les champs demandés dans mini-forfait======================================== -->
-
+<mat-card-header>
+  <h2>Mini Forfait </h2>
+</mat-card-header>
 <div class="miniforfait-card">
-
-  <mat-card-header>
-    <h2>Mini Forfait </h2>
-  </mat-card-header>
-
-
-  <div class="mini">
+  <!-- <div class="mini"> -->
     <mat-card>
       <mat-card-title class="image"> <img [src]="forfait?.imageUrl" [title]="forfait?.description | uppercase"
           [alt]="forfait?.nom |titlecase">
@@ -29,7 +25,7 @@
     <!-- Réutilisation du composant prix dans le composant forfait complet pour afficher les prix -->
     <app-prix [forfait]="forfait"></app-prix>
 
-  </div>
+  <!-- </div> -->
 
 </div>
 

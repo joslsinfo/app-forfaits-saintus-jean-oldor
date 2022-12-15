@@ -180,6 +180,135 @@ export const FORFAITS: Forfait[] = [
     
     },
     {
+        nom: 'Forfait massage pour Bébé',
+        description: 'Massage pour Bébé',
+        code: 'f0004',
+        categories: [
+            'Détente'
+        ],
+        etablissement: {
+            nomEtablissement: 'JOSLS Massage',
+            coordonnees: 
+                {
+                    adresse: '33 rue Edith',
+                    ville: 'Laval',
+                    telephone: '514-730-8282',
+                    courriel: 'josls@gmail.com',
+                    siteWeb: 'www.joslsinfo.com'
+
+                }
+            
+     
+        },
+
+        dateDebut: '2022-11-02',
+        dateFin: '2022-01-31',
+        prix: 100,
+
+        avis: [
+            {
+
+                note: 10,
+                commentaires: 'J\'adore ce forfait pour Bébé.'
+           }
+
+        ],
+        nouveauPrix: 70,
+        premium: true,
+        imageUrl: 'assets/img/massage3300.jpg',
+        rating: 5,
+        rabais: 0,
+      
+        
+    
+    },
+    {
+        nom: 'Forfait massage pour Bébé',
+        description: 'Massage pour Bébé',
+        code: 'f0004',
+        categories: [
+            'Détente'
+        ],
+        etablissement: {
+            nomEtablissement: 'JOSLS Massage',
+            coordonnees: 
+                {
+                    adresse: '33 rue Edith',
+                    ville: 'Laval',
+                    telephone: '514-730-8282',
+                    courriel: 'josls@gmail.com',
+                    siteWeb: 'www.joslsinfo.com'
+
+                }
+            
+     
+        },
+
+        dateDebut: '2022-11-02',
+        dateFin: '2022-01-31',
+        prix: 100,
+
+        avis: [
+            {
+
+                note: 10,
+                commentaires: 'J\'adore ce forfait pour Bébé.'
+           }
+
+        ],
+        nouveauPrix: 70,
+        premium: true,
+        imageUrl: 'assets/img/massage3300.jpg',
+        rating: 5,
+        rabais: 0,
+      
+        
+    
+    },
+    {
+        nom: 'Forfait massage pour Bébé',
+        description: 'Massage pour Bébé',
+        code: 'f0004',
+        categories: [
+            'Détente'
+        ],
+        etablissement: {
+            nomEtablissement: 'JOSLS Massage',
+            coordonnees: 
+                {
+                    adresse: '33 rue Edith',
+                    ville: 'Laval',
+                    telephone: '514-730-8282',
+                    courriel: 'josls@gmail.com',
+                    siteWeb: 'www.joslsinfo.com'
+
+                }
+            
+     
+        },
+
+        dateDebut: '2022-11-02',
+        dateFin: '2022-01-31',
+        prix: 100,
+
+        avis: [
+            {
+
+                note: 10,
+                commentaires: 'J\'adore ce forfait pour Bébé.'
+           }
+
+        ],
+        nouveauPrix: 70,
+        premium: true,
+        imageUrl: 'assets/img/massage3300.jpg',
+        rating: 5,
+        rabais: 0,
+      
+        
+    
+    },
+    {
         nom: 'Forfait Yoga',
         description: 'Yoga d\'équipe',
         code: 'f0005',

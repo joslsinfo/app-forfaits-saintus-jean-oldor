@@ -10,13 +10,16 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
+
     <mat-toolbar color="primary">
+      <!-- ==================== -->
       <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
+      <!-- ====================== -->
       <mat-icon>apps</mat-icon>
-      {{ title }}
+      <!-- {{ title }} -->
       <!-- <span>app-forfaits-saintus-jean-oldor</span> -->
       <span class="example-spacer"></span>
       <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
@@ -29,23 +32,7 @@
 
     <!-- Add Content Here -->
 
-    <app-formulaire-recherche [(recherche)]="recherche"></app-formulaire-recherche>
-
-      <div class="parent">
-
-      <h2>Affichage - Composant parent</h2>
-          <div>
-              {{recherche.nom}}, {{recherche.dateDebut}}, {{recherche.dateFin}} 
-          </div>
-          
-  
-<app-formulaire-forfait [recherche]="recherche"></app-formulaire-forfait>
-        </div>
-
-
-
-    <app-liste-forfaits></app-liste-forfaits>
-
+    
 
 
 

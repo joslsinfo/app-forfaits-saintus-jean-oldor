@@ -23,6 +23,9 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatSelectModule} from '@angular/material/select';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatTableModule} from '@angular/material/table';
+import {MatSortModule} from '@angular/material/sort';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 import { AppComponent } from './app.component';
 import { ListeForfaitsComponent } from './liste-forfaits/liste-forfaits.component';
@@ -41,6 +44,14 @@ import { FormulaireRechercheComponent } from './formulaire-recherche/formulaire-
 import { FormulaireContactComponent } from './formulaire-contact/formulaire-contact.component';
 import { PremiumPipe } from './premium.pipe';
 import { EtablissementPipe } from './etablissement.pipe';
+import { TableauForfaitsComponent } from './tableau-forfaits/tableau-forfaits.component';
+import { EnteteComponent } from './entete/entete.component';
+import { ListeMiniForfaitsComponent } from './liste-mini-forfaits/liste-mini-forfaits.component';
+import { RechercheComponent } from './recherche/recherche.component';
+import { ListeForfaitsCompletsComponent } from './liste-forfaits-complets/liste-forfaits-complets.component';
+import { AProposComponent } from './a-propos/a-propos.component';
+import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
+
 
 
 
@@ -60,6 +71,14 @@ import { EtablissementPipe } from './etablissement.pipe';
     CustomSnackBarComponent,
     PremiumPipe,
     EtablissementPipe,
+    TableauForfaitsComponent,
+    EnteteComponent,
+    ListeMiniForfaitsComponent,
+    RechercheComponent,
+    ListeForfaitsCompletsComponent,
+    AProposComponent,
+    PiedDePageComponent,
+
 
 
  
@@ -88,7 +107,10 @@ import { EtablissementPipe } from './etablissement.pipe';
     MatRadioModule,
     MatAutocompleteModule,
     MatSelectModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule
     
     
   

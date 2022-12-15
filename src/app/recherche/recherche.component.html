@@ -1,0 +1,17 @@
+<app-formulaire-recherche [(recherche)]="recherche"></app-formulaire-recherche>
+
+      <div class="parent">
+
+      <h2>Affichage - Composant parent</h2>
+          <div>
+              {{recherche.nom}}, {{recherche.dateDebut}}, {{recherche.dateFin}} 
+          </div>
+          
+  
+<app-formulaire-forfait [recherche]="recherche"></app-formulaire-forfait>
+        </div>
+
+
+
+    <app-liste-forfaits></app-liste-forfaits>
+
