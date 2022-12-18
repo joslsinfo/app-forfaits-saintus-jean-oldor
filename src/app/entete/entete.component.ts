@@ -7,13 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EnteteComponent implements OnInit {
   title = 'app-forfaits-saintus-jean-oldor';
-  constructor() { }
+
+
+  constructor() { 
+    this.updateTime();
+  }
 
   ngOnInit(): void {
   }
 
+  public time: string = new Date().toLocaleTimeString();
+
   public getDate(): Date {
     return new Date();
+  }
+
+  public updateTime():void {
+    setInterval( () => {
+      this.time = new Date().toLocaleTimeString()
+    }, 1000);
   }
 
 }

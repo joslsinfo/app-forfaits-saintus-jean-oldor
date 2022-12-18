@@ -48,7 +48,7 @@
   
   } */
 
- 
+/*  
   .mini{
     display: inline-block;
     flex-wrap: wrap;
@@ -67,3 +67,7 @@
       color: teal;
     }
     
+
+    .card{
+      display: block;
+    } */
