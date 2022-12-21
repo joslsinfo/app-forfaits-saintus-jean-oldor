@@ -2,7 +2,19 @@ table {
     width: 100%;
   }
 
-  th{
+  td, th{
+ 
+   
+    width: 25%;
+   
+  }
+
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  th {
+     font-size: 1.1rem;
     font-weight: bold;
-    font-size: 1.1rem;
   }
