@@ -1,3 +1,7 @@
+import { RechercheComponent } from './recherche/recherche.component';
+import { FormulaireRechercheComponent } from './formulaire-recherche/formulaire-recherche.component';
+import { FormulaireContactComponent } from './formulaire-contact/formulaire-contact.component';
+import { FormulaireForfaitComponent } from './formulaire-forfait/formulaire-forfait.component';
 import { AProposComponent } from './a-propos/a-propos.component';
 import { TableauForfaitsComponent } from './tableau-forfaits/tableau-forfaits.component';
 import { MiniForfaitComponent } from './mini-forfait/mini-forfait.component';
@@ -10,10 +14,12 @@ import { ListeForfaitsCompletsComponent } from './liste-forfaits-complets/liste-
 
 const routes: Routes = [
 
+  {path: '', component: ListeForfaitsComponent},
   {path: 'liste-mini-forfaits', component: ListeMiniForfaitsComponent},
   {path: 'liste-forfaits-complets', component: ListeForfaitsCompletsComponent},
   {path: 'liste-tous-les-forfaits', component: ListeForfaitsComponent},
   {path: 'tableau-forfaits', component: TableauForfaitsComponent},
+  {path: 'recherche', component: RechercheComponent},
   {path: 'a-propos', component: AProposComponent},
 ];
 

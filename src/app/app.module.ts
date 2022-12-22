@@ -26,6 +26,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTableModule} from '@angular/material/table';
 import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatChipsModule} from '@angular/material/chips';
 
 import { AppComponent } from './app.component';
 import { ListeForfaitsComponent } from './liste-forfaits/liste-forfaits.component';
@@ -51,6 +52,7 @@ import { RechercheComponent } from './recherche/recherche.component';
 import { ListeForfaitsCompletsComponent } from './liste-forfaits-complets/liste-forfaits-complets.component';
 import { AProposComponent } from './a-propos/a-propos.component';
 import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
+import { ChipsComponent } from './chips/chips.component';
 
 
 
@@ -78,6 +80,7 @@ import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
     ListeForfaitsCompletsComponent,
     AProposComponent,
     PiedDePageComponent,
+    ChipsComponent,
 
 
 
@@ -110,7 +113,8 @@ import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
     MatSnackBarModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatChipsModule,
     
     
   
