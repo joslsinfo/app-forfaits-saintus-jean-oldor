@@ -53,6 +53,7 @@ import { ListeForfaitsCompletsComponent } from './liste-forfaits-complets/liste-
 import { AProposComponent } from './a-propos/a-propos.component';
 import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
 import { ChipsComponent } from './chips/chips.component';
+import { ForfaitEtablissementComponent } from './forfait-etablissement/forfait-etablissement.component';
 
 
 
@@ -81,6 +82,7 @@ import { ChipsComponent } from './chips/chips.component';
     AProposComponent,
     PiedDePageComponent,
     ChipsComponent,
+    ForfaitEtablissementComponent,
 
 
 
