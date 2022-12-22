@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 
 })
 export class PiedDePageComponent implements OnInit {
-piedDePage='Réalisé par Saintus Jean Oldor';
+piedDePage=`Réalisé par Saintus Jean Oldor`;
 
 
 
@@ -17,14 +17,14 @@ piedDePage='Réalisé par Saintus Jean Oldor';
   ngOnInit(): void {
   }
 
-  public getDate():string{
-    return new Date().toLocaleDateString();
+  // public getDate():string{
+  //   return new Date().toLocaleDateString();
 
-  }
-  public getTime():string{
-    return new Date().toLocaleTimeString();
+  // }
+  // public getTime():string{
+  //   return new Date().toLocaleTimeString();
 
-  }
+  // }
 
 
 
