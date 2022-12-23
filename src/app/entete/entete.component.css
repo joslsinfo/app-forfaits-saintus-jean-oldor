@@ -16,10 +16,14 @@ li{
    text-decoration: none;
   color: teal;
   font-size: 1.1rem;
+  margin: 1rem;
+  padding: 1rem;
 }
 
 .navigation a:hover{
   background-color: #F7F7F7;
+  margin: 1rem;
+  padding: 1rem;
 
 }
 
@@ -37,5 +41,7 @@ li{
 
   .active{
     background-color: #F7F7F7;
+    margin: 1rem;
+    padding: 1rem;
 
   }
