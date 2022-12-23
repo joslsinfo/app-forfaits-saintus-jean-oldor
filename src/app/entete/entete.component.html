@@ -29,8 +29,9 @@
 
 
 <ul class="navigation">
-    <li> <a routerLink="/">Accueil</a></li>
-    <li> <a routerLink="/etablissement">Établissement</a></li>
-     <li> <a routerLink="/gestion-forfaits"> Gestion des forfaits</a></li>
-    <li> <a routerLink="/a-propos"> A propos</a></li>
+    <li [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}"> <a routerLink="/">Accueil</a></li>
+    <li [routerLinkActive]="'active'"> <a routerLink="/etablissement">Établissement</a></li>
+    <li [routerLinkActive]="'active'"> <a routerLink="/categorie">Catégorie</a></li>
+     <li [routerLinkActive]="'active'"> <a routerLink="/gestion-forfaits"> Gestion des forfaits</a></li>
+    <li [routerLinkActive]="'active'"> <a routerLink="/a-propos"> A propos</a></li>
 </ul>

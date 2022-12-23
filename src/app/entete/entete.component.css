@@ -3,16 +3,19 @@
     list-style-type: none;
     justify-content: right;
     flex-wrap: wrap;
+   
+}
 
+li{
+  margin: 1rem;
+  padding: 1rem;
 
 }
 
 .navigation a{
-  margin: 1rem;
-  text-decoration: none;
+   text-decoration: none;
   color: teal;
   font-size: 1.1rem;
-  padding: 1rem;
 }
 
 .navigation a:hover{
@@ -30,4 +33,9 @@
   
   .example-spacer {
     flex: 1 1 auto;
+  }
+
+  .active{
+    background-color: #F7F7F7;
+
   }

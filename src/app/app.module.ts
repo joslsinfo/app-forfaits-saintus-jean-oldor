@@ -54,6 +54,8 @@ import { AProposComponent } from './a-propos/a-propos.component';
 import { PiedDePageComponent } from './pied-de-page/pied-de-page.component';
 import { ChipsComponent } from './chips/chips.component';
 import { ForfaitEtablissementComponent } from './forfait-etablissement/forfait-etablissement.component';
+import { CategoriesComponent } from './categories/categories.component';
+import { CategoriesPipe } from './categories.pipe';
 
 
 
@@ -83,6 +85,8 @@ import { ForfaitEtablissementComponent } from './forfait-etablissement/forfait-e
     PiedDePageComponent,
     ChipsComponent,
     ForfaitEtablissementComponent,
+    CategoriesComponent,
+    CategoriesPipe,
 
 
 

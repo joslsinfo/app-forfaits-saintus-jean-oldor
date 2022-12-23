@@ -1,3 +1,4 @@
+import { CategoriesComponent } from './categories/categories.component';
 import { ForfaitEtablissementComponent } from './forfait-etablissement/forfait-etablissement.component';
 import { RechercheComponent } from './recherche/recherche.component';
 import { FormulaireRechercheComponent } from './formulaire-recherche/formulaire-recherche.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
   // { path: '', redirectTo: '/liste-de-tous-les-forfaits', pathMatch: 'full' },
   { path: '', component: ListeForfaitsComponent },
   { path: 'etablissement', component: ForfaitEtablissementComponent },
+  { path: 'categorie', component: CategoriesComponent },
   { path: 'gestion-forfaits', component: TableauForfaitsComponent },
   { path: 'a-propos', component: AProposComponent },
   // { path: 'liste-forfaits-complets', component: ListeForfaitsCompletsComponent },

@@ -7,6 +7,7 @@ export const FORFAITS: Forfait[] = [
         description: 'Iphone 13 Pro',
         code: 'f0001',
         categories: [
+         
            
         ],
         etablissement: {
@@ -97,7 +98,7 @@ export const FORFAITS: Forfait[] = [
         description: 'Massage pour une personne',
         code: 'f0003',
         categories: [
-            'Détente', ' Restaurant'
+            'Détente', 'Restaurant'
         ],
         etablissement: {
             nomEtablissement: 'JOSLS Massage',

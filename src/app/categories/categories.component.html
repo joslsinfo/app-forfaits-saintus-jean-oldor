@@ -1,0 +1,6 @@
+<h3 class="title-h2">Liste des forfaits avec pipe personnalisée pour une catégorie précise </h3>
+<div *ngFor="let forfait of forfaits | categories" >
+  <app-forfait-complet [forfait]="forfait"></app-forfait-complet>
+
+</div>
+
