@@ -56,6 +56,7 @@ import { ChipsComponent } from './chips/chips.component';
 import { ForfaitEtablissementComponent } from './forfait-etablissement/forfait-etablissement.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { CategoriesPipe } from './categories.pipe';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 
@@ -87,6 +88,7 @@ import { CategoriesPipe } from './categories.pipe';
     ForfaitEtablissementComponent,
     CategoriesComponent,
     CategoriesPipe,
+    PageNotFoundComponent,
 
 
 

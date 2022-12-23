@@ -1,3 +1,4 @@
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { ForfaitEtablissementComponent } from './forfait-etablissement/forfait-etablissement.component';
 import { RechercheComponent } from './recherche/recherche.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'categorie', component: CategoriesComponent },
   { path: 'gestion-forfaits', component: TableauForfaitsComponent },
   { path: 'a-propos', component: AProposComponent },
+  { path: '**', component: PageNotFoundComponent },
   // { path: 'liste-forfaits-complets', component: ListeForfaitsCompletsComponent },
   // { path: 'liste-de-tous-les-forfaits', component: ListeForfaitsComponent },
   // { path: 'recherche', component: RechercheComponent },

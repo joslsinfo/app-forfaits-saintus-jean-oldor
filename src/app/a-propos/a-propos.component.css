@@ -1,5 +1,6 @@
- div{
+ div, p{
     font-family: 'Ubuntu', sans-serif;
     margin: auto 1.5rem;
+    font-size: 1.1rem;
 
 }
