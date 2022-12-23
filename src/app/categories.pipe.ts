@@ -9,6 +9,7 @@ export class CategoriesPipe implements PipeTransform {
  
   transform(forfaits: Forfait[]): Forfait[] {
     return forfaits.filter(forfait => forfait.categories.includes('Restaurant' || 'Détente'));
+   
     }
 
 
