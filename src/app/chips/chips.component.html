@@ -10,7 +10,7 @@
         </button>
       </mat-chip>
     </mat-chip-list>
-    <input placeholder="Nouvelle catégorie..." #fruitInput [formControl]="categorieCtrl"
+    <input placeholder="Nouvelle catégorie..." #categorieInput [formControl]="categorieCtrl"
       [matChipInputFor]="chipGrid" [matAutocomplete]="auto"
       [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
       (matChipInputTokenEnd)="add($event)"/>

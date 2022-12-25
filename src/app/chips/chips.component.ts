@@ -36,7 +36,7 @@ export class ChipsComponent implements OnInit {
   add(event: MatChipInputEvent): void {
     const value = (event.value || '').trim();
 
-    // Add our fruit
+    // Add our categorie
     if (value) {
       this.categories.push(value);
     }
