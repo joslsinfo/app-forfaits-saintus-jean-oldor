@@ -54,7 +54,7 @@ export const FORFAITS: Forfait[] = [
         description: 'Massage par groupe',
         code: 'f0002',
         categories: [
-            'Détente', ' Hebergement'
+            'Détente', ' Hébergement'
         ],
         etablissement: {
             nomEtablissement: 'JOSLS Massage',
@@ -97,7 +97,7 @@ export const FORFAITS: Forfait[] = [
         description: 'Massage par couple',
         code: 'f0003',
         categories: [
-            'Détente', ' Hebergement'
+            'Détente', ' Hébergement'
         ],
         etablissement: {
             nomEtablissement: 'JOSLS Massage',

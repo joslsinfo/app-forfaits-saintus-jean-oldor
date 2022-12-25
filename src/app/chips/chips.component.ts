@@ -10,6 +10,7 @@ import {Observable} from 'rxjs';
 import {map, startWith} from 'rxjs/operators';
 
 
+
 @Component({
   selector: 'app-chips',
   templateUrl: './chips.component.html',
@@ -18,17 +19,17 @@ import {map, startWith} from 'rxjs/operators';
 export class ChipsComponent implements OnInit {
 
   separatorKeysCodes: number[] = [ENTER, COMMA];
-  fruitCtrl = new FormControl('');
-  filteredFruits: Observable<string[]>;
-  fruits: string[] = ['Lemon'];
-  allFruits: string[] = ['Apple', 'Lemon', 'Lime', 'Orange', 'Strawberry'];
+  categorieCtrl = new FormControl('');
+  filteredCategories: Observable<string[]>;
+  categories: string[] = ['Détente'];
+  allCategories: string[] = ['Détente', 'Hébergement', 'Restaurant'];
 
-  @ViewChild('fruitInput') fruitInput!: ElementRef<HTMLInputElement>;
+  @ViewChild('fruitInput') categorieInput!: ElementRef<HTMLInputElement>;
 
   constructor() {
-    this.filteredFruits = this.fruitCtrl.valueChanges.pipe(
+    this.filteredCategories = this.categorieCtrl.valueChanges.pipe(
       startWith(null),
-      map((fruit: string | null) => (fruit ? this._filter(fruit) : this.allFruits.slice())),
+      map((categorie: string | null) => (categorie ? this._filter(categorie) : this.allCategories.slice())),
     );
   }
 
@@ -37,36 +38,38 @@ export class ChipsComponent implements OnInit {
 
     // Add our fruit
     if (value) {
-      this.fruits.push(value);
+      this.categories.push(value);
     }
 
     // Clear the input value
     event.chipInput!.clear();
 
-    this.fruitCtrl.setValue(null);
+    this.categorieCtrl.setValue(null);
   }
 
-  remove(fruit: string): void {
-    const index = this.fruits.indexOf(fruit);
+  remove(categorie: string): void {
+    const index = this.categories.indexOf(categorie);
 
     if (index >= 0) {
-      this.fruits.splice(index, 1);
+      this.categories.splice(index, 1);
     }
   }
 
   selected(event: MatAutocompleteSelectedEvent): void {
-    this.fruits.push(event.option.viewValue);
-    this.fruitInput.nativeElement.value = '';
-    this.fruitCtrl.setValue(null);
+    this.categories.push(event.option.viewValue);
+    this.categorieInput.nativeElement.value = '';
+    this.categorieCtrl.setValue(null);
   }
 
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
 
-    return this.allFruits.filter(fruit => fruit.toLowerCase().includes(filterValue));
+    return this.allCategories.filter(categorie => categorie.toLowerCase().includes(filterValue));
   }
+   // constructor() { }
 
-  // constructor() { }
+
+  
 
   ngOnInit(): void {
   }

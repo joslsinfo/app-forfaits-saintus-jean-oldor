@@ -28,6 +28,7 @@ import {MatSortModule} from '@angular/material/sort';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatChipsModule} from '@angular/material/chips';
 
+
 import { AppComponent } from './app.component';
 import { ListeForfaitsComponent } from './liste-forfaits/liste-forfaits.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -123,6 +124,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatSortModule,
     MatPaginatorModule,
     MatChipsModule,
+  
     
     
   
