@@ -50,8 +50,8 @@ export const FORFAITS: Forfait[] = [
     },
 
     {
-        nom: 'Forfait massage pour un couple',
-        description: 'Massage pour un couple',
+        nom: 'Forfait massage par groupe',
+        description: 'Massage par groupe',
         code: 'f0002',
         categories: [
             'Détente', ' Hebergement'
@@ -92,11 +92,54 @@ export const FORFAITS: Forfait[] = [
         
     
     },
+    {
+        nom: 'Forfait massage par couple',
+        description: 'Massage par couple',
+        code: 'f0003',
+        categories: [
+            'Détente', ' Hebergement'
+        ],
+        etablissement: {
+            nomEtablissement: 'JOSLS Massage',
+            coordonnees: 
+                {
+                    adresse: '33 rue Edith',
+                    ville: 'Laval',
+                    telephone: '514-730-8282',
+                    courriel: 'josls@gmail.com',
+                    siteWeb: 'www.joslsinfo.com'
+
+                }
+            
+     
+        },
+
+        dateDebut: '2022-11-02',
+        dateFin: '2022-12-31',
+        prix: 500,
+
+        avis: [
+            {
+
+                note: 10,
+                commentaires: 'Un très bon forfait pour un bon massage.'
+           }
+
+        ],
+        nouveauPrix: 400,
+        premium: true,
+        imageUrl: 'assets/img/img-massage-couple300.jpg',
+        rating: 5,
+        rabais: 0,
+      
+        
+    
+    },
 
     {
         nom: 'Forfait massage une personne',
         description: 'Massage pour une personne',
-        code: 'f0003',
+        code: 'f0004',
         categories: [
             'Détente', 'Restaurant'
         ],
@@ -140,7 +183,7 @@ export const FORFAITS: Forfait[] = [
     {
         nom: 'Forfait massage pour Bébé',
         description: 'Massage pour Bébé',
-        code: 'f0004',
+        code: 'f0005',
         categories: [
             'Détente'
         ],
@@ -181,14 +224,14 @@ export const FORFAITS: Forfait[] = [
     
     },
     {
-        nom: 'Forfait massage pour Bébé',
-        description: 'Massage pour Bébé',
-        code: 'f0004',
+        nom: 'Forfait yoga en plein air',
+        description: 'Yoga en plein air',
+        code: 'f0006',
         categories: [
             'Détente'
         ],
         etablissement: {
-            nomEtablissement: 'JOSLS Massage',
+            nomEtablissement: 'JOSLS Yoga',
             coordonnees: 
                 {
                     adresse: '33 rue Edith',
@@ -202,21 +245,21 @@ export const FORFAITS: Forfait[] = [
      
         },
 
-        dateDebut: '2022-11-02',
+        dateDebut: '2022-12-25',
         dateFin: '2022-01-31',
-        prix: 100,
+        prix: 250,
 
         avis: [
             {
 
                 note: 10,
-                commentaires: 'J\'adore ce forfait pour Bébé.'
+                commentaires: 'J\'adore ce forfait en plein air.'
            }
 
         ],
-        nouveauPrix: 70,
+        nouveauPrix: 200,
         premium: true,
-        imageUrl: 'assets/img/massage3300.jpg',
+        imageUrl: 'assets/img/yoga-beach300.jpg',
         rating: 5,
         rabais: 0,
       
@@ -224,14 +267,14 @@ export const FORFAITS: Forfait[] = [
     
     },
     {
-        nom: 'Forfait massage pour Bébé',
-        description: 'Massage pour Bébé',
-        code: 'f0004',
+        nom: 'Forfait yoga pour une personne',
+        description: 'Yoga pour une personne',
+        code: 'f0007',
         categories: [
             'Détente'
         ],
         etablissement: {
-            nomEtablissement: 'JOSLS Massage',
+            nomEtablissement: 'JOSLS Yoga',
             coordonnees: 
                 {
                     adresse: '33 rue Edith',
@@ -245,21 +288,21 @@ export const FORFAITS: Forfait[] = [
      
         },
 
-        dateDebut: '2022-11-02',
+        dateDebut: '2022-12-25',
         dateFin: '2022-01-31',
-        prix: 100,
+        prix: 150,
 
         avis: [
             {
 
                 note: 10,
-                commentaires: 'J\'adore ce forfait pour Bébé.'
+                commentaires: 'J\'adore ce forfait.'
            }
 
         ],
-        nouveauPrix: 70,
+        nouveauPrix: 120,
         premium: true,
-        imageUrl: 'assets/img/massage3300.jpg',
+        imageUrl: 'assets/img/img-yoga-individuel300.jpg',
         rating: 5,
         rabais: 0,
       
@@ -267,14 +310,14 @@ export const FORFAITS: Forfait[] = [
     
     },
     {
-        nom: 'Forfait massage pour Bébé',
-        description: 'Massage pour Bébé',
-        code: 'f0004',
+        nom: 'Forfait Yoga à la plage',
+        description: 'Yoga à la plage',
+        code: 'f0008',
         categories: [
             'Détente'
         ],
         etablissement: {
-            nomEtablissement: 'JOSLS Massage',
+            nomEtablissement: 'JOSLS Yoga',
             coordonnees: 
                 {
                     adresse: '33 rue Edith',
@@ -290,19 +333,19 @@ export const FORFAITS: Forfait[] = [
 
         dateDebut: '2022-11-02',
         dateFin: '2022-01-31',
-        prix: 100,
+        prix: 190,
 
         avis: [
             {
 
                 note: 10,
-                commentaires: 'J\'adore ce forfait pour Bébé.'
+                commentaires: 'J\'adore ce forfait.'
            }
 
         ],
-        nouveauPrix: 70,
+        nouveauPrix: 150,
         premium: true,
-        imageUrl: 'assets/img/massage3300.jpg',
+        imageUrl: 'assets/img/img-yoga-beach300.jpg',
         rating: 5,
         rabais: 0,
       
@@ -312,7 +355,7 @@ export const FORFAITS: Forfait[] = [
     {
         nom: 'Forfait Yoga',
         description: 'Yoga d\'équipe',
-        code: 'f0005',
+        code: 'f0009',
         categories: [
             'Détente'
         ],
