@@ -24,7 +24,7 @@ export class ChipsComponent implements OnInit {
   categories: string[] = ['Détente'];
   allCategories: string[] = ['Détente', 'Hébergement', 'Restaurant'];
 
-  @ViewChild('fruitInput') categorieInput!: ElementRef<HTMLInputElement>;
+  @ViewChild('categorieInput') categorieInput!: ElementRef<HTMLInputElement>;
 
   constructor() {
     this.filteredCategories = this.categorieCtrl.valueChanges.pipe(
