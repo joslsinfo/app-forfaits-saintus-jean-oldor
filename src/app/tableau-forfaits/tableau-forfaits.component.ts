@@ -77,7 +77,7 @@ import { Forfait } from '../forfait';
 })
 export class TableauForfaitsComponent implements OnInit {
 
-  displayedColumns: string[] = ['nom', 'description', 'dateDebut', 'dateFin'];
+  displayedColumns: string[] = ['nom', 'description', 'dateDebut', 'dateFin','prix'];
   dataSource:  MatTableDataSource<Forfait> = new  MatTableDataSource (FORFAITS);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
