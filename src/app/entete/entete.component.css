@@ -4,12 +4,13 @@
     justify-content: right;
     flex-wrap: wrap;
    
+   
 }
 
 li{
   margin: 1rem;
   padding: 1rem;
-
+ 
 }
 
 .navigation a{
@@ -46,4 +47,8 @@ li{
 
   }
  
- 
+.material-icons{
+  font-size: 26px;
+
+}
+
