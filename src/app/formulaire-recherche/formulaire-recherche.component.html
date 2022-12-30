@@ -1,6 +1,6 @@
 
 
-<div class="recherche">
+<!-- <div class="recherche">
 
   <mat-form-field appearence="outline">
     <mat-label>Rechercher un forfait</mat-label>
@@ -9,10 +9,10 @@
   </mat-form-field>
   <button mat-icon-button class="btn-search" color="primary">Rechercher</button>
   
-</div>
+</div> -->
 
 
-<h2 class="affichage"> Affichage - Composant enfant</h2>
+<!-- <h2 class="affichage"> Affichage - Composant enfant</h2> -->
 <p class="affichage">
     {{recherche.nom}} ,  {{recherche.dateDebut}} , {{recherche.dateFin}}
 
@@ -20,15 +20,15 @@
 
 
     <mat-form-field appearance="outline" class="container">
-           <mat-label>Nom</mat-label>
+           <mat-label>Nom</mat-label>  <mat-icon class="searche-icon">search</mat-icon>
         <input [ngModel]="recherche.nom" matInput (ngModelChange)="changeNom($event)" placeholder="Nom" maxlength="25" required>
       </mat-form-field>
     <mat-form-field appearance="outline" class="container">
-           <mat-label>Date de début</mat-label>
+           <mat-label>Date de début</mat-label> <mat-icon class="searche-icon">search</mat-icon>
         <input [ngModel]="recherche.dateDebut" matInput (ngModelChange)="changeDateDebut($event)" placeholder="Date de début" maxlength="25" required>
       </mat-form-field>
     <mat-form-field appearance="outline" class="container">
-           <mat-label>Date de fin</mat-label>
+           <mat-label>Date de fin</mat-label>   <mat-icon class="searche-icon">search</mat-icon>
         <input [ngModel]="recherche.dateFin" matInput (ngModelChange)="changeDateFin($event)" placeholder="Date de fin" maxlength="25" required>
       </mat-form-field>
 
