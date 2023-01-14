@@ -332,7 +332,7 @@ export const FORFAITS: Forfait[] = [
         },
 
         dateDebut: '2022-11-02',
-        dateFin: '2022-01-31',
+        dateFin: '2023-01-31',
         prix: 190,
 
         avis: [
@@ -375,7 +375,7 @@ export const FORFAITS: Forfait[] = [
         },
 
         dateDebut: '2022-11-19',
-        dateFin: '2022-01-31',
+        dateFin: '2023-01-31',
         prix: 180,
 
         avis: [
