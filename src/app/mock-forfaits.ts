@@ -137,7 +137,7 @@ export const FORFAITS: Forfait[] = [
     },
 
     {
-        nom: 'Forfait massage une personne',
+        nom: 'Forfait massage pour une personne',
         description: 'Massage pour une personne',
         code: 'f0004',
         categories: [
@@ -395,6 +395,51 @@ export const FORFAITS: Forfait[] = [
         
     
     }
+    ,
+    {
+        nom: 'Forfait Yoga entre les amis',
+        description: 'Yoga en groupe d\'amis',
+        code: 'f0010',
+        categories: [
+            'Détente'
+        ],
+        etablissement: {
+            nomEtablissement: 'JOSLS Yoga',
+            coordonnees: 
+                {
+                    adresse: '33 rue Edith',
+                    ville: 'Laval',
+                    telephone: '514-730-8282',
+                    courriel: 'josls@gmail.com',
+                    siteWeb: 'www.joslsinfo.com'
+
+                }
+            
+     
+        },
+
+        dateDebut: '2022-12-01',
+        dateFin: '2023-01-31',
+        prix: 300,
+
+        avis: [
+            {
+
+                note: 10,
+                commentaires: 'Le plaisir de faire du yoga!'
+           }
+
+        ],
+        nouveauPrix: 170,
+        premium: true,
+        imageUrl: 'assets/img/img-yoga300.jpg',
+        rating: 5,
+        rabais: 0,
+      
+        
+    
+    }
+
 
         
 
