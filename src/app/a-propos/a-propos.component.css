@@ -1,8 +1,49 @@
  div{
     font-family: 'Ubuntu', sans-serif;
     margin: auto 1.5rem;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    /* padding: 0.5rem; */
+    line-height: 1.5;
 
 }
 
 
+.style-apropos{
+    font-weight: bold;
+    margin-left: 1rem;
+   
+}
+.style-apropos-titre{
+    margin-left: 0.5rem;
+}
+
+
+h1{
+    text-align: center;
+}
+
+mat-card .card{
+    margin-bottom: 1.5rem;
+   
+}
+.content{
+    padding: 1rem;
+}
+
+.page{
+    background: url(../../assets/img/background-image.jpg) no-repeat scroll center;
+    background-size: cover;
+    background-color: rgba(0,0,0,0.6);
+    margin-top: 2rem;
+
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+  
+  
+  }

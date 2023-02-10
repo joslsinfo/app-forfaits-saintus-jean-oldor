@@ -1,3 +1,4 @@
+import { ForfaitsService } from './forfaits.service';
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -39,7 +40,8 @@ import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 registerLocaleData(localeFr, 'fr');
 import { StarRatingComponent } from './shared/components/star-rating/star-rating.component';
-import { FormulaireForfaitComponent, CustomSnackBarComponent } from './formulaire-forfait/formulaire-forfait.component';
+// import { FormulaireForfaitComponent, CustomSnackBarComponent } from './formulaire-forfait/formulaire-forfait.component';
+import { FormulaireForfaitComponent} from './formulaire-forfait/formulaire-forfait.component';
 import { FormulaireAvisComponent } from './formulaire-avis/formulaire-avis.component';
 import { PrixComponent } from './prix/prix.component';
 import { FormulaireRechercheComponent } from './formulaire-recherche/formulaire-recherche.component';
@@ -58,7 +60,7 @@ import { ForfaitEtablissementComponent } from './forfait-etablissement/forfait-e
 import { CategoriesComponent } from './categories/categories.component';
 import { CategoriesPipe } from './categories.pipe';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -75,7 +77,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     PrixComponent,
     FormulaireRechercheComponent,
     FormulaireContactComponent,
-    CustomSnackBarComponent,
+    // CustomSnackBarComponent,
     PremiumPipe,
     EtablissementPipe,
     TableauForfaitsComponent,
@@ -90,12 +92,13 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     CategoriesComponent,
     CategoriesPipe,
     PageNotFoundComponent,
+    
 
 
 
  
   ],
-  entryComponents: [CustomSnackBarComponent],
+  // entryComponents: [CustomSnackBarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -124,12 +127,14 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     MatSortModule,
     MatPaginatorModule,
     MatChipsModule,
+    HttpClientModule,
+    MatSnackBarModule
   
     
     
   
   ],
-  providers: [],
+  providers: [ForfaitsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

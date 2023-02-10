@@ -1,4 +1,6 @@
+import { ForfaitsService } from './../forfaits.service';
 import { Component, OnInit } from '@angular/core';
+import { Forfait } from '../forfait';
 import { FORFAITS } from '../mock-forfaits';
 
 @Component({
@@ -9,12 +11,19 @@ import { FORFAITS } from '../mock-forfaits';
 export class ListeForfaitsCompletsComponent implements OnInit {
  
  
-  forfaits = FORFAITS
+  // forfaits = FORFAITS
+  // forfaits: Forfait[] = [];
 
 
-  constructor() { }
+  // constructor(private forfaitService: ForfaitsService) { }
 
   ngOnInit(): void {
+    // this.getForfaits();
   }
+
+  // getForfaits(): void {
+  //   this.forfaitService.getForfaits()
+  //   .subscribe(resultat => this.forfaits = resultat);
+  //   }
 
 }

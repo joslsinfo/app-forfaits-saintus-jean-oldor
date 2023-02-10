@@ -8,6 +8,7 @@
   <div class="complet">
     <mat-card>
       <mat-card-title>
+        <!-- <img class="image" mat-card-image src="https://picsum.photos/200/200" alt=" Lorem Picsum"> -->
         <img class="image" [src]="forfait?.imageUrl" [title]="forfait?.description | uppercase" [alt]="forfait?.nom">
          {{forfait?.nom | titlecase }}
    
@@ -21,7 +22,7 @@
       </mat-card-content>
       <mat-card-content> 
         {{forfait?.categories}} <mat-divider></mat-divider>
-        {{forfait?.etablissement?.nomEtablissement | uppercase }} <mat-divider></mat-divider>
+        {{forfait?.etablissement?.nomEtablissement | uppercase  }} <mat-divider></mat-divider>
         {{forfait?.etablissement?.coordonnees?.adresse | titlecase}} <mat-divider></mat-divider>
         {{forfait?.etablissement?.coordonnees?.ville | titlecase}} <mat-divider></mat-divider>
         {{forfait?.etablissement?.coordonnees?.telephone}} <mat-divider></mat-divider>

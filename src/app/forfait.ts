@@ -3,6 +3,7 @@ import { Etablissement } from "./etablissement";
 import { Recherche } from './recherche';
 
 export interface Forfait {
+    id?: number;
     nom: string;
     description: string;
     code: string;

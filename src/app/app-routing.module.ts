@@ -17,8 +17,9 @@ import { ListeForfaitsCompletsComponent } from './liste-forfaits-complets/liste-
 
 const routes: Routes = [
 
-  { path: '', redirectTo: 'liste-de-tous-les-forfaits', pathMatch: 'full' },
-  { path: 'liste-de-tous-les-forfaits', component: ListeForfaitsComponent },
+  { path: '', redirectTo: 'liste-des-forfaits', pathMatch: 'full' },
+  // { path: 'liste-de-tous-les-forfaits', component: ListeForfaitsCompletsComponent },
+  { path: 'liste-des-forfaits', component: ListeForfaitsComponent },
   { path: 'etablissement', component: ForfaitEtablissementComponent },
   { path: 'categorie', component: CategoriesComponent },
   { path: 'gestion-forfaits', component: TableauForfaitsComponent },

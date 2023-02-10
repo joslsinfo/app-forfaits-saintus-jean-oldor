@@ -1,59 +1,84 @@
 <h2 class="title-h2">Formulaire Forfait</h2>
 <div class="form-container">
-  <form novalidate>
+  <form #forfaitFormAjout="ngForm">
 
     <div>
       <mat-form-field appearance="fill">
-
         <mat-label>Nom du forfait</mat-label>
-        <!-- {{recherche.nom}} -->
-        <input type="text" matInput [(ngModel)]="forfait.nom" id="nom" name="nom" value="nom"
+        <input type="text" matInput [(ngModel)]="newForfait.nom" #nom="ngModel" name="nom" value="nom"
           placeholder="Nom du forfait" minlength="2" maxlength="50" required>
-
       </mat-form-field>
+
+      <mat-error *ngIf="nom.invalid && (nom.dirty || nom.touched) && nom.hasError('required')">
+        Le nom est obligatoire.
+      </mat-error>
+      <mat-error *ngIf="nom.invalid && (nom.dirty || nom.touched) && nom.hasError('minlength')">
+        Le nom doit contenir au moins 2 caractères.
+      </mat-error>
+      <mat-error *ngIf="nom.invalid && (nom.dirty || nom.touched) && nom.hasError('maxlength')">
+        Le nom doit contenir au maximum 50 caractères.
+      </mat-error>
+
 
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Description</mat-label>
-
-        <textarea matInput type="text" [(ngModel)]="forfait.description" id="description" name="description"
+        <textarea matInput type="text" [(ngModel)]="newForfait.description" #description="ngModel" name="description"
           value="description" placeholder="description" required>description</textarea>
-
       </mat-form-field>
+
+      <mat-error
+        *ngIf="description.invalid && (description.dirty || description.touched) && description.hasError('required')">
+        La description est obligatoire.
+      </mat-error>
+      <mat-error
+        *ngIf="description.invalid && (description.dirty || description.touched) && description.hasError('minlength')">
+        Le description doit contenir au moins 2 caractères.
+      </mat-error>
+      <mat-error
+        *ngIf="description.invalid && (description.dirty || description.touched) && description.hasError('maxlength')">
+        Le description doit contenir au maximum 50 caractères.
+      </mat-error>
+
 
       <mat-form-field appearance="fill">
         <mat-label>Code</mat-label>
-         <input type="text" matInput [(ngModel)]="forfait.code" id="code" name="code" value="code"
+        <input type="text" matInput [(ngModel)]="newForfait.code" #code="ngModel" name="code" value="code"
           placeholder="Code" minlength="2" maxlength="5" required>
-
       </mat-form-field>
-     
-         <!-- <img class="image" src="../../assets/img/img-yoga300.jpg" alt="Image"> -->
-         <!-- <img class="image" [src]="forfait.imageUrl" alt="Image"> -->
-          
+
+
+      <mat-form-field appearance="fill">
+        <mat-label>Image</mat-label>
+        <input type="text" matInput [(ngModel)]="newForfait.imageUrl" #imageUrl="ngModel" name="imageUrl"
+          value="imageUrl" placeholder="Image" required>
+      </mat-form-field>
+      <!-- <img class="image" src="../../assets/img/img-yoga300.jpg" alt="Image"> -->
+      <!-- <img class="image" [src]="forfait.imageUrl" alt="Image"> -->
+
     </div>
     <div>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Nom de l'établissement</mat-label>
-
-        <input type="text" matInput [(ngModel)]="forfait.etablissement.nomEtablissement" id="nomEtablissement"
-          name="nomEtablissement" value="nomEtablissement" placeholder="Nom de l'établissement" minlength="2" maxlength="50" required>
+        <input type="text" matInput [(ngModel)]="newForfait.etablissement.nomEtablissement" #nomEtablissement="ngModel"
+          name="nomEtablissement" value="nomEtablissement" placeholder="Nom de l'établissement" minlength="2"
+          maxlength="50" required>
       </mat-form-field>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label> Adresse de l'établissement</mat-label>
-        <input type="text" matInput [(ngModel)]="forfait.etablissement.coordonnees.adresse" id="adresse" name="adresse"
-          value="adresse" placeholder="Adresse l'établissement" minlength="2" maxlength="50" required>
+        <input type="text" matInput [(ngModel)]="newForfait.etablissement.coordonnees.adresse" #adresse="ngModel"
+          name="adresse" value="adresse" placeholder="Adresse l'établissement" minlength="2" maxlength="50" required>
       </mat-form-field>
     </div>
     <div>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label> Ville</mat-label>
-        <input type="text" matInput [(ngModel)]="forfait.etablissement.coordonnees.ville" id="ville" name="ville"
-          value="ville" placeholder="Ville" minlength="2" maxlength="50" required>
+        <input type="text" matInput [(ngModel)]="newForfait.etablissement.coordonnees.ville" #ville="ngModel"
+          name="ville" value="ville" placeholder="Ville" minlength="2" maxlength="50" required>
       </mat-form-field>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label> Téléphone</mat-label>
         <span matPrefix>+1 &nbsp;</span>
-        <input type="tel" matInput [(ngModel)]="forfait.etablissement.coordonnees.telephone" id="telephone"
+        <input type="tel" matInput [(ngModel)]="newForfait.etablissement.coordonnees.telephone" #telephone="ngModel"
           name="telephone" value="telephone" placeholder="555-555-1234" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
         <mat-icon matSuffix>mode_edit</mat-icon>
       </mat-form-field>
@@ -61,7 +86,8 @@
     <div>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label> Courriel</mat-label>
-        <input type="email" [formControl]="courriel" matInput id="courriel" placeholder="jean@example.com" required>
+        <input type="email" [(ngModel)]="newForfait.etablissement.coordonnees.courriel" matInput #courriel="ngModel" name="courriel"
+          placeholder="jean@example.com" required>
         <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
             Please enter a valid email address
           </mat-error>
@@ -71,8 +97,8 @@
       </mat-form-field>
       <mat-form-field class="example-full-width" appearance="fill">
         <mat-label> Site web</mat-label>
-        <input type="text" matInput [(ngModel)]="forfait.etablissement.coordonnees.siteWeb" id="siteWeb" name="siteWeb"
-          value="siteWeb" placeholder="www.xxxx.com" required>
+        <input type="text" matInput [(ngModel)]="newForfait.etablissement.coordonnees.siteWeb" #siteWeb="ngModel"
+          name="siteWeb" value="siteWeb" placeholder="www.xxxx.com" required>
       </mat-form-field>
     </div>
     <div>
@@ -80,11 +106,11 @@
 
 
 
-      <mat-form-field color="primary" appearance="fill">
+      <!-- <mat-form-field color="primary" appearance="fill">
         <mat-label>Date de début</mat-label>
-        <!-- {{recherche.dateDebut}} -->
-        <input matInput [matDatepicker]="picker1" [(ngModel)]="forfait.dateDebut" id="dateDebut" name="dateDebut"
-          value="dateDebut" required>
+   
+        <input matInput [matDatepicker]="picker1" [(ngModel)]="newForfait.dateDebut" #dateDebut="ngModel"
+          name="dateDebut" value="dateDebut" required>
         <mat-hint>MM/DD/YYYY</mat-hint>
         <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
         <mat-datepicker #picker1></mat-datepicker>
@@ -92,54 +118,74 @@
 
       <mat-form-field color="primary" appearance="fill">
         <mat-label>Date de fin</mat-label>
-        <!-- {{recherche.dateFin}} -->
-        <input matInput [matDatepicker]="picker2" [(ngModel)]="forfait.dateFin" id="dateFin" name="dateFin"
+
+        <input matInput [matDatepicker]="picker2" [(ngModel)]="newForfait.dateFin" #dateFin="ngModel" name="dateFin"
           value="dateFin" required>
         <mat-hint>MM/DD/YYYY</mat-hint>
         <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
         <mat-datepicker #picker2 color="primary"></mat-datepicker>
       </mat-form-field>
-
+ -->
 
     </div>
 
     <div class="checkbox">
-      <mat-checkbox color="primary" class="example-margin" [(ngModel)]="forfait.premium" >Premium</mat-checkbox>
+      <mat-checkbox color="primary" class="example-margin" [(ngModel)]="newForfait.premium" name="premium">Premium
+      </mat-checkbox>
 
     </div>
 
     <div>
       <mat-form-field appearance="fill" floatLabel="always">
         <mat-label>Prix</mat-label>
-        <input type="number" class="example-right-align" placeholder="0"  matInput [(ngModel)]="forfait.prix" min="0" required>
-          <!-- <span matTextPrefix>$&nbsp;</span> -->
-          <!-- <span matTextSuffix>.00</span> -->
+        <input type="number" class="example-right-align" placeholder="0" matInput [(ngModel)]="newForfait.prix" min="0"
+          max="3000" name="prix" #prix="ngModel" required>
+
+        <!-- <span matTextPrefix>$&nbsp;</span> -->
+        <!-- <span matTextSuffix>.00</span> -->
+        <mat-error *ngIf="prix.invalid && (prix.dirty || prix.touched) && prix.hasError('required')">
+        Le nom est obligatoire.
+      </mat-error>
+      <mat-error *ngIf="prix.invalid && (prix.dirty || prix.touched) && prix.hasError('minlength')">
+        Le nom doit contenir au moins 2 caractères.
+      </mat-error>
+      <mat-error *ngIf="prix.invalid && (prix.dirty || prix.touched) && prix.hasError('maxlength')">
+        Le nom doit contenir au maximum 50 caractères.
+      </mat-error>
+
+
       </mat-form-field>
       <mat-form-field appearance="fill" floatLabel="always">
         <mat-label>Rabais</mat-label>
-        <input type="number" class="example-right-align" placeholder="0"  matInput [(ngModel)]="forfait.rabais">
-          <!-- <span matTextPrefix>$&nbsp;</span> -->
-          <!-- <span matTextSuffix>.00</span> -->
-      </mat-form-field>
-      <mat-form-field appearance="fill" floatLabel="always">
-        <mat-label>Nouveau prix</mat-label>
-        <input type="number" class="example-right-align" placeholder="0" matInput [(ngModel)]="forfait.nouveauPrix"
-          id="nouveauPrix" name="nouveauPrix" min="0" required>
+        <input type="number" class="example-right-align" placeholder="0" matInput [(ngModel)]="newForfait.rabais"
+          #rabais="ngModel" name="rabais">
         <!-- <span matTextPrefix>$&nbsp;</span> -->
         <!-- <span matTextSuffix>.00</span> -->
       </mat-form-field>
-      
-      <app-chips></app-chips>
-      
-    </div>
-  </form>
-  
-  
+      <mat-form-field appearance="fill" floatLabel="always">
+        <mat-label>Nouveau prix</mat-label>
+        <input type="number" class="example-right-align" placeholder="0" matInput [(ngModel)]="newForfait.nouveauPrix"
+          #nouvevauPrix="ngModel" name="nouveauPrix" min="0" required>
+        <!-- <span matTextPrefix>$&nbsp;</span> -->
+        <!-- <span matTextSuffix>.00</span> -->
+      </mat-form-field>
 
-    <!-- <button mat-stroked-button color="primary" (click)="openSnackBar('L\ajout dans la base de données sera programmé après le congé des fêtes!', 'durée de 5 secondes')">
+      <!-- <app-chips></app-chips> -->
+
+    </div>
+
+    <button mat-fab color="primary" aria-label="Ajouter" [disabled]="!forfaitFormAjout.form.valid"
+      (click)="addForfait(forfaitFormAjout);">
+      <mat-icon>add</mat-icon>
+    </button>
+  </form>
+
+
+
+  <!-- <button mat-stroked-button color="primary" (click)="openSnackBar('L\ajout dans la base de données sera programmé après le congé des fêtes!', 'durée de 5 secondes')">
       Ajouter
     </button> -->
-    <button mat-stroked-button color="primary" (click)="openCustomSnackBar()">Ajouter</button>
+  <!-- <button mat-stroked-button color="primary" (click)="openCustomSnackBar()">Ajouter</button> -->
 
 
 </div>

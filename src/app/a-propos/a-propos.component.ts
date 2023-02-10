@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AProposComponent implements OnInit {
 
+  appName='Application Angular - Forfaits';
+  appVersion='Version 1.0.0';
+  appAuthor='JOS'
+
   constructor() { }
 
   ngOnInit(): void {

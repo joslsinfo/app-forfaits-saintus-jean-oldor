@@ -11,7 +11,7 @@
     <app-mini-forfait [forfait]="f"> </app-mini-forfait>
     <!-- <app-prix [forfait]="f"></app-prix> -->
   </p>
-
+  
 </div>
 
 
@@ -21,8 +21,10 @@
 
 <app-recherche></app-recherche>
 
+
 <hr>
 <!-- Affichage de tous les forfaits complets -->
+
 <h2 class="title-h2">Liste des forfaits complets contenant toutes les informations  </h2>
 <div class="container" *ngFor="let f of forfaits">
 
@@ -50,6 +52,7 @@
 
 <!-- <app-formulaire-contact></app-formulaire-contact> -->
 
+
 <h3 class="title-h2">Liste des forfaits premium avec pipe personnalisée</h3>
 <div *ngFor="let forfait of forfaits | premium">
 
@@ -57,21 +60,26 @@
 
 </div>
 
-<!-- <h3 class="title-h2">Liste des forfaits avec pipe personnalisée pour un établissement précis </h3>
+
+<h3 class="title-h2">Liste des forfaits avec pipe personnalisée pour un établissement précis </h3>
 <div *ngFor="let forfait of forfaits | etablissement" >
   <app-forfait-complet [forfait]="forfait"></app-forfait-complet>
 
-</div> -->
+
+</div> 
+
+
 
 <br><br>
 
-<app-formulaire-forfait></app-formulaire-forfait>
+
+<!-- <app-formulaire-forfait></app-formulaire-forfait> -->
+
 
 <!-- <app-chips></app-chips> -->
 
 <!-- <br><br>
 {{'Date du jour:' + getDate() | date:'dd MMMM yyyy'  }} -->
-
 
 
 
