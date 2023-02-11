@@ -1,14 +1,12 @@
 <h2 class="title-h2">Formulaire Forfait</h2>
 <div class="form-container">
   <form #forfaitFormAjout="ngForm">
-
     <div>
       <mat-form-field appearance="fill">
         <mat-label>Nom du forfait</mat-label>
         <input type="text" matInput [(ngModel)]="newForfait.nom" #nom="ngModel" name="nom" value="nom"
           placeholder="Nom du forfait" minlength="2" maxlength="50" required>
       </mat-form-field>
-
       <mat-error *ngIf="nom.invalid && (nom.dirty || nom.touched) && nom.hasError('required')">
         Le nom est obligatoire.
       </mat-error>
@@ -19,114 +17,164 @@
         Le nom doit contenir au maximum 50 caractères.
       </mat-error>
 
-
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Description</mat-label>
-        <textarea matInput type="text" [(ngModel)]="newForfait.description" #description="ngModel" name="description"
-          value="description" placeholder="description" required>description</textarea>
+      <mat-form-field appearance="fill">
+        <mat-label>Description du forfait</mat-label>
+        <input type="text" matInput [(ngModel)]="newForfait.description" #description="ngModel" name="description" value="description"
+          placeholder="Description du forfait" minlength="2" maxlength="50" required>
       </mat-form-field>
-
-      <mat-error
-        *ngIf="description.invalid && (description.dirty || description.touched) && description.hasError('required')">
+      <mat-error *ngIf="description.invalid && (description.dirty || description.touched) && description.hasError('required')">
         La description est obligatoire.
       </mat-error>
-      <mat-error
-        *ngIf="description.invalid && (description.dirty || description.touched) && description.hasError('minlength')">
-        Le description doit contenir au moins 2 caractères.
+      <mat-error *ngIf="description.invalid && (description.dirty || description.touched) && description.hasError('minlength')">
+        La description doit contenir au moins 2 caractères.
       </mat-error>
-      <mat-error
-        *ngIf="description.invalid && (description.dirty || description.touched) && description.hasError('maxlength')">
-        Le description doit contenir au maximum 50 caractères.
+      <mat-error *ngIf="description.invalid && (description.dirty || description.touched) && description.hasError('maxlength')">
+        La description doit contenir au maximum 50 caractères.
       </mat-error>
-
 
       <mat-form-field appearance="fill">
-        <mat-label>Code</mat-label>
+        <mat-label>Code du forfait</mat-label>
         <input type="text" matInput [(ngModel)]="newForfait.code" #code="ngModel" name="code" value="code"
-          placeholder="Code" minlength="2" maxlength="5" required>
+          placeholder="Code du forfait" minlength="2" maxlength="5" required>
       </mat-form-field>
-
+      <mat-error *ngIf="code.invalid && (code.dirty || code.touched) && code.hasError('required')">
+        Le code est obligatoire.
+      </mat-error>
+      <mat-error *ngIf="code.invalid && (code.dirty || code.touched) && code.hasError('minlength')">
+        Le code doit contenir au moins 2 caractères.
+      </mat-error>
+      <mat-error *ngIf="code.invalid && (code.dirty || code.touched) && code.hasError('maxlength')">
+        Le code doit contenir au maximum 5 caractères.
+      </mat-error>
 
       <mat-form-field appearance="fill">
-        <mat-label>Image</mat-label>
-        <input type="text" matInput [(ngModel)]="newForfait.imageUrl" #imageUrl="ngModel" name="imageUrl"
-          value="imageUrl" placeholder="Image" required>
+        <mat-label>ImageUrl</mat-label>
+        <input type="text" matInput [(ngModel)]="newForfait.imageUrl" #imageUrl="ngModel" name="imageUrl" value="imageUrl"
+          placeholder="ImageUrl" minlength="5" maxlength="255" required>
+          <img class="image" [src]="newForfait.imageUrl" alt="">
+             <!-- <img class="image" src="../../assets/img/img-yoga300.jpg" alt="Image"> -->
       </mat-form-field>
-      <!-- <img class="image" src="../../assets/img/img-yoga300.jpg" alt="Image"> -->
-      <!-- <img class="image" [src]="forfait.imageUrl" alt="Image"> -->
-
+      <mat-error *ngIf="imageUrl.invalid && (imageUrl.dirty || imageUrl.touched) && imageUrl.hasError('required')">
+        Le champ de l'image est obligatoire.
+      </mat-error>
+      <mat-error *ngIf="imageUrl.invalid && (imageUrl.dirty || imageUrl.touched) && imageUrl.hasError('minlength')">
+        Le champ de l'image url doit contenir au moins 5 caractères.
+      </mat-error>
+      <mat-error *ngIf="imageUrl.invalid && (imageUrl.dirty || imageUrl.touched) && imageUrl.hasError('maxlength')">
+        Le champ doit contenir au maximum 255 caractères.
+      </mat-error>
+           
     </div>
     <div>
-      <mat-form-field class="example-full-width" appearance="fill">
+      <mat-form-field appearance="fill">
         <mat-label>Nom de l'établissement</mat-label>
-        <input type="text" matInput [(ngModel)]="newForfait.etablissement.nomEtablissement" #nomEtablissement="ngModel"
-          name="nomEtablissement" value="nomEtablissement" placeholder="Nom de l'établissement" minlength="2"
-          maxlength="50" required>
+        <input type="text" matInput [(ngModel)]="newForfait.etablissement.nomEtablissement" #nomEtablissement="ngModel" name="nomEtablissement" value="nomEtablissement"
+          placeholder="Nom de l'établissement" minlength="2" maxlength="50" required>
       </mat-form-field>
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label> Adresse de l'établissement</mat-label>
-        <input type="text" matInput [(ngModel)]="newForfait.etablissement.coordonnees.adresse" #adresse="ngModel"
-          name="adresse" value="adresse" placeholder="Adresse l'établissement" minlength="2" maxlength="50" required>
+
+      <mat-error *ngIf="nomEtablissement.invalid && (nomEtablissement.dirty || nomEtablissement.touched) && nomEtablissement.hasError('required')">
+        Le nom de l'établissement est obligatoire.
+      </mat-error>
+      <mat-error *ngIf="nomEtablissement.invalid && (nomEtablissement.dirty || nomEtablissement.touched) && nomEtablissement.hasError('minlength')">
+        Le nom de l'établisssement doit contenir au moins 2 caractères.
+      </mat-error>
+      <mat-error *ngIf="nomEtablissement.invalid && (nomEtablissement.dirty || nomEtablissement.touched) && nomEtablissement.hasError('maxlength')">
+        Le nom de l'établisssement doit contenir au maximum 50 caractères.
+      </mat-error>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Adresse de l'établissement</mat-label>
+        <input type="text" matInput [(ngModel)]="newForfait.etablissement.coordonnees.adresse" #adresse="ngModel" name="adresse" value="adresse"
+          placeholder="Adresse de l'établissement" minlength="2" maxlength="50" required>
       </mat-form-field>
+
+      <mat-error *ngIf="adresse.invalid && (adresse.dirty || adresse.touched) && adresse.hasError('required')">
+        L'adresse de l'établissement est obligatoire.
+      </mat-error>
+      <mat-error *ngIf="adresse.invalid && (adresse.dirty || adresse.touched) && adresse.hasError('minlength')">
+        L'adresse de l'établissement doit contenir au moins 2 caractères.
+      </mat-error>
+      <mat-error *ngIf="adresse.invalid && (adresse.dirty || adresse.touched) && adresse.hasError('maxlength')">
+        L'adresse de l'établissement doit contenir au maximum 50 caractères.
+      </mat-error>
+     
     </div>
     <div>
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label> Ville</mat-label>
-        <input type="text" matInput [(ngModel)]="newForfait.etablissement.coordonnees.ville" #ville="ngModel"
-          name="ville" value="ville" placeholder="Ville" minlength="2" maxlength="50" required>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Ville de l'établissement</mat-label>
+        <input type="text" matInput [(ngModel)]="newForfait.etablissement.coordonnees.ville" #ville="ngModel" name="ville" value="ville"
+          placeholder="Ville de l'établissement" minlength="2" maxlength="50" required>
       </mat-form-field>
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label> Téléphone</mat-label>
+
+      <mat-error *ngIf="ville.invalid && (ville.dirty ||ville.touched) && ville.hasError('required')">
+        La ville de l'établissement est obligatoire.
+      </mat-error>
+      <mat-error *ngIf="ville.invalid && (ville.dirty || ville.touched) && ville.hasError('minlength')">
+        La ville de l'établissement doit contenir au moins 2 caractères.
+      </mat-error>
+      <mat-error *ngIf="ville.invalid && (ville.dirty || ville.touched) && ville.hasError('maxlength')">
+        La ville de l'établissement doit contenir au maximum 50 caractères.
+      </mat-error>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Téléphone</mat-label>
         <span matPrefix>+1 &nbsp;</span>
-        <input type="tel" matInput [(ngModel)]="newForfait.etablissement.coordonnees.telephone" #telephone="ngModel"
-          name="telephone" value="telephone" placeholder="555-555-1234" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-        <mat-icon matSuffix>mode_edit</mat-icon>
+        <input type="tel" matInput [(ngModel)]="newForfait.etablissement.coordonnees.telephone" #telephone="ngModel" name="telephone" value="telephone"
+          placeholder="555-555-1234" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required minlength="12" maxlength="12" required>
+          <mat-icon matSuffix>mode_edit</mat-icon>
       </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label> Courriel</mat-label>
-        <input type="email" [(ngModel)]="newForfait.etablissement.coordonnees.courriel" matInput #courriel="ngModel" name="courriel"
-          placeholder="jean@example.com" required>
-        <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-            Please enter a valid email address
-          </mat-error>
-          <mat-error *ngIf="emailFormControl.hasError('required')">
-            Email is <strong>required</strong>
-          </mat-error> -->
-      </mat-form-field>
-      <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label> Site web</mat-label>
-        <input type="text" matInput [(ngModel)]="newForfait.etablissement.coordonnees.siteWeb" #siteWeb="ngModel"
-          name="siteWeb" value="siteWeb" placeholder="www.xxxx.com" required>
-      </mat-form-field>
+      <mat-error *ngIf="telephone.invalid && (telephone.dirty ||telephone.touched) && telephone.hasError('required')">
+        Le champ de téléphone de l'établissement est obligatoire.
+      </mat-error>
+      <mat-error *ngIf="telephone.invalid && (telephone.dirty || telephone.touched) && telephone.hasError('minlength')">
+        Le champ de téléphone de l'établissement doit respecter ce format 555-555-1234 pour valider.
+      </mat-error>
+      <mat-error *ngIf="telephone.invalid && (telephone.dirty || telephone.touched) && telephone.hasError('maxlength')">
+        Le champ de téléphone de l'établissement doit contenir au maximum 12 caractères.
+      </mat-error>
+
+          
     </div>
     <div>
 
-
-
-
-      <!-- <mat-form-field color="primary" appearance="fill">
-        <mat-label>Date de début</mat-label>
-   
-        <input matInput [matDatepicker]="picker1" [(ngModel)]="newForfait.dateDebut" #dateDebut="ngModel"
-          name="dateDebut" value="dateDebut" required>
-        <mat-hint>MM/DD/YYYY</mat-hint>
-        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-        <mat-datepicker #picker1></mat-datepicker>
+      <mat-form-field appearance="fill">
+        <mat-label>Courriel</mat-label>
+         <input type="email" matInput [(ngModel)]="newForfait.etablissement.coordonnees.courriel" #courriel="ngModel" name="courriel" value="courriel"
+          placeholder="jean@example.com"  required minlength="8" maxlength="50" required>
+          <mat-icon matPrefix>mail</mat-icon>
       </mat-form-field>
+      <mat-error *ngIf="courriel.invalid && (courriel.dirty ||courriel.touched) && courriel.hasError('required')">
+        Le champ de courriel de l'établissement est obligatoire.
+      </mat-error>
+      <mat-error *ngIf="courriel.invalid && (courriel.dirty || courriel.touched) && courriel.hasError('minlength')">
+        Le champ de courriel de l'établissement doit contenir au moins 8 caractères et respecter ce format "jean@example.com" pour valider.
+      </mat-error>
+      <mat-error *ngIf="courriel.invalid && (courriel.dirty || courriel.touched) && courriel.hasError('maxlength')">
+        Le champ de courriel de l'établissement doit contenir au maximum 50 caractères et respecter le format jean@example.com.
+      </mat-error>
 
-      <mat-form-field color="primary" appearance="fill">
-        <mat-label>Date de fin</mat-label>
-
-        <input matInput [matDatepicker]="picker2" [(ngModel)]="newForfait.dateFin" #dateFin="ngModel" name="dateFin"
-          value="dateFin" required>
-        <mat-hint>MM/DD/YYYY</mat-hint>
-        <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
-        <mat-datepicker #picker2 color="primary"></mat-datepicker>
+      
+      <mat-form-field appearance="fill">
+        <mat-label>Site web</mat-label>
+        <input type="text" matInput [(ngModel)]="newForfait.etablissement.coordonnees.siteWeb" #siteWeb="ngModel" name="siteWeb" value="siteWeb"
+          placeholder="www.xxxx.com" minlength="8" maxlength="50" required>
       </mat-form-field>
- -->
+      <mat-error *ngIf="siteWeb.invalid && (siteWeb.dirty || siteWeb.touched) && siteWeb.hasError('required')">
+        Le site web de l'établissement est obligatoire.
+      </mat-error>
+      <mat-error *ngIf="siteWeb.invalid && (siteWeb.dirty || siteWeb.touched) && siteWeb.hasError('minlength')">
+        Le site web de l'établissement doit contenir au moins 8 caractères et respecter ce format "www.xxxx.com" pour valider.
+      </mat-error>
+      <mat-error *ngIf="siteWeb.invalid && (siteWeb.dirty || siteWeb.touched) && siteWeb.hasError('maxlength')">
+        Le site web de l'établissement doit contenir au maximum 50 caractères et respecter ce format "www.xxxx.com" pour valider.
+      </mat-error>
+    
+    
+    </div>
+    <div>
 
+ 
     </div>
 
     <div class="checkbox">
@@ -136,39 +184,44 @@
     </div>
 
     <div>
-      <mat-form-field appearance="fill" floatLabel="always">
+    
+
+      <mat-form-field  appearance="fill" floatLabel="always">
         <mat-label>Prix</mat-label>
-        <input type="number" class="example-right-align" placeholder="0" matInput [(ngModel)]="newForfait.prix" min="0"
-          max="3000" name="prix" #prix="ngModel" required>
-
-        <!-- <span matTextPrefix>$&nbsp;</span> -->
+        <input type="number" matInput placeholder="prix"  name="prix"
+          [(ngModel)]="newForfait.prix" #prix="ngModel" min="1" max="5000" required>
+          <!-- <span matTextPrefix>$&nbsp;</span> -->
         <!-- <span matTextSuffix>.00</span> -->
-        <mat-error *ngIf="prix.invalid && (prix.dirty || prix.touched) && prix.hasError('required')">
-        Le nom est obligatoire.
-      </mat-error>
-      <mat-error *ngIf="prix.invalid && (prix.dirty || prix.touched) && prix.hasError('minlength')">
-        Le nom doit contenir au moins 2 caractères.
-      </mat-error>
-      <mat-error *ngIf="prix.invalid && (prix.dirty || prix.touched) && prix.hasError('maxlength')">
-        Le nom doit contenir au maximum 50 caractères.
-      </mat-error>
-
-
       </mat-form-field>
-      <mat-form-field appearance="fill" floatLabel="always">
+      <mat-error *ngIf="prix.invalid && (prix.dirty || prix.touched) && prix.hasError('required')">
+        Le prix est obligatoire.
+      </mat-error>
+      <mat-error *ngIf="prix.invalid && (prix.dirty || prix.touched) && prix.hasError('min')">
+        Le prix doit être supérieur ou égal à 1.
+      </mat-error>
+      <mat-error *ngIf="prix.invalid && (prix.dirty || prix.touched) && prix.hasError('max')">
+        Le prix doit être inférieur ou égal à 5000.
+      </mat-error>
+      <mat-form-field  appearance="fill" floatLabel="always">
         <mat-label>Rabais</mat-label>
-        <input type="number" class="example-right-align" placeholder="0" matInput [(ngModel)]="newForfait.rabais"
-          #rabais="ngModel" name="rabais">
-        <!-- <span matTextPrefix>$&nbsp;</span> -->
-        <!-- <span matTextSuffix>.00</span> -->
+        <input type="number" matInput placeholder="rabais"  name="rabais"
+          [(ngModel)]="newForfait.rabais" #rabais="ngModel" min="0" >
       </mat-form-field>
-      <mat-form-field appearance="fill" floatLabel="always">
+           
+      <mat-form-field  appearance="fill" floatLabel="always">
         <mat-label>Nouveau prix</mat-label>
-        <input type="number" class="example-right-align" placeholder="0" matInput [(ngModel)]="newForfait.nouveauPrix"
-          #nouvevauPrix="ngModel" name="nouveauPrix" min="0" required>
-        <!-- <span matTextPrefix>$&nbsp;</span> -->
-        <!-- <span matTextSuffix>.00</span> -->
+        <input type="number" matInput placeholder="nouveauPrix"  name="nouveauPrix"
+          [(ngModel)]="newForfait.nouveauPrix" #nouveauPrix="ngModel" min="1" max="5000" required>
       </mat-form-field>
+      <mat-error *ngIf="nouveauPrix.invalid && (nouveauPrix.dirty || nouveauPrix.touched) && nouveauPrix.hasError('required')">
+        Le nouveau prix est obligatoire.
+      </mat-error>
+      <mat-error *ngIf="nouveauPrix.invalid && (nouveauPrix.dirty || nouveauPrix.touched) && nouveauPrix.hasError('min')">
+        Le nouveau prix doit être supérieur ou égal à 1.
+      </mat-error>
+      <mat-error *ngIf="nouveauPrix.invalid && (nouveauPrix.dirty || nouveauPrix.touched) && nouveauPrix.hasError('max')">
+        Le nouveau prix doit être inférieur ou égal à 5000.
+      </mat-error>
 
       <!-- <app-chips></app-chips> -->
 

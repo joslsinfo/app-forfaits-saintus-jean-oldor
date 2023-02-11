@@ -10,6 +10,7 @@ import { Recherche } from '../recherche';
 import { ForfaitsService } from '../forfaits.service';
 import { NgForm } from '@angular/forms';
 
+
 @Component({
   selector: 'app-formulaire-forfait',
   templateUrl: './formulaire-forfait.component.html',
@@ -62,10 +63,10 @@ export class FormulaireForfaitComponent implements OnInit {
       // @Input() recherche!: Recherche;
       
       
-      // courriel = new FormControl('', [Validators.required, Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]);
+      courriel = new FormControl('', [Validators.required, Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]);
       
       
-        constructor(private forfaitService: ForfaitsService, private snackBar: MatSnackBar) { }
+        constructor(private forfaitService: ForfaitsService, private _snackBar: MatSnackBar, private snackBar: MatSnackBar) { }
 
         ngOnInit(): void {
         }
@@ -73,14 +74,20 @@ export class FormulaireForfaitComponent implements OnInit {
         addForfait(forfaitFormAjout: NgForm){
           if(forfaitFormAjout.valid){
             this.forfaitService.addForfait(this.newForfait).subscribe(
+            
               _ => {
                 forfaitFormAjout.resetForm();
                 // this.getForfaits();
+                this._snackBar.open("Forfait enregistré!", undefined, {
+                  duration: 2000
+                  });
               }
             );
           }
       
         }
+
+     
 
 
       // ===================================================================================

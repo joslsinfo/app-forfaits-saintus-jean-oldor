@@ -87,7 +87,7 @@ export class TableauForfaitsComponent implements OnInit {
     this.forfaitService.deleteForfait(id).subscribe(
     _ => {
     this.getForfaits();
-    this._snackBar.open("Produit supprimé!", undefined, {
+    this._snackBar.open("Forfait supprimé!", undefined, {
     duration: 2000
     });
     }
