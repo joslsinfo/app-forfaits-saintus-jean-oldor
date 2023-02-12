@@ -55,13 +55,13 @@
              <!-- <img class="image" src="../../assets/img/img-yoga300.jpg" alt="Image"> -->
       </mat-form-field>
       <mat-error *ngIf="imageUrl.invalid && (imageUrl.dirty || imageUrl.touched) && imageUrl.hasError('required')">
-        Le champ de l'image est obligatoire.
+        Le champ de l'image url est obligatoire.
       </mat-error>
       <mat-error *ngIf="imageUrl.invalid && (imageUrl.dirty || imageUrl.touched) && imageUrl.hasError('minlength')">
         Le champ de l'image url doit contenir au moins 5 caractères.
       </mat-error>
       <mat-error *ngIf="imageUrl.invalid && (imageUrl.dirty || imageUrl.touched) && imageUrl.hasError('maxlength')">
-        Le champ doit contenir au maximum 255 caractères.
+        Le champ de l'image url doit contenir au maximum 255 caractères.
       </mat-error>
       
     </div>

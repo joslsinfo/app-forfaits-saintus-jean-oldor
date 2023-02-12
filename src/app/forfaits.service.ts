@@ -25,6 +25,7 @@ export class ForfaitsService {
   }
 
   deleteForfait(id: number): Observable<void> {
+    confirm("Êtes-vous sûr de vouloir supprimer ce forfait?")
     return this.http.delete<void>(`${this.API_URL}?id=${id}`, httpOptions);
     }
 

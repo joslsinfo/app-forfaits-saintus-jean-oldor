@@ -54,7 +54,7 @@ export class TableauForfaitsComponent implements OnInit {
     // this.dataSourceForfaits.paginator = this.paginator;
     // this.dataSourceForfaits.sort = this.sort;
   }
-
+  errorMessage: string | undefined;
 
   constructor(private forfaitService: ForfaitsService, private _snackBar: MatSnackBar){}
 
@@ -68,21 +68,28 @@ export class TableauForfaitsComponent implements OnInit {
         this.dataSourceForfaits = new MatTableDataSource(resultat);
         this.dataSourceForfaits.paginator = this.paginator;
         this.dataSourceForfaits.sort = this.sort;
+      },
+      error =>{
+        console.error(error);
+        this.errorMessage='Une erreur s\'est produite lors de la récupération des forfaits'
       }
     )
   }
 
-  addForfait(forfaitFormAjout: NgForm){
-    if(forfaitFormAjout.valid){
-      this.forfaitService.addForfait(this.newForfait).subscribe(
-        _ => {
-          forfaitFormAjout.resetForm();
-          this.getForfaits();
-        }
-      );
-    }
-
-  }
+  // addForfait(forfaitFormAjout: NgForm){
+  //   if(forfaitFormAjout.valid){
+  //     this.forfaitService.addForfait(this.newForfait).subscribe(
+  //       _ => {
+  //         forfaitFormAjout.resetForm();
+  //         this.getForfaits();
+  //       },
+  //       error =>{
+  //         console.error(error);
+  //         this.errorMessage='Une erreur s\'est produite lors de l\'ajout du forfait'
+  //       }
+  //     );
+  //   }
+  // }
   deleteForfait(id: number) { 
     this.forfaitService.deleteForfait(id).subscribe(
     _ => {
@@ -90,6 +97,10 @@ export class TableauForfaitsComponent implements OnInit {
     this._snackBar.open("Forfait supprimé!", undefined, {
     duration: 2000
     });
+    },
+    error =>{
+      console.error(error);
+      this.errorMessage='Une erreur s\'est produite lors de la suppression d\'un forfait'
     }
     );
     }

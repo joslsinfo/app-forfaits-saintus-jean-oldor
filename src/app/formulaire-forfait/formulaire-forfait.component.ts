@@ -63,8 +63,9 @@ export class FormulaireForfaitComponent implements OnInit {
       // @Input() recherche!: Recherche;
       
       
-      courriel = new FormControl('', [Validators.required, Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]);
+      // courriel = new FormControl('', [Validators.required, Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]);
       
+      errorMessage: string | undefined;
       
         constructor(private forfaitService: ForfaitsService, private _snackBar: MatSnackBar, private snackBar: MatSnackBar) { }
 
@@ -78,9 +79,13 @@ export class FormulaireForfaitComponent implements OnInit {
               _ => {
                 forfaitFormAjout.resetForm();
                 // this.getForfaits();
-                this._snackBar.open("Forfait enregistré!", undefined, {
+                this._snackBar.open("Forfait enregistré avec succès!", undefined, {
                   duration: 2000
                   });
+              },
+              error =>{
+                console.error(error);
+                this.errorMessage='Une erreur s\'est produite lors de l\'ajout du forfait'
               }
             );
           }
