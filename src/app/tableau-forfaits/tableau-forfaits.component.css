@@ -14,13 +14,8 @@ table {
   margin-left: auto;
 }
 
-.td-champs {
-  min-width: 300px;
-}
 
-.td-actions {
-  width: 100px;
-}
+
 
   td, th{
       width: 16%;
