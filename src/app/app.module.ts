@@ -61,7 +61,7 @@ import { CategoriesComponent } from './categories/categories.component';
 import { CategoriesPipe } from './categories.pipe';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -128,7 +128,10 @@ import { HttpClientModule } from '@angular/common/http';
     MatPaginatorModule,
     MatChipsModule,
     HttpClientModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule,
+ 
+     
   
     
     

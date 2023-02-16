@@ -1,5 +1,5 @@
 // import { compileComponentFromMetadata } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Inject, OnInit, Output } from '@angular/core';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
@@ -9,6 +9,7 @@ import { Input } from '@angular/core';
 import { Recherche } from '../recherche';
 import { ForfaitsService } from '../forfaits.service';
 import { NgForm } from '@angular/forms';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 
 @Component({
@@ -19,8 +20,9 @@ import { NgForm } from '@angular/forms';
 
 export class FormulaireForfaitComponent implements OnInit {
 
+// @Output() forfaitAjoute = new EventEmitter();
 
-           newForfait: Forfait = {
+           forfait: Forfait = {
         
             nom: '',
             description: '',
@@ -39,8 +41,8 @@ export class FormulaireForfaitComponent implements OnInit {
                     }
            },
         
-          dateDebut: '2023-02-01',
-          dateFin: '2023-02-08',
+          dateDebut: '',
+          dateFin: '',
           prix: 0,
           avis: [
               {
@@ -67,22 +69,32 @@ export class FormulaireForfaitComponent implements OnInit {
       
       errorMessage: string | undefined;
       
-        constructor(private forfaitService: ForfaitsService, private _snackBar: MatSnackBar, private snackBar: MatSnackBar) { }
+        constructor(private forfaitService: ForfaitsService, 
+          private _snackBar: MatSnackBar, 
+          public dialogRef: MatDialogRef<FormulaireForfaitComponent>,
+          @Inject(MAT_DIALOG_DATA) public data: Forfait) { 
+            if(data) {
+              this.forfait = data;
+            }
+          }
 
         ngOnInit(): void {
         }
   
         addForfait(forfaitFormAjout: NgForm){
           if(forfaitFormAjout.valid){
-            this.forfaitService.addForfait(this.newForfait).subscribe(
+            this.forfaitService.addForfait(this.forfait).subscribe(
             
               _ => {
                 forfaitFormAjout.resetForm();
+                this.dialogRef.close('Forfait ajouté avec succès!');
+                // this.forfaitAjoute.emit();
                 // this.getForfaits();
-                this._snackBar.open("Forfait enregistré avec succès!", undefined, {
-                  duration: 2000
-                  });
-              },
+                // this._snackBar.open("Forfait enregistré avec succès!", undefined, {
+                //   duration: 2000
+                //   });
+              }
+              ,
               error =>{
                 console.error(error);
                 this.errorMessage='Une erreur s\'est produite lors de l\'ajout du forfait'
@@ -90,6 +102,23 @@ export class FormulaireForfaitComponent implements OnInit {
             );
           }
       
+        }
+
+        updateForfait(forfaitFormAjout: NgForm){
+          if(forfaitFormAjout.valid){
+            this.forfaitService.updateForfait(this.forfait).subscribe(
+              _=> {
+                forfaitFormAjout.reset();
+                this.dialogRef.close('Forfait modifié avec succès !');
+              }
+            );
+          }
+
+
+        }
+
+        annuler(){
+          this.dialogRef.close();
         }
 
      

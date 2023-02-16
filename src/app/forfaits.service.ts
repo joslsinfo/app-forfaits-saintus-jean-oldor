@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Forfait } from './forfait';
 import { Observable } from 'rxjs';
+import { formatDate } from '@angular/common';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -21,12 +22,28 @@ export class ForfaitsService {
   }
 
   addForfait(forfait: Forfait): Observable<void> {
+    
+    console.log(formatDate(forfait.dateDebut, 'YYYY-MM-dd', 'fr-CA'))
+    forfait.dateDebut = formatDate(forfait.dateDebut, 'YYYY-MM-dd', 'fr-CA');
+    console.log(formatDate(forfait.dateFin, 'YYYY-MM-dd', 'fr-CA'));
+    forfait.dateFin = formatDate(forfait.dateFin, 'YYYY-MM-dd', 'fr-CA');
+
     return this.http.post<void>(this.API_URL, forfait, httpOptions)
   }
 
+  updateForfait(forfait: Forfait): Observable<void> {
+    console.log(formatDate(forfait.dateDebut, 'YYYY-MM-dd', 'fr-CA'))
+    forfait.dateDebut = formatDate(forfait.dateDebut, 'YYYY-MM-dd', 'fr-CA');
+    console.log(formatDate(forfait.dateFin, 'YYYY-MM-dd', 'fr-CA'));
+    forfait.dateFin = formatDate(forfait.dateFin, 'YYYY-MM-dd', 'fr-CA');
+
+    // return this.http.put<void>(`${this.API_URL}/${forfait.id}`, forfait, httpOptions);
+    return this.http.put<void>(`${this.API_URL}?id=${forfait.id}}`, forfait, httpOptions);
+    }
+
   deleteForfait(id: number): Observable<void> {
     confirm("Êtes-vous sûr de vouloir supprimer ce forfait?")
-    return this.http.delete<void>(`${this.API_URL}?id=${id}`, httpOptions);
+    return this.http.delete<void>(`${this.API_URL}?id=${id}`);
     }
 
 }

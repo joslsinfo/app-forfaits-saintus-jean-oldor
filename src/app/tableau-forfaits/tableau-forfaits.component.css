@@ -1,10 +1,29 @@
 table {
-    width: 98%;
+    width: 100%;
     margin: 0 auto;
+
+
   }
 
+  .btn-filter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.ml-auto {
+  margin-left: auto;
+}
+
+.td-champs {
+  min-width: 300px;
+}
+
+.td-actions {
+  width: 100px;
+}
+
   td, th{
-      width: 15%;
+      width: 16%;
    
   }
 
@@ -26,3 +45,8 @@ table {
   /* .mat-form-field{
     display: block;
   } */
+
+  .icon{
+    padding: 5px;
+    margin: 5px;
+  }
