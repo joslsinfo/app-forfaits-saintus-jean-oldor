@@ -1,7 +1,7 @@
 <h2 class="title-h2">Formulaire Forfait</h2>
 <div class="form-container">
   <form #forfaitFormAjout="ngForm">
-    <div mat-dialog-content>
+    <div>
       <mat-form-field appearance="fill">
         <mat-label>Nom du forfait</mat-label>
         <input type="text" matInput [(ngModel)]="forfait.nom" #nom="ngModel"
@@ -72,7 +72,7 @@
       </mat-error>
 
     </div>
-    <div mat-dialog-content>
+    <div>
       <mat-form-field appearance="fill">
         <mat-label>Nom de l'établissement</mat-label>
         <input type="text" matInput [(ngModel)]="forfait.etablissement.nomEtablissement" #nomEtablissement="ngModel"
@@ -111,7 +111,7 @@
       </mat-error>
 
     </div>
-    <div mat-dialog-content>
+    <div>
       <mat-form-field appearance="fill">
         <mat-label>Ville de l'établissement</mat-label>
         <input type="text" matInput [(ngModel)]="forfait.etablissement.coordonnees.ville" #ville="ngModel"
@@ -148,7 +148,7 @@
       </mat-error>
 
     </div>
-    <div mat-dialog-content>
+    <div>
       <mat-form-field appearance="fill">
         <mat-label>Courriel</mat-label>
         <input type="email" matInput [(ngModel)]="forfait.etablissement.coordonnees.courriel" #courriel="ngModel"
@@ -210,7 +210,7 @@
     </div>
 
     <div class="checkbox">
-      <mat-checkbox color="primary" class="example-margin" [(ngModel)]="forfait.premium"
+      <mat-checkbox color="primary" class="example-margin" [(ngModel)]="forfait.premium" 
         (keyup.enter)="addForfait(forfaitFormAjout)" name="premium">Premium
       </mat-checkbox>
     </div>
@@ -263,18 +263,20 @@
       <!-- <mat-icon>edit</mat-icon> -->
       <span class="btn">Modifier</span>
     </button> &nbsp;
+
     <ng-template #boutonAjout>
       <button mat-fab color="primary" mat-button mat-aria-label="Ajouter" [disabled]="!forfaitFormAjout.form.valid"
         (click)="addForfait(forfaitFormAjout);">
-
+        <!-- Créer -->
         <mat-icon>add</mat-icon>
       </button>
     </ng-template>
     &nbsp;
     <button mat-fab color="accent" mat-aria-label="Annuler" (click)="annuler()">
-
+      <!-- Annuler -->
       <mat-icon>cancel</mat-icon>
     </button>
+
 
   </form>
 

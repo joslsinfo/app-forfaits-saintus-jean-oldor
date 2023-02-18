@@ -23,10 +23,17 @@ export class ListeForfaitsComponent implements OnInit {
    this.getForfaits();
  }
 
- getForfaits(): void {
-   this.forfaitService.getForfaits()
-   .subscribe(resultat => this.forfaits = resultat);
-   }
+   getForfaits(): void {
+     this.forfaitService.getForfaits()
+     .subscribe(resultat => {
+       this.forfaits = resultat
+     }, (err) => {
+      console.log("Impossible d'obtenir les données de l'url" + err);
+  
+         });
+  
+     }
+}
 
   // public getDate(): Date {
   //   return new Date();
@@ -37,4 +44,4 @@ export class ListeForfaitsComponent implements OnInit {
 
  
   
-}
+

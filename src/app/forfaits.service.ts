@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Forfait } from './forfait';
-import { Observable } from 'rxjs';
+import { catchError, map, Observable, of, throwError } from 'rxjs';
 import { formatDate } from '@angular/common';
 
 const httpOptions = {
@@ -18,7 +18,7 @@ export class ForfaitsService {
   constructor(private http: HttpClient) { }
   
   getForfaits(): Observable<Forfait[]> {
-  return this.http.get<Forfait[]>(this.API_URL); 
+      return this.http.get<Forfait[]>(this.API_URL); 
   }
 
   addForfait(forfait: Forfait): Observable<void> {
@@ -41,9 +41,21 @@ export class ForfaitsService {
     return this.http.put<void>(`${this.API_URL}?id=${forfait.id}}`, forfait, httpOptions);
     }
 
+    // deleteForfait(id: number): Observable<void> {
+    //   confirm("Êtes-vous sûr de vouloir supprimer ce forfait?")
+    //   return this.http.delete<void>(`${this.API_URL}?id=${id}`);
+    //   }
+
   deleteForfait(id: number): Observable<void> {
-    confirm("Êtes-vous sûr de vouloir supprimer ce forfait?")
-    return this.http.delete<void>(`${this.API_URL}?id=${id}`);
-    }
+    if(confirm("Êtes-vous sûr de vouloir supprimer ce forfait ?")){
+      return this.http.delete<void>(`${this.API_URL}?id=${id}`).pipe(
+        catchError(err => {
+          console.log('Une erreur est survenue lors de la suppression du forfait:', err);
+          return throwError('Une est survenue lors de la supression du forfait. Veuillez réessayer plus tard.');
+        })
+      );
+    } else return of(null).pipe(map(() =>{}))
+    
+  }
 
 }

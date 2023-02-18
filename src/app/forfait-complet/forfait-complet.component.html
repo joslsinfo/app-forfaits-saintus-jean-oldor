@@ -20,6 +20,7 @@
       </mat-card-content>
       <mat-card-content [ngStyle]="{'color' : forfait?.code === 'f0001' ? 'teal' : 'red'}">  {{forfait?.code | uppercase}} <mat-divider></mat-divider>
       </mat-card-content>
+      <mat-card-content [ngClass]="{'forfait-premium': forfait?.premium == true, 'forfait-standard': !forfait?.premium}">{{ forfait?.nom }} </mat-card-content>
       <mat-card-content> 
         {{forfait?.categories}} <mat-divider></mat-divider>
         {{forfait?.etablissement?.nomEtablissement | uppercase  }} <mat-divider></mat-divider>

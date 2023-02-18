@@ -74,28 +74,19 @@ export class TableauForfaitsComponent implements OnInit {
         this.tableForfait.renderRows();
         
       }
-      ,
-      error =>{
-        console.error(error);
-        this.errorMessage='Une erreur s\'est produite lors de la récupération des forfaits'
+      , 
+      (err) => {
+        console.log("Une erreur est survenue lors de la récupération des forfaits.", + err)
       }
+
+      // (error) =>{
+      //   console.error(error);
+      //   this.errorMessage='Une erreur s\'est produite lors de la récupération des forfaits.'
+      // }
     )
   }
 
-  // addForfait(forfaitFormAjout: NgForm){
-  //   if(forfaitFormAjout.valid){
-  //     this.forfaitService.addForfait(this.newForfait).subscribe(
-  //       _ => {
-  //         forfaitFormAjout.resetForm();
-  //         this.getForfaits();
-  //       },
-  //       error =>{
-  //         console.error(error);
-  //         this.errorMessage='Une erreur s\'est produite lors de l\'ajout du forfait'
-  //       }
-  //     );
-  //   }
-  // }
+
 
   openDialog(forfait?: Forfait) {
     console.log(forfait);
@@ -116,27 +107,19 @@ export class TableauForfaitsComponent implements OnInit {
     this.forfaitService.deleteForfait(id).subscribe(
     _ => {
     this.getForfaits();
-    this._snackBar.open("Forfait supprimé!", undefined, {
+    this._snackBar.open("Forfait supprimé avec succès !", undefined, {
     duration: 2000
     });
-    }
-    ,
+    },
     error =>{
-      console.error(error);
+      console.error("Message:", error);
       this.errorMessage='Une erreur s\'est produite lors de la suppression d\'un forfait'
     }
     );
     }
   
 
-  // constructor() {
-  //   // Create 100 users
-  //   // const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
-
-  //   // Assign the data to the data source for the table to render
-  //   // this.dataSource = new MatTableDataSource(users);
-  // }
-
+ 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSourceForfaits.filter = filterValue.trim().toLowerCase();
@@ -150,18 +133,3 @@ export class TableauForfaitsComponent implements OnInit {
 }
 
 
-/** Builds and returns a new User. */
-// function createNewUser(id: number): UserData {
-//   const name =
-//     NAMES[Math.round(Math.random() * (NAMES.length - 1))] +
-//     ' ' +
-//     NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) +
-//     '.';
-
-//   return {
-//     id: id.toString(),
-//     name: name,
-//     progress: Math.round(Math.random() * 100).toString(),
-//     fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
-//   };
-// }

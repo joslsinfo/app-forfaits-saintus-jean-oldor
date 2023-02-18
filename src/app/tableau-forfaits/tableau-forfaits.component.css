@@ -9,7 +9,9 @@ table {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+   
 }
+
 .ml-auto {
   margin-left: auto;
 }
@@ -41,7 +43,4 @@ table {
     display: block;
   } */
 
-  .icon{
-    padding: 5px;
-    margin: 5px;
-  }
+

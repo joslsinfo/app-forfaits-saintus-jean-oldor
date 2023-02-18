@@ -10,6 +10,7 @@ import { Recherche } from '../recherche';
 import { ForfaitsService } from '../forfaits.service';
 import { NgForm } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatCheckboxChange } from '@angular/material/checkbox';
 
 
 @Component({
@@ -68,6 +69,7 @@ export class FormulaireForfaitComponent implements OnInit {
       // courriel = new FormControl('', [Validators.required, Validators.email, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]);
       
       errorMessage: string | undefined;
+    
       
         constructor(private forfaitService: ForfaitsService, 
           private _snackBar: MatSnackBar, 
@@ -76,18 +78,24 @@ export class FormulaireForfaitComponent implements OnInit {
             if(data) {
               this.forfait = data;
             }
+
+            
           }
 
         ngOnInit(): void {
         }
   
+ 
+ 
+
         addForfait(forfaitFormAjout: NgForm){
+          console.log("Tester ajout:", forfaitFormAjout.value)
           if(forfaitFormAjout.valid){
             this.forfaitService.addForfait(this.forfait).subscribe(
             
               _ => {
                 forfaitFormAjout.resetForm();
-                this.dialogRef.close('Forfait ajouté avec succès!');
+                this.dialogRef.close('Forfait ajouté avec succès !');
                 // this.forfaitAjoute.emit();
                 // this.getForfaits();
                 // this._snackBar.open("Forfait enregistré avec succès!", undefined, {
@@ -95,6 +103,9 @@ export class FormulaireForfaitComponent implements OnInit {
                 //   });
               }
               ,
+              // (err) => {
+              //   console.log("Impossible d'ajouter un forfait", + err);
+              // }
               error =>{
                 console.error(error);
                 this.errorMessage='Une erreur s\'est produite lors de l\'ajout du forfait'
@@ -105,6 +116,7 @@ export class FormulaireForfaitComponent implements OnInit {
         }
 
         updateForfait(forfaitFormAjout: NgForm){
+          console.log("Tester Modification:", forfaitFormAjout.value)
           if(forfaitFormAjout.valid){
             this.forfaitService.updateForfait(this.forfait).subscribe(
               _=> {
@@ -117,8 +129,8 @@ export class FormulaireForfaitComponent implements OnInit {
 
         }
 
-        annuler(){
-          this.dialogRef.close();
+        annuler() {
+          this.dialogRef.close('Opération annulée');
         }
 
      
