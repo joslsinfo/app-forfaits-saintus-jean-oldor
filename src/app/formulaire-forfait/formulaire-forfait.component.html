@@ -36,7 +36,8 @@
         *ngIf="description.invalid && (description.dirty || description.touched) && description.hasError('maxlength')">
         La description doit contenir au maximum 50 caractères.
       </mat-error>
-
+</div>
+<div>
       <mat-form-field appearance="fill">
         <mat-label>Code du forfait</mat-label>
         <input type="text" matInput [(ngModel)]="forfait.code" #code="ngModel"
@@ -210,7 +211,7 @@
     </div>
 
     <div class="checkbox">
-      <mat-checkbox color="primary" class="example-margin" [(ngModel)]="forfait.premium" 
+      <mat-checkbox color="primary" class="example-margin" [(ngModel)]="forfait.premium"
         (keyup.enter)="addForfait(forfaitFormAjout)" name="premium">Premium
       </mat-checkbox>
     </div>
