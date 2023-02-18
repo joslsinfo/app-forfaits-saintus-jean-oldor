@@ -5,11 +5,20 @@ table {
 
   }
 
+  .mat-elevation-z8{
+    margin: 0 3rem;
+  }
+
   .btn-filter {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-   
+    margin: 0 3rem;
+}
+
+h1{
+  margin: 0 0 1.5rem 3rem;
+
 }
 
 .ml-auto {
@@ -42,5 +51,4 @@ table {
   /* .mat-form-field{
     display: block;
   } */
-
 

@@ -49,7 +49,8 @@
 
 
 <h3 class="title-h2">Liste des forfaits avec pipe personnalisée pour un établissement précis </h3>
-<div *ngFor="let forfait of forfaits | etablissement">
+<div *ngFor="let forfait of forfaits | etablissement:'Communication plus'">
+  <!-- {{forfait.nom}} - {{forfait.prix}} -->
   <app-forfait-complet [forfait]="forfait"></app-forfait-complet>
 
 

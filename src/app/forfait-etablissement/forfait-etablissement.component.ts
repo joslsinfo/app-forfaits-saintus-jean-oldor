@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ForfaitsService } from '../forfaits.service';
 import { FORFAITS } from '../mock-forfaits';
 
 @Component({
@@ -10,9 +11,21 @@ export class ForfaitEtablissementComponent implements OnInit {
 
   forfaits = FORFAITS
 
-  constructor() { }
+  constructor(private forfaitService: ForfaitsService) { }
 
   ngOnInit(): void {
+    this.getForfaits();
   }
+
+  getForfaits(): void {
+    this.forfaitService.getForfaits()
+    .subscribe(resultat => {
+      this.forfaits = resultat
+    }, (err) => {
+     console.log("Impossible d'obtenir les données de l'url" + err);
+ 
+        });
+ 
+    }
 
 }
