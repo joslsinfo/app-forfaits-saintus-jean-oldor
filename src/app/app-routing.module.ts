@@ -1,3 +1,4 @@
+import { PrixComponent } from './prix/prix.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { ForfaitEtablissementComponent } from './forfait-etablissement/forfait-etablissement.component';
