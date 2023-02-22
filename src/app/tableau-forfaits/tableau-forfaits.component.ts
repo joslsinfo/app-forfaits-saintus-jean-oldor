@@ -109,12 +109,15 @@ export class TableauForfaitsComponent implements OnInit {
     this.getForfaits();
     this._snackBar.open("Forfait supprimé avec succès !", undefined, {
     duration: 2000
-    });
+    }, 
+    );
     },
-    error =>{
-      console.error("Message:", error);
-      this.errorMessage='Une erreur s\'est produite lors de la suppression d\'un forfait'
-    }
+
+     error =>{
+      console.error("Une erreur a été interceptée");
+       console.error("Message:", error);
+       this.errorMessage='Une erreur s\'est produite lors de la suppression d\'un forfait'
+     }
     );
     }
   

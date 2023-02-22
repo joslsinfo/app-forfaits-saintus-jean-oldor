@@ -48,7 +48,7 @@ export class ForfaitsService {
 
   deleteForfait(id: number): Observable<void> {
     if(confirm("Êtes-vous sûr de vouloir supprimer ce forfait ?")){
-      return this.http.delete<void>(`${this.API_URL}?id=${id}`).pipe(
+      return this.http.delete<any>(`${this.API_URL}?id=${id}`).pipe(
         catchError(err => {
           console.log('Une erreur est survenue lors de la suppression du forfait:', err);
           return throwError('Une est survenue lors de la supression du forfait. Veuillez réessayer plus tard.');

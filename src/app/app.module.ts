@@ -62,7 +62,9 @@ import { CategoriesPipe } from './categories.pipe';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { Graphique1Component } from './graphique1/graphique1.component';
 
+import { NgChartsModule } from 'ng2-charts';
 
 
 @NgModule({
@@ -93,6 +95,7 @@ import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
     CategoriesComponent,
     CategoriesPipe,
     PageNotFoundComponent,
+    Graphique1Component,
    
     
 
@@ -132,6 +135,7 @@ import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
     HttpClientModule,
     MatSnackBarModule,
     MatDialogModule,
+    NgChartsModule
  
      
   

@@ -107,6 +107,7 @@ export class FormulaireForfaitComponent implements OnInit {
               //   console.log("Impossible d'ajouter un forfait", + err);
               // }
               error =>{
+                console.error("erreur provoquée par le service et interceptée par le formulaire");
                 console.error(error);
                 this.errorMessage='Une erreur s\'est produite lors de l\'ajout du forfait'
               }

@@ -1,3 +1,4 @@
+import { Graphique1Component } from './graphique1/graphique1.component';
 import { PrixComponent } from './prix/prix.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { CategoriesComponent } from './categories/categories.component';
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'liste-des-forfaits', component: ListeForfaitsComponent },
   { path: 'etablissement', component: ForfaitEtablissementComponent },
   { path: 'categorie', component: CategoriesComponent },
+  { path: 'graphique', component: Graphique1Component },
   { path: 'gestion-forfaits', component: TableauForfaitsComponent },
   { path: 'a-propos', component: AProposComponent },
   { path: '**', component: PageNotFoundComponent },
