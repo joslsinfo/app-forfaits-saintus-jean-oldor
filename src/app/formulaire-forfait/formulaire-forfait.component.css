@@ -16,6 +16,20 @@ form{
 }
 
 
+
+/* .error-space{
+  height: 20px;
+}
+.mat-form-field + .mat-form-field .mat-form-field {
+  top: 30px;
+}
+.mat-form-field + .mat-form-field .mat-form-field-wrapper {
+  margin-top: 24px;
+} */
+
+
+
+
 .form-container{
    width: 100%;
    justify-content: space-around;
@@ -24,6 +38,7 @@ form{
    padding: 1rem;
  
 }
+
 
 mat-form-field {
     width:50%;

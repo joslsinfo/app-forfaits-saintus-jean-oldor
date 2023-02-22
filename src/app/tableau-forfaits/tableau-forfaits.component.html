@@ -21,13 +21,13 @@
     <!-- Name Column -->
     <ng-container matColumnDef="nom">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Nom </th>
-      <td mat-cell *matCellDef="let forfait"> {{forfait.nom | titlecase}} </td>
+      <td mat-cell *matCellDef="let forfait" class="td-class"> {{forfait.nom | titlecase}} </td>
     </ng-container>
 
     <!-- Description Column -->
     <ng-container matColumnDef="description">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>
-      <td mat-cell *matCellDef="let forfait"> {{forfait.description | titlecase}} </td>
+      <td mat-cell *matCellDef="let forfait" class="td-class"> {{forfait.description | titlecase}} </td>
     </ng-container>
 
 
@@ -35,17 +35,17 @@
     <!-- Start Date Column -->
     <ng-container matColumnDef="dateDebut">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Date de début </th>
-      <td mat-cell *matCellDef="let forfait"> {{forfait.dateDebut}} </td>
+      <td mat-cell *matCellDef="let forfait" class="td-class"> {{forfait.dateDebut}} </td>
     </ng-container>
     <!-- End Date Column -->
     <ng-container matColumnDef="dateFin">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Date de fin </th>
-      <td mat-cell *matCellDef="let forfait"> {{forfait.dateFin}} </td>
+      <td mat-cell *matCellDef="let forfait" class="td-class"> {{forfait.dateFin}} </td>
     </ng-container>
     <!-- Price Column -->
     <ng-container matColumnDef="prix">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Prix </th>
-      <td mat-cell *matCellDef="let forfait"> {{forfait.prix}} </td>
+      <td mat-cell *matCellDef="let forfait" class="td-class"> {{forfait.prix}} </td>
     </ng-container>
 
     <!-- Actions Column -->
@@ -56,7 +56,7 @@
 
     <ng-container matColumnDef="actions">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Actions </th>
-      <td mat-cell *matCellDef="let forfait">
+      <td mat-cell *matCellDef="let forfait" class="td-actions">
         <button mat-icon-button color="primary" aria-label="Modifier" (click)="openDialog(forfait)">
           <mat-icon>edit</mat-icon>
         </button>
