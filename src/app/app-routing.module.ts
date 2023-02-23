@@ -1,3 +1,4 @@
+import { ClientChartComponent } from './client-chart/client-chart.component';
 import { Graphique1Component } from './graphique1/graphique1.component';
 import { PrixComponent } from './prix/prix.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'etablissement', component: ForfaitEtablissementComponent },
   { path: 'categorie', component: CategoriesComponent },
   { path: 'graphique', component: Graphique1Component },
+  { path: 'client', component: ClientChartComponent },
   { path: 'gestion-forfaits', component: TableauForfaitsComponent },
   { path: 'a-propos', component: AProposComponent },
   { path: '**', component: PageNotFoundComponent },

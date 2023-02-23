@@ -65,6 +65,9 @@ import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { Graphique1Component } from './graphique1/graphique1.component';
 
 import { NgChartsModule } from 'ng2-charts';
+import { ClientChartComponent } from './client-chart/client-chart.component';
+
+
 
 
 @NgModule({
@@ -96,6 +99,8 @@ import { NgChartsModule } from 'ng2-charts';
     CategoriesPipe,
     PageNotFoundComponent,
     Graphique1Component,
+    ClientChartComponent,
+  
    
     
 
@@ -135,7 +140,8 @@ import { NgChartsModule } from 'ng2-charts';
     HttpClientModule,
     MatSnackBarModule,
     MatDialogModule,
-    NgChartsModule
+    NgChartsModule,
+
  
      
   
