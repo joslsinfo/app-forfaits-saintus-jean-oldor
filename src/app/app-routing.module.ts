@@ -17,6 +17,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ListeMiniForfaitsComponent } from './liste-mini-forfaits/liste-mini-forfaits.component';
 import { ListeForfaitsCompletsComponent } from './liste-forfaits-complets/liste-forfaits-complets.component';
+import { Graphique2Component } from './graphique2/graphique2.component';
 
 const routes: Routes = [
 
@@ -25,7 +26,7 @@ const routes: Routes = [
   { path: 'liste-des-forfaits', component: ListeForfaitsComponent },
   { path: 'etablissement', component: ForfaitEtablissementComponent },
   { path: 'categorie', component: CategoriesComponent },
-  { path: 'graphique', component: Graphique1Component },
+  { path: 'graphique', component: Graphique2Component },
   { path: 'client', component: ClientChartComponent },
   { path: 'gestion-forfaits', component: TableauForfaitsComponent },
   { path: 'a-propos', component: AProposComponent },

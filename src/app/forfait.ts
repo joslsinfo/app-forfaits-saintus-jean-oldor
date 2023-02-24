@@ -23,10 +23,7 @@ export interface Forfait {
     rating: number;
     rabais: number;
 
-   
-  
-
-   
+      
 
 }
 

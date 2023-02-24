@@ -19,15 +19,9 @@ export class ClientChartComponent implements OnInit {
     options: { responsive: true, maintainAspectRatio: false }
   };
 
-  // public mesDonnees: ChartData<'bar', number[], string | string[]> = {
-  //   labels: [],
-  //   datasets: [
-  //     { data: [], label: 'Nombre de clients par ville' }
-  //   ]
-  // };
 
 
-// initialisez les données à une valeur vide pour éviter une erreur undefined
+// Initialisation des données à une valeur vide pour éviter une erreur undefined
   public mesDonnees: ChartData<'bar', number[], string | string[]> = {
     labels: [],
     datasets: []
@@ -42,19 +36,18 @@ export class ClientChartComponent implements OnInit {
 
   getClientsData(){
 
-
-        // récupérez les données de l'API via le service client
+        // La récupération des données de l'API via le service client
         this.clientService.getClientsParVille().subscribe(data => {
           console.log(data)
-        // extrayez les données nécessaires pour le graphique
+        // L'extraction des données nécessaires pour le graphique
         const labels = Object.keys(data);
         const values = Object.values(data);
         const backgroundColors = [];
         for (let i = 0; i < labels.length; i++) {
-          // ajouter une couleur différente pour chaque ville
+          // L'ajout d'une couleur différente pour chaque ville
           backgroundColors.push(getRandomColor());
         }
-        // mettez à jour les données du graphique
+        // La mise à jour des données du graphique
         this.mesDonnees = {
           labels: labels,
           datasets: [

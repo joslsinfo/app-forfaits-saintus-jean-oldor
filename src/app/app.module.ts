@@ -66,6 +66,7 @@ import { Graphique1Component } from './graphique1/graphique1.component';
 
 import { NgChartsModule } from 'ng2-charts';
 import { ClientChartComponent } from './client-chart/client-chart.component';
+import { Graphique2Component } from './graphique2/graphique2.component';
 
 
 
@@ -100,6 +101,7 @@ import { ClientChartComponent } from './client-chart/client-chart.component';
     PageNotFoundComponent,
     Graphique1Component,
     ClientChartComponent,
+    Graphique2Component,
   
    
     
