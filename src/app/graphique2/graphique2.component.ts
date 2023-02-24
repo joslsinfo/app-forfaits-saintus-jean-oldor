@@ -11,19 +11,13 @@ import { ChartOptions, ChartType } from 'chart.js';
 })
 export class Graphique2Component implements OnInit {
 
-//   public pieChartOptions: ChartOptions = {
-    // responsive: true,
-//   };
-
 
   // Pie
   public pieChartOptions: ChartOptions<'pie'> = {
     responsive: false,
   };
   
-//   public pieChartLabels: Label[] = [];
-//   public pieChartData: number[] = [];
-//   public pieChartType: ChartType = 'pie';
+
 
 // public pieChartLabels = [ [ 'Download', 'Sales' ], [ 'In', 'Store', 'Sales' ], 'Mail Sales' ];
 public pieChartLabels = [ [ '', '' ], [ '', '', '' ], '' ];
