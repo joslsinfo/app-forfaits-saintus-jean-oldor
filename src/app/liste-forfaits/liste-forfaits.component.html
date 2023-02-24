@@ -24,10 +24,14 @@
 <h2 class="title-h2">Liste des forfaits complets contenant toutes les informations </h2>
 <div class="container " *ngFor="let f of forfaits">
 
-  <p class="premium-complet" *ngIf="f.premium">
-    <app-forfait-complet [forfait]="f"></app-forfait-complet>
+  <!-- <p class="premium-complet" *ngIf="f.premium"> -->
+    <!-- <app-forfait-complet [forfait]="f"></app-forfait-complet> -->
     <!-- <app-prix [forfait]="f"></app-prix> -->
-  </p>
+  <!-- </p> -->
+
+    <app-forfait-complet [forfait]="f"></app-forfait-complet>
+ 
+
 
   <div class="rating-style" *ngIf="f.rating > 0">
     <app-star-rating [forfait]="f"> </app-star-rating>
