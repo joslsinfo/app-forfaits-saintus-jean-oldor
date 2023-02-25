@@ -1,5 +1,5 @@
+import { ForfaitsService } from './../forfaits.service';
 import { Recherche } from './../recherche';
-// import { outputAst } from '@angular/compiler';
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { Forfait } from '../forfait';
 
@@ -11,12 +11,15 @@ import { Forfait } from '../forfait';
 })
 export class FormulaireRechercheComponent implements OnInit {
 
+  // forfaits: Forfait[] = [];
 
   @Input() forfait?: Forfait;
  
 
   @Input()  recherche!: Recherche;
   @Output() rechercheChange = new EventEmitter();
+
+  
 
   changeNom(nouvelleValeur: string){
     let nouvelleRecherche : Recherche = {
@@ -65,7 +68,14 @@ export class FormulaireRechercheComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    // this.getForfaits();
 
   }
+
+  // getForfaits() {
+  //   this.forfaitService.getForfaits(this.recherche).subscribe(
+  //     forfaits => this.forfaits = forfaits
+  //   );
+  // }
 
 }

@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Forfait } from './forfait';
 import { catchError, map, Observable, of, throwError } from 'rxjs';
 import { formatDate } from '@angular/common';
+import { Recherche } from './recherche';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -58,4 +59,10 @@ export class ForfaitsService {
     
   }
 
+
+
+
+
+  
+ 
 }

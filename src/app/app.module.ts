@@ -71,6 +71,8 @@ import { Graphique2Component } from './graphique2/graphique2.component';
 
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -102,7 +104,9 @@ import { Graphique2Component } from './graphique2/graphique2.component';
     Graphique1Component,
     ClientChartComponent,
     Graphique2Component,
-  
+
+
+ 
    
     
 
