@@ -73,7 +73,7 @@
           Le champ de l'image url est obligatoire.
         </mat-error>
         <mat-error *ngIf="imageUrl.invalid && (imageUrl.dirty || imageUrl.touched) && imageUrl.hasError('minlength')">
-          Ce champ  doit contenir au moins 5 caractères.
+          Ce champ  doit contenir au moins 5 caractères ou un lien d'une image.
         </mat-error>
         <mat-error *ngIf="imageUrl.invalid && (imageUrl.dirty || imageUrl.touched) && imageUrl.hasError('maxlength')">
           Ce champ  doit contenir au maximum 255 caractères.
